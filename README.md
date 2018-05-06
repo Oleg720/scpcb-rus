@@ -1,2 +1,2 @@
-# scpcb-rus
-SCP - Containment Breach | Русификатор
+# SCP - Containment Breach | Русификатор
+Репозиторий для более удобной работы над русификатором
