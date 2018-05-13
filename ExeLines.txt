@@ -1,0 +1,250 @@
+﻿;Перевод некоторых строк для EXE игры SCP:CB 1.3.9/1.3.10
+;$ - Какая-либо игровая переменная
+
+;Лаунчер
+Resolution: = Разрешение экрана:
+Graphics: = Графическая карта:
+Fullscreen = Полноэкранный режим
+Borderless windowed mode = Без рамок
+16 Bit = 16 Бит
+Use launcher = Использовать лаунчер
+Current Resolution: = Текущее разрешение:
+(upscaled to $) = (увеличено до $)
+Check for updates on launch = Проверять обновления при запуске
+LAUNCH = ИГРАТЬ
+EXIT = ВЫЙТИ
+
+;Главное меню
+NEW GAME = НОВАЯ ИГРА
+LOAD GAME = ЗАГРУЗИТЬ
+OPTIONS = ОПЦИИ
+QUIT = ВЫХОД
+BACK = НАЗАД
+
+;Меню "НОВАЯ ИГРА"
+NEW GAME = НОВАЯ ИГРА
+Name: = Имя:
+Map seed: = Сид карты:
+Enable intro sequence: = Включить вступление:
+Difficulty: = Сложность:
+Safe = Бозопасная
+Euclid = Евклид
+Keter = Кетер
+Custon = Своя
+Load map = Загрузить карту
+Deselect = Отменить
+START = НАЧАТЬ
+
+;Меню "ЗАГРУЗИТЬ"
+LOAD GAME = ЗАГРУЗИТЬ ИГРУ
+No saved games. = Нет сохранённых игр.
+Load = Загрузить
+Delete = Удалить
+Are you sure you want to delete this save? = Вы действительно хотите удалить это сохранение?
+Yes = Да
+No = Нет
+
+;Меню "ОПЦИИ"
+OPTIONS = ОПЦИИ
+GRAPHICS = ГРАФИКА
+AUDIO = АУДИО
+CONTROLS = УПРАВЛЕНИЕ
+ADVANCED = ДОПОЛНИТЕЛЬНО
+This option cannot be changed in-game. = Эта опция не может быть изменена во время игры.
+This option only takes effect on fullscreen. = Эта опция работает только в полножэкранном режиме.
+Only smoke will produce particles = Рендерится только дым.
+Only a few perticles will be rendered per tick = Рендерятся только некоторые частицы.
+All particles are rendered = Рендерятся все частицы.
+Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent. = Обычно, предпочительно 60 FPS или выше. Если вы замечаете чрезмерное заикивание, при этом параметре, то попробуйте уменьшить его, чтобы сделать FPS более стабильным.
+LOW = НИЗК
+HIGH = ВЫС
+MINIMAL = МИНИМУМ
+REDUCED = СРЕДНЕ
+FULL = ВСЕ
+
+;Меню "ОПЦИИ" -> "ГРАФИКА"
+Enable bump mapping: = Включить bump mapping:
+Vsync: = Вертикальная синхронизация:
+Anti-aliasing: = Сглаживание:
+Enable room lighting: = Включить улучшенное освещение:
+Screen gamma: = Уровень гаммы:
+Particle ammount: = Количество частиц:
+Texture LOD Bias: = Коррекция LOD текстур:
+Save textures in the VRAM: = Загружать текстуры в VRAM:
+
+;Меню "ОПЦИИ" -> "АУДИО"
+Music volume: = Громкость музыки:
+Sound volume: = Громкость звуков:
+Sound auto-release: = 
+Enable user tracks: = Включить польз. треки:
+User track mpde: = Режим польз. треков:
+Repeat: = Повтор:
+Random: = Случайно:
+Scan for User Tracks: = Проверить польз. треки:
+
+;Меню "ОПЦИИ" -> "УПРАВЛЕНИЕ"
+Mouse sensitivity: = Чувствительность мыши:
+Invert mouse Y-axis: = Инвертировать мышь по оси-Y:
+Control configuration: = Клавиши управления:
+Move Forward = Двигаться вперёд
+Strafe Left = Стрейф влево
+Move Backward = Двигаться назад
+Strafe Right = Стрейф вправо
+Quick Save = Быстрое сохр.
+Manial Blink = Моргнуть
+Sprint = Бежать
+Open/Close Inventory = Откр./Закр. инвентарь
+Crouch = Ползти
+Open/Close Console = Откр./Закр. консоль
+
+;Некоторый клавиши для Меню "ОПЦИИ" -> "УПРАВЛЕНИЕ"
+SPACE = Пробел
+Left Shift = Левый Shift
+Right Shift = Правый Shift
+Left CTRL = Левый CTRL
+Right CTRL = Правый CTRL
+Left ALT = Левый ALT
+Right ALT = Правый ALT
+
+;Меню "ОПЦИИ" -> "ДОПОЛНИТЕЛЬНО"
+Show HUD: = Отображать HUD
+Enable console: = Включить консоль
+Open console on error: = Открывать консоль при ошибке:
+Achievement popups: = Достижения:
+Show FPS: = Отображать FPS:
+Framelimit: = Лимит кадров:
+Antialiased text: = Сглаживание текста:
+
+;Загрузочный экран
+LOADING - $ % = ЗАГРУЗКА - $ %
+PRESS ANY KEY TO CONTINUE = НАЖМИТЕ ЛЮБУЮ КЛАВИШУ, ЧТОБЫ ПРОДОЛЖИТЬ
+
+;Пауза
+PAUSED = ПАУЗА
+Difficulty = Сложность
+Save = Сохранение
+Map seed = Сид карты
+Resume = Продолжить
+Load Game = Загрузить игру
+Achievements = Достижения
+ACHIEVEMENTS = ДОСТИЖЕНИЯ
+Options = Опции
+OPTIONS = ОПЦИИ
+QUIT? = ВЫЙТИ?
+Save & Quit = Сохр. и выйти
+Quit = Выйти
+Back = Назад
+
+;Подсказки
+Press $ to open the inventory = Нажмите $, чтобы открыть инвентарь
+Press $ to blink = Нажмите $, чтобы моргнуть
+Press $ to save = Нажмите $, чтобы сохраниться
+Press $ to run = Нажмите $, чтобы бежать
+
+;Предметы (Items.bb)
+Some SCP-420-J = Немного SCP-420-J
+Level 1 Key Card = Ключ-карта 1-го уровня
+Level 2 Key Card = Ключ-карта 2-го уровня
+Level 3 Key Card = Ключ-карта 3-го уровня
+Level 4 Key Card = Ключ-карта 4-го уровня
+Level 5 Key Card = Ключ-карта 5-го уровня
+Playing Card = Игральная карта
+Key Card Omni = Ключ-карта Омни
+Document SCP-079 = Документ о SCP-079
+Document SCP-895 = Документ о SCP-895
+Document SCP-860 = Документ о SCP-860
+Document SCP-860-1 = Документ о SCP-860-1
+SCP-093 Recovered Materials = Материалы, добытые посредством SCP-093
+Document SCP-106 = Документ о SCP-106
+Dr. Allok's Note = 
+Recall Protocol RP-106-N = Протокол возврата RP-106-N
+Document SCP-682 = Документ о SCP-682
+Document SCP-173 = Документ о SCP-173
+Document SCP-372 = Документ о SCP-372
+Document SCP-049 = Документ о SCP-049
+Document SCP-096 = Документ о SCP-096
+Document SCP-008 = Документ о SCP-008
+Document SCP-012 = Документ о SCP-012
+Document SCP-500 = Документ о SCP-500
+Document SCP-714 = Документ о SCP-714
+Document SCP-513 = Документ о SCP-513
+Document SCP-035 = Документ о SCP-035
+SCP-035 Addendum = Дополнения к документу о SCP-035
+Document SCP-939 = Документ о SCP-939
+Document SCP-966 = Документ о SCP-966
+Document SCP-970 = Документ о SCP-970
+Document SCP-1048 = Документ о SCP-1048
+Document SCP-1123 = Документ о SCP-1123
+Document SCP-1162 = Документ о SCP-1162
+Document SCP-1499 = Документ о SCP-1499
+Incident Report SCP-1048-A = Доклад об онциденте SCP-1048-A
+Drawing = Рисунок
+Leaflet = Листовка
+Dr. L's Note = Записка Д-ра. Л.
+Dr L's Note = Записка Д-ра Л.
+Blood-stained Note = Кровавая записка
+Dr. L's Burnt Note = Записка Д-ра. Бэнта
+Dr L's Burnt Note = Записка Д-ра Бэнта
+Scorched Note = Выжженная записка
+Journal Page = Страница журнала
+Log #1 = Лог #1
+Log #2 = Лог #2
+Log #3 = Лог #3
+Strange Note = Странная записка
+Nuclear Device Document = 
+Class D Orientation Leaflet = Ориентационная листовка Класса-D
+Note from Daniel = Записка от Даниэля
+Burnt Note = Сгоревшая записка
+Mysterious Note = Мистическая записка
+Mobile Task Forces = Мобильная оперативная группа
+Security Clearance Levels = 
+Object Classes = Классы объектов
+Document = Докумет
+Note = Записка
+Notification = Напоминание
+Incident Report SCP-106-0204 = Доклад об инциденте SCP-106-0204
+Ballistic Vest = Бронежилет
+Heavy Ballistic Vest = Тяжёлый бронежилет
+Bulky Ballistic Vest = Громоздкий бронежилет
+Hazmat Suit = Костюм химзащиты
+Heavy Hazmat Suit = Тяжёлый костюм химзащиты
+cup = стакан
+Empty Cup = Пустой стакан
+First Aid Kit = Аптечка первой помощи
+Small First Aid Kit = Маленькая аптечка первой помощи
+Blue First Aid Kit = Синяя аптечка первой помощи
+Strange Bottle = Странная бутылка
+Gas Mask = Противогаз
+Heavy Gas Mask = Тяжёлый противогаз
+Origami = Оригами
+Electronical components = Электронные компоненты
+Metal Panel = Металлическая панель
+SCP-148 Ingot = Слиток SCP-148
+S-NAV 300 Navigator = Навигатор S-NAV 300
+S-NAV Navigator = Навигатор S-NAV
+S-NAV Navigator Ultimate = Навигатор S-NAV Ultimate
+S-NAV 310 Navigator = Навигатор S-NAV 310
+Radio Transceiver = Рация
+Cigarette = Сигара
+Joint = Сустав
+Smelly Joint = Вонючий сустав
+Severed Hand = Оторванная рука
+9V Battery = 9V Батарейка
+18V Battery = 18V Батарейка
+Strange Battery = Странная батарейка
+Eyedrops = Глазные капли
+ReVision Eyedrops = Глазные капли РеЗрение
+RedVision Eyedrops = Глазные капли РеЗрение красные
+Clipboard = Планшет
+Night Vision Goggles = Очки ночного зрения
+Syringe = Шприц
+Emily Ross = Эмили Роуз
+Lost Key = Потерянный ключ
+Disciplinary Hearing DH-S-4137-17092 = Дисциплинарное слушание DH-S-4137-17092
+Coin = Монета
+Movie Ticket = Билет в кино
+Old Badge = Старый бейджик
+50 Cent Coin = 50-ти центная монета
+Wallet = Кошелёк
+
+;Что-то ещё...
