@@ -107,13 +107,16 @@ Left ALT = Левый ALT
 Right ALT = Правый ALT
 
 ;Меню "ОПЦИИ" -> "ДОПОЛНИТЕЛЬНО"
-Show HUD: = Отображать HUD
-Enable console: = Включить консоль
+Show HUD: = Отображать HUD:
+Enable console: = Включить консоль:
 Open console on error: = Открывать консоль при ошибке:
 Achievement popups: = Достижения:
 Show FPS: = Отображать FPS:
 Framelimit: = Лимит кадров:
 Antialiased text: = Сглаживание текста:
+
+;Описание опций (Будет много текста)
+
 
 ;Загрузочный экран
 LOADING - $ % = ЗАГРУЗКА - $ %
@@ -121,9 +124,9 @@ PRESS ANY KEY TO CONTINUE = НАЖМИТЕ ЛЮБУЮ КЛАВИШУ, ЧТОБЫ
 
 ;Пауза
 PAUSED = ПАУЗА
-Difficulty = Сложность
-Save = Сохранение
-Map seed = Сид карты
+Difficulty: = Сложность:
+Save: = Сохранение:
+Map seed: = Сид карты:
 Resume = Продолжить
 Load Game = Загрузить игру
 Achievements = Достижения
