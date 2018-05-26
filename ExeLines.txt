@@ -1,4 +1,4 @@
-﻿;Перевод некоторых строк для EXE игры SCP:CB 1.3.9/1.3.10
+﻿;Перевод некоторых строк для EXE игры SCP:CB 1.3.10
 ;$ - Какая-либо игровая переменная
 
 ;Лаунчер
@@ -25,12 +25,23 @@ BACK = НАЗАД
 NEW GAME = НОВАЯ ИГРА
 Name: = Имя:
 Map seed: = Сид карты:
+Selected map: = Карта:
 Enable intro sequence: = Включить вступление:
 Difficulty: = Сложность:
 Safe = Бозопасная
+The game can be saved any time. However as in the case of SCP Objects, a Safe classification does not mean that handling it does not pose a threat. = Игра может быть сохранена в любое время. Однако, Безопасная сложность не означает, что можно расслабиться.
 Euclid = Евклид
+Euclid-class objects are insufficiently understood of inherently unpredictable, such that reliable containment is not always possible. In the Euclid bifficulty, saving only allowed at specific locations marked by lit up computer screens.
 Keter = Кетер
+Keter-class objects are considered the most dangerous ones in Foundation containment. The same can be said for this difficulity level: the SCPs are more aggressive, and you hane only one life - when you die, the game is over.
 Custon = Своя
+Permadeath = Одна жизнь
+Save anywhere = Сохраняться везде
+Aggressive NPC`s = Агрессивные NPC
+Other difficulity factors: = Другие факторы:
+Easy = Легко
+Normal = Нормально
+Hard = Сложно
 Load map = Загрузить карту
 Deselect = Отменить
 START = НАЧАТЬ
@@ -50,12 +61,6 @@ GRAPHICS = ГРАФИКА
 AUDIO = АУДИО
 CONTROLS = УПРАВЛЕНИЕ
 ADVANCED = ДОПОЛНИТЕЛЬНО
-This option cannot be changed in-game. = Эта опция не может быть изменена во время игры.
-This option only takes effect on fullscreen. = Эта опция работает только в полножэкранном режиме.
-Only smoke will produce particles = Рендерится только дым.
-Only a few perticles will be rendered per tick = Рендерятся только некоторые частицы.
-All particles are rendered = Рендерятся все частицы.
-Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent. = Обычно, предпочительно 60 FPS или выше. Если вы замечаете чрезмерное заикивание, при этом параметре, то попробуйте уменьшить его, чтобы сделать FPS более стабильным.
 LOW = НИЗК
 HIGH = ВЫС
 MINIMAL = МИНИМУМ
@@ -97,7 +102,7 @@ Open/Close Inventory = Откр./Закр. инвентарь
 Crouch = Ползти
 Open/Close Console = Откр./Закр. консоль
 
-;Некоторый клавиши для Меню "ОПЦИИ" -> "УПРАВЛЕНИЕ"
+;Некоторые клавиши для Меню "ОПЦИИ" -> "УПРАВЛЕНИЕ"
 SPACE = Пробел
 Left Shift = Левый Shift
 Right Shift = Правый Shift
@@ -115,8 +120,16 @@ Show FPS: = Отображать FPS:
 Framelimit: = Лимит кадров:
 Antialiased text: = Сглаживание текста:
 
-;Описание опций (Будет много текста)
+;Описание подсказок для "ОПЦИИ" -> "ГРАФИКА"
+"Bump mapping" is used to simulate bumps and dents by distorting the lightmaps. = "Bump mapping" используется для иммитации вмятин, искажая карта света.
 
+;Описание мини-подсказок для всех разделов Опций
+This option cannot be changed in-game. = Эта опция не может быть изменена во время игры.
+This option only takes effect on fullscreen. = Эта опция работает только в полножэкранном режиме.
+Only smoke will produce particles = Рендерится только дым.
+Only a few perticles will be rendered per tick = Рендерятся только некоторые частицы.
+All particles are rendered = Рендерятся все частицы.
+Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent. = Обычно, предпочительно 60 FPS или выше. Если вы замечаете чрезмерное заикивание, при этом параметре, то попробуйте уменьшить его, чтобы сделать FPS более стабильным.
 
 ;Загрузочный экран
 LOADING - $ % = ЗАГРУЗКА - $ %
