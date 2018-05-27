@@ -1,163 +1,22 @@
-﻿;Перевод некоторых строк для EXE игры SCP:CB 1.3.10
-;$ - Какая-либо игровая переменная
+﻿;Перевод строк для EXE игры SCP:CB 1.3.10
 
-;Лаунчер
-Resolution: = Разрешение экрана:
-Graphics: = Графическая карта:
-Fullscreen = Полноэкранный режим
-Borderless windowed mode = Без рамок
-16 Bit = 16 Бит
-Use launcher = Использовать лаунчер
-Current Resolution: = Текущее разрешение:
-(upscaled to $) = (увеличено до $)
-Check for updates on launch = Проверять обновления при запуске
-LAUNCH = ИГРАТЬ
-EXIT = ВЫЙТИ
+[Achivments.bb] - 100%
+Achievement Unlocked - = Достижение разблокировано 
 
-;Главное меню
-NEW GAME = НОВАЯ ИГРА
-LOAD GAME = ЗАГРУЗИТЬ
-OPTIONS = ОПЦИИ
-QUIT = ВЫХОД
-BACK = НАЗАД
-
-;Меню "НОВАЯ ИГРА"
-NEW GAME = НОВАЯ ИГРА
-Name: = Имя:
-Map seed: = Сид карты:
-Selected map: = Карта:
-Enable intro sequence: = Включить вступление:
-Difficulty: = Сложность:
-Safe = Бозопасная
-The game can be saved any time. However as in the case of SCP Objects, a Safe classification does not mean that handling it does not pose a threat. = Игра может быть сохранена в любое время. Однако, Безопасная сложность не означает, что можно расслабиться.
+[Difficulty.bb] - 100%
+Safe = Безопасная
+The game can be saved any time. However, as in the case of SCP Objects, a Safe classification does not mean that handling it does not pose a threat. = Игра может быть сохранена в любой момент. Однако, это не значит, что можно расслабиться.
 Euclid = Евклид
-Euclid-class objects are insufficiently understood of inherently unpredictable, such that reliable containment is not always possible. In the Euclid bifficulty, saving only allowed at specific locations marked by lit up computer screens.
+Euclid-class objects are insufficiently understood or inherently unpredictable, = Объекты класса Евклид недостаточно изучены, и непредсказуемы. Надёжное 
+such that reliable containment is not always possible. = содержание таких объектов затруднено.
+In Euclid difficulty, saving only allowed at specific locations marked by lit up computer screens. = На сложности Евклид, сохранение возможно только у мониторов.
 Keter = Кетер
-Keter-class objects are considered the most dangerous ones in Foundation containment. The same can be said for this difficulity level: the SCPs are more aggressive, and you hane only one life - when you die, the game is over.
-Custon = Своя
-Permadeath = Одна жизнь
-Save anywhere = Сохраняться везде
-Aggressive NPC`s = Агрессивные NPC
-Other difficulity factors: = Другие факторы:
-Easy = Легко
-Normal = Нормально
-Hard = Сложно
-Load map = Загрузить карту
-Deselect = Отменить
-START = НАЧАТЬ
+Keter-class objects are considered the most dangerous ones in Foundation containment. = Объекты класса Кетер считаются наиболее опасными.
+The same can be said for this difficulty level: the SCPs are more aggressive, and you have only one life - when you die, the game is over.
+Тоже самое можно сказать и о уровне сложности: SCP более агрессивны, а также у вас только одна жизнь. Погибли? Игра окончена.
+Custom = Своя
 
-;Меню "ЗАГРУЗИТЬ"
-LOAD GAME = ЗАГРУЗИТЬ ИГРУ
-No saved games. = Нет сохранённых игр.
-Load = Загрузить
-Delete = Удалить
-Are you sure you want to delete this save? = Вы действительно хотите удалить это сохранение?
-Yes = Да
-No = Нет
-
-;Меню "ОПЦИИ"
-OPTIONS = ОПЦИИ
-GRAPHICS = ГРАФИКА
-AUDIO = АУДИО
-CONTROLS = УПРАВЛЕНИЕ
-ADVANCED = ДОПОЛНИТЕЛЬНО
-LOW = НИЗК
-HIGH = ВЫС
-MINIMAL = МИНИМУМ
-REDUCED = СРЕДНЕ
-FULL = ВСЕ
-
-;Меню "ОПЦИИ" -> "ГРАФИКА"
-Enable bump mapping: = Включить bump mapping:
-Vsync: = Вертикальная синхронизация:
-Anti-aliasing: = Сглаживание:
-Enable room lighting: = Включить улучшенное освещение:
-Screen gamma: = Уровень гаммы:
-Particle ammount: = Количество частиц:
-Texture LOD Bias: = Коррекция LOD текстур:
-Save textures in the VRAM: = Загружать текстуры в VRAM:
-
-;Меню "ОПЦИИ" -> "АУДИО"
-Music volume: = Громкость музыки:
-Sound volume: = Громкость звуков:
-Sound auto-release: = 
-Enable user tracks: = Включить польз. треки:
-User track mpde: = Режим польз. треков:
-Repeat: = Повтор:
-Random: = Случайно:
-Scan for User Tracks: = Проверить польз. треки:
-
-;Меню "ОПЦИИ" -> "УПРАВЛЕНИЕ"
-Mouse sensitivity: = Чувствительность мыши:
-Invert mouse Y-axis: = Инвертировать мышь по оси-Y:
-Control configuration: = Клавиши управления:
-Move Forward = Двигаться вперёд
-Strafe Left = Стрейф влево
-Move Backward = Двигаться назад
-Strafe Right = Стрейф вправо
-Quick Save = Быстрое сохр.
-Manial Blink = Моргнуть
-Sprint = Бежать
-Open/Close Inventory = Откр./Закр. инвентарь
-Crouch = Ползти
-Open/Close Console = Откр./Закр. консоль
-
-;Некоторые клавиши для Меню "ОПЦИИ" -> "УПРАВЛЕНИЕ"
-SPACE = Пробел
-Left Shift = Левый Shift
-Right Shift = Правый Shift
-Left CTRL = Левый CTRL
-Right CTRL = Правый CTRL
-Left ALT = Левый ALT
-Right ALT = Правый ALT
-
-;Меню "ОПЦИИ" -> "ДОПОЛНИТЕЛЬНО"
-Show HUD: = Отображать HUD:
-Enable console: = Включить консоль:
-Open console on error: = Открывать консоль при ошибке:
-Achievement popups: = Достижения:
-Show FPS: = Отображать FPS:
-Framelimit: = Лимит кадров:
-Antialiased text: = Сглаживание текста:
-
-;Описание подсказок для "ОПЦИИ" -> "ГРАФИКА"
-"Bump mapping" is used to simulate bumps and dents by distorting the lightmaps. = "Bump mapping" используется для иммитации вмятин, искажая карта света.
-
-;Описание мини-подсказок для всех разделов Опций
-This option cannot be changed in-game. = Эта опция не может быть изменена во время игры.
-This option only takes effect on fullscreen. = Эта опция работает только в полножэкранном режиме.
-Only smoke will produce particles = Рендерится только дым.
-Only a few perticles will be rendered per tick = Рендерятся только некоторые частицы.
-All particles are rendered = Рендерятся все частицы.
-Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent. = Обычно, предпочительно 60 FPS или выше. Если вы замечаете чрезмерное заикивание, при этом параметре, то попробуйте уменьшить его, чтобы сделать FPS более стабильным.
-
-;Загрузочный экран
-LOADING - $ % = ЗАГРУЗКА - $ %
-PRESS ANY KEY TO CONTINUE = НАЖМИТЕ ЛЮБУЮ КЛАВИШУ, ЧТОБЫ ПРОДОЛЖИТЬ
-
-;Пауза
-PAUSED = ПАУЗА
-Difficulty: = Сложность:
-Save: = Сохранение:
-Map seed: = Сид карты:
-Resume = Продолжить
-Load Game = Загрузить игру
-Achievements = Достижения
-ACHIEVEMENTS = ДОСТИЖЕНИЯ
-Options = Опции
-OPTIONS = ОПЦИИ
-QUIT? = ВЫЙТИ?
-Save & Quit = Сохр. и выйти
-Quit = Выйти
-Back = Назад
-
-;Подсказки
-Press $ to open the inventory = Нажмите $, чтобы открыть инвентарь
-Press $ to blink = Нажмите $, чтобы моргнуть
-Press $ to save = Нажмите $, чтобы сохраниться
-Press $ to run = Нажмите $, чтобы бежать
-
-;Предметы (Items.bb)
+[items.bb] - 100%
 Some SCP-420-J = Немного SCP-420-J
 Level 1 Key Card = Ключ-карта 1-го уровня
 Level 2 Key Card = Ключ-карта 2-го уровня
@@ -263,4 +122,260 @@ Old Badge = Старый бейджик
 50 Cent Coin = 50-ти центная монета
 Wallet = Кошелёк
 
-;Что-то ещё...
+[KeyName.bb] - 100%
+Left Ctrl = Левый Ctrl
+Left Shift = Левый Shift
+Right Shift = Правый Shift
+Left Alt = Левый Alt
+Space = Пробел
+Right Control = Правый Ctrl
+Right Alt = Правый Alt
+Up = Вверх
+Left = Влево
+Right = Вправо
+Down = Вниз
+
+[Main.bb] ???%
+The following DLLs were not found in the game directory: = Следующие DLL не были найдены в директории игры:
+LIST OF COMMANDS - PAGE 1/3 = СПИСОК КОМАНД - СТРАНИЦА 1/3
+Use "+Chr(34)+"help 2/3"+Chr(34)+" to find more commands. = Используйте "+Chr(34)+"help 2/3"+Chr(34)+", чтобы найти больше команд.
+Use "+Chr(34)+"help [command name]"+Chr(34)+" to get more information about a command. = Используйте "+Chr(34)+"help [имя команды]"+Chr(34)+", чтобы получить больше информации о команде.
+LIST OF COMMANDS - PAGE 2/3 = СПИСОК КОМАНД - СТРАНИЦА 2/3
+There is no help available for that command. = Помощь для этой команды недоступна.
+ spawned. =  заспавнено.
+Item not found. = Предмен не найден.
+WIREFRAME ON = WIREFRAME АКТИВИРОВАН
+WIREFRAME OFF = WIREFRAME ДЕАКТИВИРОВАН
+173's speed set to  = Скорость SCP-173 установлена на 
+106's speed set to  = Скорость SCP-106 установлена на 
+GOTTA GO FAST = БЫСТРЕЕ БЫСТРОГО
+WHOA SLOW DOWN = ЭЙ, ПОМЕДЛЕННЕЕ!
+GODMODE ON = GODMODE АКТИВИРОВАН
+GODMODE OFF = GODMODE ДЕАКТИВИРОВАН
+NOCLIP ON = NOCLIP АКТИВИРОВАН
+NOCLIP OFF = NOCLIP ДЕАКТИВИРОВАН
+ShowFPS:  = ОтображатьFPS:
+SCP-096 has not spawned. = SCP-096 не обнаружен.
+Debug Mode On = Дебаг активирован
+Debug Mode Off = Дебаг деактивирован
+Stopped all sounds. = Остановленны все звуки.
+Near set to:  = 
+Gamma set to  = Гамма установлена на 
+INFINITE STAMINA ON = БЕСКОНЕЧНЫЙ БЕГ АКТИВИРОВАН
+INFINITE STAMINA OFF = БЕСКОНЕЧНЫЙ БЕГ ДЕАКТИВИРОВАН
+Gate A is now unlocked. = Ворота A разблокированы.
+Gate B is now unlocked. = Ворота B разблокированы.
+Gate A and B are now unlocked. = Ворота A и B разблокированы.
+[REDACTED] = [УДАЛЕНО]
+Subject D-9341 found dead in Sector [REDACTED]. = Субъект D-9341 был обнаружен мёртвым в секторе [УДАЛЕНО].
+The subject appears to have attained no physical damage, and there is no visible indication as to what killed him.  = Похоже, что субъект не получил физических повреждений или любых других признаков того, что его убило. 
+Body was sent for autopsy. = Тело было отправлено на вскрытие.
+The subject appears to have scribbled the letters "+Chr(34)+"kys"+Chr(34)+" in his own blood beside him.  = Субъект нацарапал рядок с собой буквы "+Chr(34)+"kys"+Chr(34)+" собственной кровью.  
+No other signs of physical trauma or struggle can be observed. Body was sent for autopsy. = Никаких видимих следов физических трафм или борьбы не было замечено. Тело было отправлено на вскрытие.
+Teleported to coordinates (X|Y|Z):  = Телепортирован на координаты (X|Y|Z): 
+NOTARGET OFF = NOTARGET ДЕАКТИВИРОВАН
+NOTARGET ON = NOTARGET АКТИВИРОВАН
+What pumpkin? = Какая свинья?
+Too few parameters. This command requires 3. = Слишком мало параметров. Эта команда требует 3.
+Changed event states from current player room to: = Состояние события в комнате, для текущего игрока, изменено на: 
+The current room doesn't has any event applied. = В текущей комнате не применяется какое-либо событие.
+Spawned particle emitter with ID  "+Int(StrTemp)+" at player's position. = Создан излучатель частиц с ID  "+Int(StrTemp)+" на пазиции игрока.
+Particle emitter with ID "+Int(StrTemp)+" not found. = Излучатель частиц с ID "+Int(StrTemp)+" не найден.
+Achievemt "+AchievementStrings(Int(StrTemp))+" unlocked. = Достижение "+AchievementStrings(Int(StrTemp))+" разблокировано.
+Achievement with ID "+Int(StrTemp)+" doesn't exist. = Достижение с ID "+Int(StrTemp)+" не существует.
+Command not found. = Команда не найдена.
+Console commands:  = Консольные команды
+  - teleport [room name] =   - teleport [имя комнаты]
+  - noclipspeed [x] (default = 2.0) =   - noclipspeed [x] (по умолчанию = 2.0)
+  - spawnitem [item name] =   - spawnitem [имя предмета]
+  - 173speed [x] (default = 35) =   - 173speed [x] (по умолчанию = 35)
+  - spawn [npc type] =   - spawn [тип npc]
+A keycard is required to operate this door. = Для взаимодействия с дверью, требуется Ключ-карта.
+The keycard was inserted into the slot but nothing happened. = Вы вставили Ключ-карту в слот, но ничего не произошло.
+The keycard was inserted into the slot. = Ключ-карта было вставлена в слот.
+A keycard with a higher security clearance is required to operate this door. = Для взаимодействия с дверью, требуется Ключ-карта более высокого уровня допуска.
+You place the palm of the hand onto the scanner. The scanner reads:  = Вы кладёте ладонь на сканер. Сканер пишет: 
+DNA verified. Access granted. = ДНК проверено. Доступ разрешён.
+DNA does not match known sample. Access denied. = ДНК не соответствует образцу. В доступе отказано.
+You pushed the button but nothing happened. = Вы нажали на кнопку, но ничего не произошло.
+The door appears to be locked. = Дверь заперта.
+The elevator appears to be broken. = Лифт сломан.
+You called the elevator. = Вы вызвали лифт.
+You already called the elevator. = Вы уже вызвали лифт.
+Stop spamming the button. = Хватит нажимать на кнопку.
+Pressing it harder does not make the elevator come faster. = Сильное нажатие на кнопку не ускорит лифт.
+If you continue pressing this button I will generate a Memory Access Violation. = Если Вы продолжите нажимать на кнопку, то я вызову Ошибку доступа к памяти.
+The eyedrops are causing your eyes to tear up. = 
+You cannot save in this location. = Вы не можете сохраниться в этой локации
+You cannot save at this moment. = Вы не можете сохраниться в этот момент.
+ (game is loading) =  (игра загружается)
+Saving is only permitted on clickable monitors scattered throughout the facility.= Сохраняться разрешено только у интерактивных мониторов, которые разбросаны по всему комплексу.
+Quick saving is disabled. = Быстрое сохранение отключено.
+Game progress saved. = Игра сохранена.
+Press "+KeyName(KEY_SAVE)+" to save. = Нажмите "+KeyName(KEY_SAVE)+", чтобы сохраниться.
+Blitz3D Error! = В Blitz3D произошла ошибка!
+SCPs encountered:  = Найдено SCP: 
+Achievements unlocked:  = Получено достижений: 
+Rooms found:  = Обнаружено комнат: 
+Documents discovered:  = Открыто документов: 
+Items refined in SCP-914: = Улучшено предметов в SCP-914:
+ACHIEVEMENTS = ДОСТИЖЕНИЯ
+MAIN MENU = ГЛАВНОЕ МЕНЮ
+A Class D jumpsuit found in [DATA REDACTED]. Upon further examination, the jumpsuit was found to be filled with 12.5 kilograms of blue ash-like substance.  = 
+Chemical analysis of the substance remains non-conclusive. Most likely related to SCP-914. = 
+You are feeling faint from the amount of blood you have lost. = Вы чувствуете слабость из-за потери крови.
+EntityX(Collider) = NaN, RESETTING COORDINATES    -    New coordinates:  = EntityX(Коллайдер) = NaN, СБРОС КООРДИНАТ    -    Новые координаты: 
+The pain in your stomach is becoming unbearable. = Боль в желудке становится невыносимой.
+Your stomach is aching. = Ваш желудок болит
+He died of a cardiac arrest after reading SCP-1025, that's for sure. Is there such a thing as psychosomatic cardiac arrest, or does SCP-1025 have some  = 
+anomalous properties we are not yet aware of? = 
+
+[Menu.bb] - 100%
+DON'T BLINK = НЕ МОРГАЙ
+Secure. Contain. Protect. = Обезопасить. Удержать. Обезвредить.
+You want happy endings? Fuck you. = Тебе нужны счастливые концовки? Отсоси.
+Sometimes we would have had time to scream. = Иногда у нас было время кричать
+NIL = НИЧТО
+NO = НЕТ
+black white black white black white gray = чёрный белый чёрный белый чёрный белый серый
+Stone does not care = Камень не волнует
+It controls the doors = Оно управляет дверьми
+It has taken over everything = Он взял всё на себя
+The spiral is growing = Спираль растёт
+Some kind of gestalt effect due to massive reality damage. = Какой-то эффект гештальта из-за огромного ущерба от реальности.
+NEW GAME = НОВАЯ ИГРА
+LOAD GAME = ЗАГРУЗИТЬ ИГРУ
+OPTIONS = ОПЦИИ
+QUIT = ВЫХОД
+Name: = Имя:
+Map seed: = Сид карты:
+Selected map: = Текущая карта:
+Deselect = Отменить
+Intro = Включить вступительную сцену:
+Difficulty = Сложность
+Permadeath = Одна жизнь
+Save anywhere = Сохраняться везде
+Aggressive NPCs = Агрессивные NPC
+Other difficulty factors: Easy = Другие факторы сложности: Легко
+Other difficulty factors: Normal = Другие факторы сложности: Нормально
+Other difficulty factors: Hard = Другие факторы сложности: Тяжело
+Load map = Загрузить карту
+START = НАЧАТЬ
+No saved games. = Нет сохранённых игр.
+Load = Загрузить
+Delete = Удалить
+Are you sure you want to delete this save? = Вы действительно хотите удалить это сохранение?
+Yes = Да
+No = Нет
+GRAPHICS = ГРАФИКА
+AUDIO = АУДИО
+CONTROLS = УПРАВЛЕНИЕ
+ADVANCED = ДОПОЛНИТЕЛЬНО
+Enable bump mapping: = Включить bump mapping:
+VSync: = Верт. синх.:
+Anti-aliasing: = Сглаживание:
+Enable room lights: = Улучшенное освещение комнат:
+Screen gamma = Гамма:
+Particle amount: = Кол-во частиц:
+MINIMAL = МИНИМУМ
+REDUCED = СРЕДНЕ
+FULL = ВСЕ
+Texture LOD Bias: = LOD`ы текстур:
+Save textures in the VRAM: : Сохранять текстуры в VRAM:
+Music volume: = Громкоть музыки:
+Sound volume: = Громкость звука:
+Sound auto-release: = Авто-высвобождение звука:
+Enable user tracks: = Включить польз. треки:
+User track mode: = Режим польз. треков:
+Repeat = Повтор
+Random = Случайно
+Scan for User Tracks = Сканировать польз. треки
+User tracks found ("+UserTrackCheck2+"/"+UserTrackCheck+" successfully loaded) = Пользоватильские треки обнаружены ("+UserTrackCheck2+"/"+UserTrackCheck+" было загружено)
+Mouse sensitivity: = Чувствительность мыши
+Invert mouse Y-axis: = Инвертировать по оси-Y
+Control configuration: = Настройка управления.
+Move Forward = Вперёд
+Strafe Left = Влево
+Move Backward = Назад
+Strafe Right = Вправо
+Quick Save = Быстрое сохранение
+Manual Blink = Моргнуть
+Sprint = Бежать
+Open/Close Inventory = Откр/Закр инвентарь
+Crouch = Присесть
+Open/Close Console = Откр/Закр консоль
+Show HUD: = Отображать HUD:
+Enable console: = Включить консоль:
+Open console on error: = Открывать консоль при ошибке:
+Achievement popups: = Достижения:
+Show FPS: = Отображать FPS:
+Framelimit: = Лимит кадров:
+Antialiased text: = Сглаживание текста:
+LOAD MAP = ЗАГРУЗИТЬ КАРТУ
+No saved maps. Use the Map Creator to create new maps. = Нет сохранённых карт. Используйте Редактор карт, чтобы создать карту.
+Resolution:  = Разрешение:
+Graphics: = Графическая карта:
+Fullscreen = Полноэкранный режим
+Borderless = Оконный режим
+windowed mode = без рамок
+16 Bit = 16 Бит
+Use launcher = Использовать лаунчер
+Current Resolution: = Текущее разрешение
+(upscaled to = (увеличено до
+(downscaled to = (уменьшено до
+Check for = Проверять
+updates on = обновления
+launch = при запуске
+LAUNCH = ИГРАТЬ
+EXIT = ВЫЙТИ
+It will happen on  = Это произойдёт 
+A very fine radio might prove to be useful.
+ThIS PLaCE WiLL BUrN = ЭтО МЕсТО ДоЛжНО СГоРеТЬ
+You cannot control it. = Ты не можешь это контролировать.
+YOU NEED TO TRUST IT = ВЫ ДОЛЖНЫ ДОВЕРЯТЬ ЕМУ
+Look my friend in the eye when you address him, isn't that the way of the gentleman?
+Jorge has been expecting you. = Jorge ждёт вас.
+Make her a member of the midnight crew.
+oncluded that coming here was a mistake. We have to turn back.
+This alloy contains the essence of my life.
+LOADING - = ЗАГРУЗКА - 
+PRESS ANY KEY TO CONTINUE = НАЖМИТЕ ЛЮБУЮ КЛАВИШУ
+LOW = НИЗК
+HIGH = ВЫС
+LOADING: = ЗАГРУЗКА:
+Bump mapping"+Chr(34)+" is used to simulate bumps and dents by distorting the lightmaps. = Bump mapping"+Chr(34)+" используется для иммитации вмятин, искажая карты света.
+This option cannot be changed in-game. = Эта опция не может быть изменена в игре.
+Vertical sync"+Chr(34)+" waits for the display to finish its current refresh cycle before calculating the next frame, preventing issues such as = Вертикальная синхронизация"+Chr(34)+" ожидает, пока дисплей завершит текущий цикл обноления, перед построением следующего кадра. Предотвращает 
+screen tearing. This ties the game's frame rate to your display's refresh rate and may cause some input lag. = разрыв кадра. Частота обновлений кадров синхронизируется с частотой обновления вашего монитора. Что может вызвать некоторые задержки.
+Anti-Aliasing"+Chr(34)+" is used to smooth the rendered image before displaying in order to reduce aliasing around the edges of models. = Сглаживание"+Chr(34)+" используется для сглаживания изображения, перед его отображения. Позволяет избавиться от лесенок на моделях.
+This option only takes effect in fullscreen. = Эта опция работает только в полноэкранном режиме.
+Toggles the artificial lens flare effect generated over specific light sources. = Создаёт эффект вспышки на некоторых источникаъ света.
+Gamma correction"+Chr(34)+" is used to achieve a good brightness factor to balance out your display's gamma if the game appears either too dark or bright. = Коррекция гаммы"+Chr(34)+" поможет достичь баланса яркости, если игра кажется слишком тёмной или яркой.
+Setting it too high or low can cause the graphics to look less detailed. = Установка слишком большого или низкого значения может вызвать ухудшение детализации изображения.
+Texture LOD Bias"+Chr(34)+" affects the distance at which texture detail will change to prevent aliasing. Change this option if textures flicker or look too blurry. = LOD`ы текстур"+Chr(34)+" изменяет дистанцию, на которой будет изменяться детализация текстур. Измените если текстуры мерцают, или быглядят слишком размытыми.
+Determines the amount of particles that can be rendered per tick. = Определяет кол-во частиц, которые могут быть отображены в кадре.
+Only smoke will produce particles. = Отображается только дым.
+Only a few perticles will be rendered per tick. = Отображаются только некоторые частицы.
+All particles are rendered. = Отображаются все частицы.
+Textures that are stored in the Video-RAM will load faster, but this also has negative effects on the texture quality as well. = Текстуры, которые хранятся в Видеопамяти, будут загружаться быстрее. Однако, это может вызвать ухудшение их качества.
+Adjusts the volume of background music. Sliding the bar fully to the left will mute all music. = Громкость фоновой музыки. Проведите слайдер влево до конца, для полного отключения музыки.
+Adjusts the volume of sound effects. Sliding the bar fully to the left will mute all sounds. = Громкость звуковых эффектов. Проведите слайдер влево до конца, для полного отключения звука.
+Sound auto-release"+Chr(34)+" will free a sound from memory if it not used after 5 seconds. Prevents memory allocation issues. Авто-высвобождение звука"+Chr(34)+" высвободит из памяти звук, который не используется более 5 секунд. Предотвращает ошибки с распределением памяти.
+Toggles the ability to play custom tracks over channel 1 of the radio. These tracks are loaded from the  = Включает вохможность прослушивания пользовательский треков на 1-ом канале радио. Треки загружаются из 
+ directory. Press =  Нажмите
+ when the radio is selected to change track. = , когда выбрано радио, чтобы прослушать ваши треки.
+Sets the playing mode for the custom tracks. "+Chr(34)+"Repeat"+Chr(34)+" plays every file in alphabetical order. "+Chr(34)+"Random"+Chr(34)+" chooses the  = Режим проигрывания пользовательский треков. "+Chr(34)+"Повтор"+Chr(34)+" - файлы воспроизводятся в алфаивитном порядке. "+Chr(34)+"Случайно"+Chr(34)+" файлы 
+next track at random. = воспроизводятся в случайно порядке.
+Note that the random mode does not prevent previously played tracks from repeating. = Обратите внимание, что в Случайном режиме треки могут повторяться.
+Re-checks the user tracks directory for any new or removed sound files. = Пере-проверить папке с треками на наличие новых или удалённых треков.
+Adjusts the speed of the mouse pointer. = Скорость указателя мыши
+Invert mouse Y-axis"+Chr(34)+" is self-explanatory. = Не требует пояснений.
+Configure the in-game control scheme. = Настройка управления в игре.
+Display the blink and stamina meters. = Отображает индикатор моргания и бега.
+Toggles the use of the developer console. Can be used in-game by pressing  = Включает возможность использования Консоли разработчика в игре. Открывается в игре по нажатию клавиши 
+Open console on error"+Chr(34)+" is self-explanatory. = Не требует пояснений.
+Displays a pop-up notification when an achievement is unlocked. = Отображает уведомление при получении нового достижения.
+Displays the frames per second counter at the top left-hand corner. = Отображает кол-во кадров в секунду в левом верхнем углу экрана.
+Limits the frame rate that the game can run at to a desired value. = Ограничиает частоту кадров в игре.
+Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent. = Обычно, предпочительно 60 FPS или выше. Если вы замечаете чрезмерное заикивание, при этом параметре, то попробуйте уменьшить его, чтобы сделать FPS более стабильным.
+Antialiased text"+Chr(34)+" smooths out the text before displaying. Makes text easier to read at high resolutions. = Сглаживание текста"+Chr(34)+" сглаживает текст, делая его читабельным на мониторах с большим разрешением экрана.
