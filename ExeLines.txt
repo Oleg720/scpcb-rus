@@ -120,6 +120,8 @@ Movie Ticket = Билет в кино
 Old Badge = Старый бейджик
 50 Cent Coin = 50-ти центная монета
 Wallet = Кошелёк
+Upgraded pill = Улучшенная таблетка
+Pill = Таблетка
 
 [KeyName.bb] - 100%/100%
 Left Ctrl = Левый Ctrl
@@ -316,6 +318,9 @@ You are not able to wear SCP-1499 and a hazmat suit at the same time. = Вы н�
 Huh? This guy looks just like me! = А? Этот парень выглядит так же, как и я!
 Isn't this the key to that old shack? The one where I... No, it can't be. = Разве это не ключ от той старой хижины? Той, где я... Нет, этого не может быть!
 Why does this seem so familiar? = Почему это кажется мне таким знакомым?
+You closed the locket. = Вы закрыли медальон.
+You opened the locket. = Вы открыли медальон.
+You swallowed the pill. = Вы проглотили таблетку.
 STOP HIDING = ХВАТИТ ПРЯТАТЬСЯ
 ACHIEVEMENTS = ДОСТИЖЕНИЯ
 OPTIONS = ОПЦИИ
