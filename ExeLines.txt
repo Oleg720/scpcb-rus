@@ -1,9 +1,9 @@
 ﻿;Перевод строк для EXE игры SCP:CB 1.3.10
 
-[Achivments.bb] - 100%
+[Achivments.bb] - 100%/100%
 Achievement Unlocked - = Достижение разблокировано 
 
-[Difficulty.bb] - 100%
+[Difficulty.bb] - 100%/100%
 Safe = Безопасная
 The game can be saved any time. However, as in the case of SCP Objects, a Safe classification does not mean that handling it does not pose a threat. = Игра может быть сохранена в любой момент. Однако, это не значит, что можно расслабиться.
 Euclid = Евклид
@@ -12,11 +12,10 @@ such that reliable containment is not always possible. = содержание т
 In Euclid difficulty, saving only allowed at specific locations marked by lit up computer screens. = На сложности Евклид, сохранение возможно только у мониторов.
 Keter = Кетер
 Keter-class objects are considered the most dangerous ones in Foundation containment. = Объекты класса Кетер считаются наиболее опасными.
-The same can be said for this difficulty level: the SCPs are more aggressive, and you have only one life - when you die, the game is over.
-Тоже самое можно сказать и о уровне сложности: SCP более агрессивны, а также у вас только одна жизнь. Погибли? Игра окончена.
+The same can be said for this difficulty level: the SCPs are more aggressive, and you have only one life - when you die, the game is over. = Тоже самое можно сказать и о уровне сложности: SCP более агрессивны, а также у вас только одна жизнь. Погибли? Игра окончена.
 Custom = Своя
 
-[items.bb] - 100%
+[items.bb] - 100%/100%
 Some SCP-420-J = Немного SCP-420-J
 Level 1 Key Card = Ключ-карта 1-го уровня
 Level 2 Key Card = Ключ-карта 2-го уровня
@@ -31,7 +30,7 @@ Document SCP-860 = Документ о SCP-860
 Document SCP-860-1 = Документ о SCP-860-1
 SCP-093 Recovered Materials = Материалы, добытые посредством SCP-093
 Document SCP-106 = Документ о SCP-106
-Dr. Allok's Note = 
+Dr. Allok's Note =  Записка Д-ра Аллока
 Recall Protocol RP-106-N = Протокол возврата RP-106-N
 Document SCP-682 = Документ о SCP-682
 Document SCP-173 = Документ о SCP-173
@@ -60,19 +59,19 @@ Dr L's Note = Записка Д-ра Л.
 Blood-stained Note = Кровавая записка
 Dr. L's Burnt Note = Записка Д-ра. Бэнта
 Dr L's Burnt Note = Записка Д-ра Бэнта
-Scorched Note = Выжженная записка
+Scorched Note = Разъеденная записка
 Journal Page = Страница журнала
 Log #1 = Лог #1
 Log #2 = Лог #2
 Log #3 = Лог #3
 Strange Note = Странная записка
-Nuclear Device Document = 
+Nuclear Device Document = Предложение размещения боеголовок
 Class D Orientation Leaflet = Ориентационная листовка Класса-D
 Note from Daniel = Записка от Даниэля
 Burnt Note = Сгоревшая записка
-Mysterious Note = Мистическая записка
+Mysterious Note = Загадочная записка
 Mobile Task Forces = Мобильная оперативная группа
-Security Clearance Levels = 
+Security Clearance Levels = Документ о Уровнях допуска
 Object Classes = Классы объектов
 Document = Докумет
 Note = Записка
@@ -122,7 +121,7 @@ Old Badge = Старый бейджик
 50 Cent Coin = 50-ти центная монета
 Wallet = Кошелёк
 
-[KeyName.bb] - 100%
+[KeyName.bb] - 100%/100%
 Left Ctrl = Левый Ctrl
 Left Shift = Левый Shift
 Right Shift = Правый Shift
@@ -135,7 +134,7 @@ Left = Влево
 Right = Вправо
 Down = Вниз
 
-[Main.bb] ???%
+[Main.bb] 100%/97%
 The following DLLs were not found in the game directory: = Следующие DLL не были найдены в директории игры:
 LIST OF COMMANDS - PAGE 1/3 = СПИСОК КОМАНД - СТРАНИЦА 1/3
 Use "+Chr(34)+"help 2/3"+Chr(34)+" to find more commands. = Используйте "+Chr(34)+"help 2/3"+Chr(34)+", чтобы найти больше команд.
@@ -203,9 +202,9 @@ The elevator appears to be broken. = Лифт сломан.
 You called the elevator. = Вы вызвали лифт.
 You already called the elevator. = Вы уже вызвали лифт.
 Stop spamming the button. = Хватит нажимать на кнопку.
-Pressing it harder does not make the elevator come faster. = Сильное нажатие на кнопку не ускорит лифт.
+Pressing it harder does not make the elevator come faster. = Частое нажатие на кнопку не ускорит лифт.
 If you continue pressing this button I will generate a Memory Access Violation. = Если Вы продолжите нажимать на кнопку, то я вызову Ошибку доступа к памяти.
-The eyedrops are causing your eyes to tear up. = 
+The eyedrops are causing your eyes to tear up. = Глазные капли заставляют ваши глаза слезиться
 You cannot save in this location. = Вы не можете сохраниться в этой локации
 You cannot save at this moment. = Вы не можете сохраниться в этот момент.
  (game is loading) =  (игра загружается)
@@ -221,19 +220,140 @@ Documents discovered:  = Открыто документов:
 Items refined in SCP-914: = Улучшено предметов в SCP-914:
 ACHIEVEMENTS = ДОСТИЖЕНИЯ
 MAIN MENU = ГЛАВНОЕ МЕНЮ
-A Class D jumpsuit found in [DATA REDACTED]. Upon further examination, the jumpsuit was found to be filled with 12.5 kilograms of blue ash-like substance.  = 
-Chemical analysis of the substance remains non-conclusive. Most likely related to SCP-914. = 
+A Class D jumpsuit found in [DATA REDACTED]. Upon further examination, the jumpsuit was found to be filled with 12.5 kilograms of blue ash-like substance.  = Комбинезон класса D был найден в [ДАННЫЕ УДАЛЕНЫ]. При дальнейшей экспертизе выяснилось, что комбинезон был наполнен 12.5 килограммами субстанции в виде синего пепла. 
+Chemical analysis of the substance remains non-conclusive. Most likely related to SCP-914. = Химический анализ субстанции остаётся неокончательным. Скорее всего, всё это связано с SCP-914.
 You are feeling faint from the amount of blood you have lost. = Вы чувствуете слабость из-за потери крови.
 EntityX(Collider) = NaN, RESETTING COORDINATES    -    New coordinates:  = EntityX(Коллайдер) = NaN, СБРОС КООРДИНАТ    -    Новые координаты: 
 The pain in your stomach is becoming unbearable. = Боль в желудке становится невыносимой.
 Your stomach is aching. = Ваш желудок болит
-He died of a cardiac arrest after reading SCP-1025, that's for sure. Is there such a thing as psychosomatic cardiac arrest, or does SCP-1025 have some  = 
-anomalous properties we are not yet aware of? = 
+He died of a cardiac arrest after reading SCP-1025, that's for sure. Is there such a thing as psychosomatic cardiac arrest, or does SCP-1025 have some  = Есть ли такая вещь, как психосоматический сердечный приступ, или же у SCP-1025 есть некоторые аномальные свойства, о которых мы ещё не в курсе?
+anomalous properties we are not yet aware of? =      
+ACCESS CODE:  = КОД ДОСТУПА: 
+ACCESS DENIED = В ДОСТУПЕ ОТКАЗАНО
+You cannot combine these two items. = Вы не можете объеденить два этих предмета.
+Double click on this item to take it off. = Дважды щёлкните по этому предмету, чтобы снять его.
+The paperclip is not strong enough to hold any more items. = В планшет не помещается больше предметов.
+This document was added to the clipboard. = Документ добавлен на планшет
+was added to the clipboard. = добавлен на планшет
+The  =  
+The wallet is full. = Кошелёк полный.
+You put  = Вы положили 
+into the wallet. = в кошелёк.
+You replaced the navigator's battery. = Вы заменили батарею навигатора.
+There seems to be no place for batteries in this navigator. = Кажется, в этом навигаторе нет отсека для батареек.
+There seems to be no place for batteries in this radio. = Кажется, в этой рации нет отсека для батареек.
+The battery does not fit inside this radio. = Батарея не помещается внутри этой рации.
+You replaced the radio's battery. = Вы заменили батарею рации.
+You replaced the goggles' battery. = Вы заменили батарею очков.
+There seems to be no place for batteries in these night vision goggles. = Кажется, в этих очках ночного видения нет отсека для батареек.
+The battery does not fit inside this navigator. = Батарея не помещается внутри этого навигатора.
+You removed the goggles. = Вы сняли очки.
+You put on the goggles. = Вы надели очки.
+You removed the glasses. = Вы сняли очки.
+You put on the glasses. = Вы надели очки.
+You removed the ring. = Вы сняли кольцо.
+You put on the ring. = Вы надели кольцо.
+Subject D-9341 was shot dead after attempting to attack a member of Nine-Tailed Fox. Surveillance tapes show that the subject had been  = Субъект D-9341 был застрелен после попытки напасть на члена "Девятихвостой Лисы". Записи с камер наблюдения показывают, 
+wandering around the site approximately 9 minutes prior, shouting the phrase " + Chr(34) + "get rid of the four pests = что примерно за 9 минут до этого субъект блуждал по Зоне, выкрикивая фразу " + Chr(34) + "избавиться от четырёх вредителей
+ in chinese. SCP-1123 was found in [REDACTED] nearby, suggesting the subject had come into physical contact with it. How  =  на китайском языке. Неподалёку в [УДАЛЕНО] был обнаружен SCP-1123, что даёт предположить, что субъект вступил в физический контакт с ним. Как 
+exactly SCP-1123 was removed from its containment chamber is still unknown. = именно SCP-1123 был изъят из своей камеры содержания, до сих пор неизвестно.
+You swallowed the pill. Your wounds are healing rapidly and your nausea is fading. = Вы проглотили таблетку. Выши раны заживают, а тошнота прохожит.
+You swallowed the pill. Your nausea is fading. = Вы проглотили таблетку. Тошнота исчезает.
+You swallowed the pill. Your wounds are healing rapidly. = Вы проглотили таблетку. Выши раны заживают.
+You started bleeding heavily. = Вы начали тяжело кровоточить.
+Your wounds are healing up rapidly. = Ваши раны быстро заживают
+You feel much better. = Вы чувствуете себя намного лучше.
+You feel nauseated. = Вы чувствуете тошноту.
+For some inexplicable reason. You find yourself inside the pocket dimension. = По какой-то неведомой причине, вы оказались в карманном измерении.
+You do not need to use a first aid right now. = Нет необходимости использовать аптечку сейчас.
+You bandaged the wounds and took a painkiller. You feel fine.
+You bandaged the wounds and took a painkiller. You feel fine. = Вы перевязали раны и приняли обезболивающее. Вы чувствуете себя лучше.
+You bandaged the wounds and took a painkiller, but you were not able to stop the bleeding. = Вы перевязали раны и приняли обезболивающее, но не смогли остановить кровотечение.
+You bandaged the wounds and took a painkiller, but you still feel sore. = Вы перевязали раны и приняли обезболивающее, но всё ещё чувствуете боль.
+The wounds were way too severe to staunch the bleeding completely. = Раны были слишком большими, чтобы остановить кроотечение.
+You managed to stop the bleeding. = Вам удалось остановить кровотечение.
+You took a painkiller, easing the pain slightly. = Вы приняли обезболивающее, слегка облегчив боль.
+You took a painkiller, but it still hurts to walk. = Вы приняли обезболивающее, но вам всё ещё больно ходить.
+You have becomed overwhelmedwithadrenalineholyshitWOOOOOO~! = Вы были перегружены адреналиномтвоюматьОДААААА~!
+You suddenly find it very difficult to turn your head. = Неожиданно, вам становится трудно поворачивать голову.
+You bandaged the wounds. The bleeding stopped completely and you feel fine. = Вы перевязали раны. Кровотечение полностью прекратилось, и вы чувствуете себя хорошо.
+You bandaged the wounds and blood started pouring heavily through the bandages. = Вы перевязали раны, но кровь начала резко литься через повязки.
+Hey, I remember this movie! = Эй, я помню это кино!
+You injected yourself with the syringe and feel a slight adrenaline rush. = Вы вкололи себе шприц, и почувствовали лёгкий прилив адреналина.
+You injected yourself with the syringe and feel an adrenaline rush. = Вы вкололи себе шприц, и почувствовали прилив адреналина.
+You injected yourself with the syringe and feel a huge adrenaline rush. = Вы вкололи себе шприц, и почувствовали сильный прилив адреналина.
+You injected yourself with the syringe and feel a humongous adrenaline rush. = Вы вкололи себе шприц, и почувствовали чрезмерный прилив адреналина.
+You injected yourself with the syringe and feel a pain in your stomach. = Вы вкололи себе шприц, и почувствовали боль в животе.
+Use the numbered keys 1 through 5 to cycle between various channels. = Используйте цифровые клавиши от 1 до 5, для переключения между каналами.
+        USER TRACK PLAYER -  =         ПОЛЬЗОВАТЕЛЬСКИЙ ТРЕК ПРОИГРЫВАЕТСЯ - 
+NOT ENABLED      = НЕ ВКЛЮЧЕНО     
+NO TRACKS FOUND      = ТРЕКИ НЕ ОБНАРУЖЕНЫ     
+WARNING - CONTAINMENT BREACH = ВНИМАНИЕ - НАРУШЕНИЙ УСЛОВИЙ СОДЕРЖАНИЯ
+SCP Foundation On-Site Radio = Внутренняя радиостанция SCP Foundation
+EMERGENCY CHANNEL - RESERVED FOR COMMUNICATION IN THE EVENT OF A CONTAINMENT BREACH = АВАРИЙНЫЙ КАНАЛ - ЗАРЕЗЕРВИРОВАН НА СЛУЧАЙ НАРУШЕНИЯ УСЛОВИЙ СОДЕРЖАНИЯ
+I don't have anything to light it with. Umm, what about that... Nevermind. = У меня нет ничего, чем бы я мог зажечь это. Хм, а как на счёт... Неважно.
+You are unable to get lit. = Вы не можете зажечь это.
+I quit that a long time ago. = Я бросил давным-давно.
+Even if I wanted one, I have nothing to light it with. = Даже если бы я захотел. Мне всё равно нечем это зажечь.
+Could really go for one now... Wish I had a lighter. = Одна не помешала бы... Жаль, что у меня нет зажигалки.
+Don't plan on starting, even at a time like this. = Не планирую начинать, даже в такое время.
+Subject D-9341 found in a comatose state in [DATA REDACTED]. The subject was holding what appears to be a cigarette while smiling widely.  = Субъект D-9341 найден в коматозном состоянии в [ДАННЫЕ УДАЛЕНЫ]. Субъект держал предмет, похожий на сигарету, и широко улыбался. 
+Chemical analysis of the cigarette has been inconclusive, although it seems to contain a high concentration of an unidentified chemical  = Химический анализ сигареты было безрезультатным, но похоже, что она содержит высокую концентрацию неизвестных химикатов, 
+whose molecular structure is remarkably similar to that of tetrahydrocannabinol. = молекулярная структура которых похожа на тетрагидроканнабинол.
+UH WHERE... WHAT WAS I DOING AGAIN... MAN I NEED TO TAKE A NAP... = ЭМ, ГДЕ... ЧТО Я ОПЯТЬ НАТВОРИЛ... ЧУВАК, МНЕ НУЖНО ВЗДРЕМНУТЬ...
+You removed the hazmat suit. = Вы сняли костюм Химзащиты.
+You put on the hazmat suit. = Вы надели костюм Химзащиты.
+You removed the vest. = Вы сняли бронижилет
+You put on the vest and feel slightly encumbered. = Вы надели бронижилет, и почувствовали себя слегка обременённым.
+You put on the vest and feel heavily encumbered. = Вы надели бронижилет, и почувствовали себя очень обременённым.
+You removed the gas mask. = Вы сняли противогаз.
+You put on the gas mask and you can breathe easier. = Вы надели противогаз, и вам стало легче дышать.
+You put on the gas mask. = Вы надели противогаз.
+ERROR 06 = ОШИБКА 06
+LOCATION UNKNOWN = ЛОКАЦИЯ НЕИЗВЕСТНА
+MAP DATABASE OFFLINE = БАЗА ДАННЫХ ОФФЛАЙН
+You are not able to wear SCP-1499 and a hazmat suit at the same time. = Вы не можете носить SCP-1499 и костюм химзащиты одновременно.
+Huh? This guy looks just like me! = А? Этот парень выглядит так же, как и я!
+Isn't this the key to that old shack? The one where I... No, it can't be. = Разве это не ключ от той старой хижины? Той, где я... Нет, этого не может быть!
+Why does this seem so familiar? = Почему это кажется мне таким знакомым?
+STOP HIDING = ХВАТИТ ПРЯТАТЬСЯ
+ACHIEVEMENTS = ДОСТИЖЕНИЯ
+OPTIONS = ОПЦИИ
+QUIT? = ВЫЙТИ?
+PAUSED = ПАУЗА
+YOU DIED = ВЫ ПОГИБЛИ
+Difficulty:  = Сложность: 
+Save:  = Сохранение: 
+Map seed:  = Сид карты: 
+Back = Назад
+//Налее будут идти настройки и их описание. См. перевод ниже (В разделе Manu.bb)
+Resume = Продолжить
+Load Game = Загрузить игру
+Achievements = Достижения
+Options = Опции
+Quit to Menu = Выйти в меню
+Quit = Выйти
+OUT OF RANGE = ВНЕ ДИАПАЗОНА
+DISPENSING... = РАЗЛИВ...
+You feel kinda feverish. = 
+The nausea's getting worse. = Тошнота усиливается.
+You feel very faint. = Вы чувствуете слабость.
+Subject D-9341 found ingesting Dr. [REDACTED] at Sector [REDACTED]. Subject was immediately terminated by Nine-Tailed Fox and sent for autopsy.  = Субъект D-9341 поедал доктора [УДАЛЕНО] в секторе [УДАЛЕНО]. Субъект был немедленно уничтожен Девятихвостой Лисой и был направлен на вскрытие. 
+SCP-008 infection was confirmed, after which the body was incinerated. = Инфекция SCP-008 была подтверждена, после чего тело было сожжено.
+The whereabouts of SCP-1499 are still unknown, but a recon team has been dispatched to investigate repots of a violent attack to a church in the Russian town of [REDACTED]. = Местонахождение SCP-1499 до сих пор неизвестно, однако разведгруппа отправлена на расследование сообщений о нападении с применением насилия на церковь в российском городе [УДАЛЕНО].
+The batteries in these night vision goggles died. = Батареи в этих очках ночного зрения разряжены.
+REFRESHING DATA IN = ОБНОВЛЕНИЕ ДАННЫХ ЧЕРЕЗ
+SECONDS = СЕКУНД
+WARNING: LOW BATTERY = ВНИМАНИЕ: МАЛЫЙ ЗАРЯД БАТАРЕИ
+Blitz3D Error! Details in  = В Blitz3D произошла ошибка! Детали в 
+You can't use that item while wearing a hazmat suit. = Вы не можете использовать этот предмет, поскольку на вас надет костюм химзащиты.
+You can't use that item while wearing a gas mask. = Вы не можете использовать этот предмет, поскольку на вас надет противогаз.
+You can't use that item while wearing headgear. = Вы не можете использовать этот предмет, поскольку на вас надет головной убор.
 
-[Menu.bb] - 100%
+[Menu.bb] - 100%/100%
 DON'T BLINK = НЕ МОРГАЙ
 Secure. Contain. Protect. = Обезопасить. Удержать. Обезвредить.
-You want happy endings? Fuck you. = Тебе нужны счастливые концовки? Отсоси.
+You want happy endings? Fuck you. = Тебе нужны счастливые концовки? Хуй тебе!
 Sometimes we would have had time to scream. = Иногда у нас было время кричать
 NIL = НИЧТО
 NO = НЕТ
@@ -379,3 +499,5 @@ Displays the frames per second counter at the top left-hand corner. = Отобр
 Limits the frame rate that the game can run at to a desired value. = Ограничиает частоту кадров в игре.
 Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent. = Обычно, предпочительно 60 FPS или выше. Если вы замечаете чрезмерное заикивание, при этом параметре, то попробуйте уменьшить его, чтобы сделать FPS более стабильным.
 Antialiased text"+Chr(34)+" smooths out the text before displaying. Makes text easier to read at high resolutions. = Сглаживание текста"+Chr(34)+" сглаживает текст, делая его читабельным на мониторах с большим разрешением экрана.
+
+-END OF FILE-
