@@ -12,9 +12,9 @@
 Смотрите "Credits.txt" для подробностей.
 
 
-Данная игра лицензируется по Creative Commons Attribution-ShareAlike 3.0 License.
+Данная игра использует лицензию Creative Commons Attribution-ShareAlike 3.0.
 
-http://creativecommons.org/licenses/by-sa/3.0/
+https://creativecommons.org/licenses/by-sa/3.0/deed.ru
 
 
 Исходный код игры доступен на Github: https://github.com/Regalis11/scpcb
