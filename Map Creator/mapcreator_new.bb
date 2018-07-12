@@ -523,7 +523,7 @@ Repeat
 				EndIf
 				filename$ = ""
 			ElseIf result=-1 Then
-				SetStatusText(winhandle, "Creating new map has been cancelled")
+				SetStatusText(winhandle, "Создание новой карты отменено")
 			EndIf
 		EndIf
 		If EID=1 Then
@@ -553,7 +553,7 @@ Repeat
 			EndIf
 		EndIf
 		If EID=6 Then ExecFile "Manual.pdf"
-		If EID=40  Then Notify "SCP Containement Breach Map Creator v"+versionnumber+""+Chr$(13)+"Разработали: Vane Brain и ENDSHN."+Chr$(13)+"Перевёл: Олег Сиряк (Oleg720)"
+		If EID=40  Then Notify "SCP Containement Breach Map Creator v"+versionnumber+""+Chr$(13)+"Разработали: Vane Brain и ENDSHN."+Chr$(13)+"Перевёл: Oleg720"
 		If EID=17 Then 
 			ShowGadget optionwin
 		EndIf
