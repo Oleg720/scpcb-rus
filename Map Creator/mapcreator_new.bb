@@ -1,6 +1,6 @@
 Global ResWidth% = 910
 Global ResHeight% = 660
-Global versionnumber$ = "2.1 Rus"
+Global versionnumber$ = "2.1 [Rus]"
 
 Loadingwindow=CreateWindow("", GraphicsWidth()/2-160,GraphicsHeight()/2-120,320,260,winhandle,8)
 panelloading = CreatePanel(0,0,320,260,Loadingwindow,0)
@@ -1072,7 +1072,7 @@ Repeat
 				EndIf
 				filename$ = ""
 			ElseIf result=0 Then 
-				SetStatusText(winhandle, "Создана новая карты без сохранению предыдущей")
+				SetStatusText(winhandle, "Создана новая карта без сохранения предыдущей")
 				EraseMap()
 				If ShowGrid=False
 					SaveMap("CONFIG_MAPINIT.SI",True)
@@ -1125,7 +1125,7 @@ Repeat
 			EndIf
 		EndIf
 		If EID=6 Then ExecFile "Manual.pdf"
-		If EID=40  Then Notify "SCP Containement Breach Редактор карт v"+versionnumber+""+Chr$(13)+" Разработали: Vane Brain and ENDSHN."+Chr$(13)+" Перевёл: Oleg720"
+		If EID=40  Then Notify "SCP Containement Breach Редактор карт v"+versionnumber+""+Chr$(13)+" Разработали: Vane Brain and ENDSHN."+Chr$(13)+" Перевёл: Олег Сиряк"
 		If EID=17 Then 
 			ShowGadget optionwin
 		EndIf
@@ -1904,6 +1904,8 @@ Function LoadMap(file$)
 		SetGadgetText descr_text,MapDescription$
 		zonetransvalue1 = ReadByte(f)
 		zonetransvalue2 = ReadByte(f)
+		SetGadgetText zonetrans1,(MapHeight)-zonetransvalue1
+		SetGadgetText zonetrans2,(MapHeight)-zonetransvalue2
 		Local roomamount = ReadInt(f) ;Amount of rooms
 		Local forestamount = ReadInt(f) ;Amount of forest pieces
 		Local mtroomamount = ReadInt(f) ;Amount of maintenance tunnel rooms

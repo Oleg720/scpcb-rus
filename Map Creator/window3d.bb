@@ -3,7 +3,7 @@ Const C_WS_POPUP = $80000000
 Const C_HWND_TOP = 0
 Const C_SWP_SHOWWINDOW = $0040
 
-Global versionnumber$ = "2.1 Rus"
+Global versionnumber$ = "2.1 [Rus]"
 
 Const ClrR = 50, ClrG = 50, ClrB = 50
 
