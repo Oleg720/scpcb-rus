@@ -34,97 +34,116 @@
 
 *Программисты
 
-		Йонас Рикконен ("Regalis")
-		MonocleBios
-		Juanjpro
-		Райан Стиллингс
-		Luggs123
-		ENDSHN
-		InnocentSam
+		Joonas Rikkonen ("Regalis")
 		CommanderMark
+		Jesse Ludtke ("MonocleBios")
+		Juan Pablo Arce ("Juanjpro")
+		Luggs123
+		Ryan Stillings ("Risingstar64")
+		Sam Lynch ("InnocentSam")
+		Shaun Gaylard ("ENDSHN")
 
 
 *3D Моделлеры и художники текстур
 
-		Рейлли Гриндл ("Mirocaine")
-		Night
-		Hakkla
-		Prosth
-		Micro
-		GamerEntitlement
-		Atomicsneak
-		Джеймс Бир
-		Кеннет Крукер
-		Иван Михайлов ("Redbull.Ivan")
-		TheKMan
-		Брэндон Смит
-		Лионель Раскин ("Cridone")
-		Том Малиновски
-		SaitoFox
+		Joonas Rikkonen ("Regalis")
 		Apocryphos
-		InnocentSam
+		Atomicsneak
+		Brandon Smith
+		GamerEntitlement
+		Hakkla
+		James Bear ("Moonsaber")
+		Kenneth Crooker
+		Lionel Ruskin ("Cridone")
+		Micro
+		Night
+		Prosth
+		Ivan Mikhailov ("Redbull.Ivan")
+		TheKMan
+		Reilly Grindle ("Mirocaine")
+		SaitoFox
+		Sam Lynch ("InnocentSam")
+		Shaun Gaylard ("ENDSHN")
+		Tom Malinowski
+		Vladislav Borisevich ("Vane Brain")
 
 
 *Звуковые эффекты и музыка
 
-		Кевин Маклауд
-		Slagar
-		revo794
-		Тим Моррисон
+		Joonas Rikkonen ("Regalis")
+		Caleb Yu ("Omniary")
 		Class401
 		FireFox
-		phlip45
-		Калеб Ю ("Omniary")
 		gmodfan11
+		Kevin MacLeod
+		phlip45
+		revo794
+		Shaun Gaylard ("ENDSHN")
+		Slagar
+		Tim Morrison
+		Vladislav Borisevich ("Vane Brain")
 		Walach
-		Йонас Рикконен ("Regalis")
-		ENDSHN
-		Vane Brain
 
 
 *Актеры озвучивания
 
-		Аарон МакКи ("TheVolgun")
-		Брендан Сюззман ("DukeLovesYou")
-		ItsDuke
-		Tallfellow
-		Joshofsouls
+		Aaron Mckee ("TheVolgun")
+		Brendan Sussman ("DukeLovesYou")
+		CDWinters
+		Graham Ruruku ("Stealthy Zoroark")
 		Hunter
+		ItsDuke
+		Joshofsouls
+		Moonstiee
 		SolidBaker
+		Tallfellow
 
 
 *Графика и спрайты
 
-		KyoteeWilliams
-		Brokami
+		Joonas Rikkonen ("Regalis")
 		Anon4743
-		Orgil Pount ("Destructoid")
 		Balzac
+		Brokami
+		Caleb Yu ("Omniary")
+		KyoteeWilliams
+		Orgil Pount ("Destructoid")
 		Shadowscale48
-		Йонас Рикконен ("Regalis")
-		Калеб Ю ("Omniary")
-		ENDSHN
-		Vane Brain
+		Shaun Gaylard ("ENDSHN")
+		Vladislav Borisevich ("Vane Brain")
 
 
 *Сценаристы
 
-		Йонас Рикконен ("Regalis")
+		Joonas Rikkonen ("Regalis")
+		Caleb Yu ("Omniary")
 		Dr. Gears
-		Steelpoint
-		Калеб Ю ("Omniary")
 		Irontaco
-		Vane Brain
+		Steelpoint
+		Vladislav Borisevich ("Vane Brain")
+
+
+*Тестировщики
+
+		Christian Rie?
+		Emil215p
+		Inclination
+		LordDeathv11
+		Onemario1234
+		RadReed
+		TheHappyJammer
+		Zadrakos
 
 
 *Другие
 
-		Гэйг Аллен ("Lotims")
-		Turtle Sandwich/Catnipbuddy
-		Christian Rie?
 		Agent G
-		Meow :3
+		Gage Allen ("Lotims")
 		Haversine
+		Max Taylor
+		Meow :3
+		Nikita Sidorov ("Jabka")
+		Turtle Sandwich/Catnipbuddy
 		/v/ и все участники форума SCP-CB
 
 
@@ -240,4 +259,4 @@ by "Skara Brae"
 	в игру и Вам хотелось бы, чтобы ваше имя было добавлено сюда,
 	Сообщите мне на форуме Undertow Games или contact@undertowgames.com!
 	
-	- Йонас Рикконен ("Regalis")
+	- Joonas Rikkonen ("Regalis")
