@@ -50,15 +50,16 @@
 		Apocryphos
 		Atomicsneak
 		Brandon Smith
+		EternalError
 		GamerEntitlement
 		Hakkla
+		Ivan Mikhailov ("Redbull.Ivan")
 		James Bear ("Moonsaber")
 		Kenneth Crooker
 		Lionel Ruskin ("Cridone")
 		Micro
 		Night
 		Prosth
-		Ivan Mikhailov ("Redbull.Ivan")
 		TheKMan
 		Reilly Grindle ("Mirocaine")
 		SaitoFox
@@ -108,6 +109,7 @@
 		Caleb Yu ("Omniary")
 		KyoteeWilliams
 		Orgil Pount ("Destructoid")
+		Pavel Lvovich Gorfunkel ("-Mark-")
 		Shadowscale48
 		Shaun Gaylard ("ENDSHN")
 		Vladislav Borisevich ("Vane Brain")
@@ -127,6 +129,7 @@
 
 		Christian Rie?
 		Emil215p
+		Flipsy
 		Inclination
 		LordDeathv11
 		Onemario1234
