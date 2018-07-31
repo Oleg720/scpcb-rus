@@ -36,8 +36,8 @@ difficulties(SAFE)\b = 50
 
 difficulties(EUCLID) = New Difficulty
 difficulties(EUCLID)\name = "Евклид" ;Euclid
-difficulties(EUCLID)\description = "На сложности Евклид, сохранение разрешено только в специальных местах, отмеченных освещёнными экранами мониторов " ;In Euclid difficulty, saving is only allowed at specific locations marked by lit up computer screens. 
-difficulties(EUCLID)\description = difficulties(EUCLID)\description +"К объектам класса Евклид относятся недостаточно изученные или изначально непредсказуемые аномалии, надёжное содержание которых не всегда возможно." ;Euclid-class objects are inherently unpredictable, so that reliable containment is not always possible.
+difficulties(EUCLID)\description = "На сложности Евклид сохранение разрешено только в специальных местах, отмеченных освещёнными экранами мониторов " ;In Euclid difficulty, saving is only allowed at specific locations marked by lit up computer screens. 
+difficulties(EUCLID)\description = difficulties(EUCLID)\description +"К объектам класса Евклид относятся недостаточно изученные или непредсказуемые аномалии, надёжное содержание которых не всегда возможно." ;Euclid-class objects are inherently unpredictable, so that reliable containment is not always possible.
 difficulties(EUCLID)\permaDeath = False
 difficulties(EUCLID)\aggressiveNPCs = False
 difficulties(EUCLID)\saveType = SAVEONSCREENS

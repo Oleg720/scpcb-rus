@@ -135,7 +135,7 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Документ об SCP-860", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc860.jpg", 0.003) : it\sound = 0 ;Document SCP-860
 	it = CreateItemTemplate("Документ об SCP-860-1", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc8601.jpg", 0.003) : it\sound = 0 ;Document SCP-860-1
 	it = CreateItemTemplate("Материалы, добытые посредством SCP-093", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc093rm.jpg", 0.003) : it\sound = 0 ;SCP-093 Recovered Materials
-	it = CreateItemTemplate("Документ об SCP-106", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106.jpg", 0.003) : it\sound = 0 ;Document об SCP-106
+	it = CreateItemTemplate("Документ об SCP-106", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106.jpg", 0.003) : it\sound = 0 ;Document SCP-106
 	it = CreateItemTemplate("Записка д-ра Эллока", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106_2.jpg", 0.0025) : it\sound = 0 ;Dr. Allok's Note
 	it = CreateItemTemplate("Протокол возврата RP-106-N", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRP.jpg", 0.0025) : it\sound = 0 ;Recall Protocol RP-106-N
 	it = CreateItemTemplate("Документ об SCP-682", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc682.jpg", 0.003) : it\sound = 0 ;Document SCP-682
@@ -157,7 +157,7 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Документ об SCP-1123", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1123.jpg", 0.003) : it\sound = 0 ;Document SCP-1123
 	it = CreateItemTemplate("Документ об SCP-1162", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1162.jpg", 0.003) : it\sound = 0 ;Document SCP-1162
 	it = CreateItemTemplate("Документ об SCP-1499", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1499.png", 0.003) : it\sound = 0 ;Document SCP-1499
-	it = CreateItemTemplate("Инцидент с SCP-1048-A", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048a.jpg", 0.003) : it\sound = 0 ;Incident Report SCP-1048-A
+	it = CreateItemTemplate("Отчёт об инциденте SCP-1048-A", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048a.jpg", 0.003) : it\sound = 0 ;Incident Report SCP-1048-A
 	
 	it = CreateItemTemplate("Рисунок", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048.jpg", 0.003) : it\sound = 0 ;Drawing
 	
@@ -193,8 +193,8 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Уровни допуска", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docSC.jpg", 0.003) : it\sound = 0 ;Security Clearance Levels
 	it = CreateItemTemplate("Классы объектов", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docOBJC.jpg", 0.003) : it\sound = 0 ;Object Classes
 	it = CreateItemTemplate("Документ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRAND3.jpg", 0.003) : it\sound = 0 ;Document
-	it = CreateItemTemplate("Пополнение: 5/14 Протокол исследоаний", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND2.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 ;Addendum: 5/14 Test Log
-	it = CreateItemTemplate("Уведоление", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND1.jpg", 0.003, "GFX\items\notetexture.jpg") :it\sound = 0 ;Notification
+	it = CreateItemTemplate("Дополнение: 5/14 Протокол исследований", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND2.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 ;Addendum: 5/14 Test Log
+	it = CreateItemTemplate("Уведомление", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND1.jpg", 0.003, "GFX\items\notetexture.jpg") :it\sound = 0 ;Notification
 	it = CreateItemTemplate("Отчёт об инциденте SCP-106-0204", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docIR106.jpg", 0.003) : it\sound = 0 ;Incident Report SCP-106-0204
 	
 	it = CreateItemTemplate("Бронежилет", "vest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.02,"GFX\items\Vest.png") : it\sound = 2 ;Ballistic Vest
@@ -259,7 +259,7 @@ Function InitItemTemplates()
 	CreateItemTemplate("Глазные капли", "fineeyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;Eyedrops
 	CreateItemTemplate("Глазные капли", "supereyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;Eyedrops
 	CreateItemTemplate("Глазные капли РеЗрение", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;ReVision Eyedrops
-	CreateItemTemplate("Глазные капли РеЗрение", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg") ;ReVision Eyedrops
+	CreateItemTemplate("Красные глазные капли РеЗрение", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg") ;ReVision Eyedrops
 	
 	it = CreateItemTemplate("SCP-714", "scp714", "GFX\items\scp714.b3d", "GFX\items\INV714.jpg", "", 0.3) ;
 	it\sound = 3
@@ -292,7 +292,7 @@ Function InitItemTemplates()
 	;new Items in SCP:CB 1.3 - ENDSHN
 	it = CreateItemTemplate("SCP-1499","scp1499","GFX\items\SCP-1499.b3d","GFX\items\INVscp1499.jpg", "", 0.023) : it\sound = 2
 	it = CreateItemTemplate("SCP-1499","super1499","GFX\items\SCP-1499.b3d","GFX\items\INVscp1499.jpg", "", 0.023) : it\sound = 2
-	CreateItemTemplate("Бейдж 'Эмили Росс'", "badge", "GFX\items\badge.x", "GFX\items\INVbadge.jpg", "GFX\items\badge1.jpg", 0.0001, "GFX\items\badge1_tex.jpg") ;Emily Ross
+	CreateItemTemplate("Бейдж Эмили Росс", "badge", "GFX\items\badge.x", "GFX\items\INVbadge.jpg", "GFX\items\badge1.jpg", 0.0001, "GFX\items\badge1_tex.jpg") ;Emily Ross' Badge
 	it = CreateItemTemplate("Потерянный ключ", "key", "GFX\items\key.b3d", "GFX\items\INV1162_1.jpg", "", 0.001, "GFX\items\key2.png","",0,1+2+8) : it\sound = 3 ;Lost Key
 	it = CreateItemTemplate("Дисциплинарное слушание DH-S-4137-17092", "oldpaper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\dh.s", 0.003) : it\sound = 0 ;Disciplinary Hearing DH-S-4137-17092
 	it = CreateItemTemplate("Монета", "coin", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3 ;Coin
