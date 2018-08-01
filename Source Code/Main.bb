@@ -1,4 +1,4 @@
-;SCP - Containment Breach
+;SCP - Containment Breach | Русская версия
 
 ;    The game is based on the works of the SCP Foundation community (http://www.scp-wiki.net/).
 
@@ -9980,6 +9980,8 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 	If it2 <> Null Then EntityType (it2\collider, HIT_ITEM)
 End Function
 
+Global langtemp% ;Переменная для работы переключения раскладки SCP-294
+
 Function Use294()
 	Local x#,y#, xtemp%,ytemp%, strtemp$, temp%
 	
@@ -9997,92 +9999,142 @@ Function Use294()
 	
 	If temp Then
 		If MouseHit1 Then
-			xtemp = Floor((ScaledMouseX()-x-228) / 35.5)
+			;xtemp = Floor((ScaledMouseX()-x-228) / 35.5)
+			xtemp = Floor((MouseX()-x-190) / 35.5) ;Клавиатура с русской раскладкой шире, чем с английской
 			ytemp = Floor((ScaledMouseY()-y-342) / 36.5)
 			
 			If ytemp => 0 And ytemp < 5 Then
-				If xtemp => 0 And xtemp < 10 Then PlaySound_Strict ButtonSFX
+				If xtemp => 0 And xtemp < 12 Then PlaySound_Strict ButtonSFX  ;xtemp <10
 			EndIf
 			
 			strtemp = ""
 			
 			temp = False
 			
-			Select ytemp
-				Case 0
-					strtemp = (xtemp + 1) Mod 10
-				Case 1
-					Select xtemp
-						Case 0
-							strtemp = "Q"
-						Case 1
-							strtemp = "W"
-						Case 2
-							strtemp = "E"
-						Case 3
-							strtemp = "R"
-						Case 4
-							strtemp = "T"
-						Case 5
-							strtemp = "Y"
-						Case 6
-							strtemp = "U"
-						Case 7
-							strtemp = "I"
-						Case 8
-							strtemp = "O"
-						Case 9
-							strtemp = "P"
-					End Select
-				Case 2
-					Select xtemp
-						Case 0
-							strtemp = "A"
-						Case 1
-							strtemp = "S"
-						Case 2
-							strtemp = "D"
-						Case 3
-							strtemp = "F"
-						Case 4
-							strtemp = "G"
-						Case 5
-							strtemp = "H"
-						Case 6
-							strtemp = "J"
-						Case 7
-							strtemp = "K"
-						Case 8
-							strtemp = "L"
-						Case 9 ;dispense
-							temp = True
-					End Select
-				Case 3
-					Select xtemp
-						Case 0
-							strtemp = "Z"
-						Case 1
-							strtemp = "X"
-						Case 2
-							strtemp = "C"
-						Case 3
-							strtemp = "V"
-						Case 4
-							strtemp = "B"
-						Case 5
-							strtemp = "N"
-						Case 6
-							strtemp = "M"
-						Case 7
-							strtemp = "-"
-						Case 8
-							strtemp = " "
-						Case 9
-							Input294 = Left(Input294, Max(Len(Input294)-1,0))
-					End Select
-				Case 4
-					strtemp = " "
-			End Select
+			If langtemp = 1 Then
+				Select ytemp
+					Case 0
+						Select xtemp
+							Case 0 strtemp = "1"
+							Case 1 strtemp = "2"
+							Case 2 strtemp = "3"
+							Case 3 strtemp = "4"
+							Case 4 strtemp = "5"
+							Case 5 strtemp = "6"
+							Case 6 strtemp = "7"
+							Case 7 strtemp = "8"
+							Case 8 strtemp = "9"
+							Case 9 strtemp = "0"
+							Case 10 strtemp = "-"
+							Case 11 Input294 = Left(Input294, Max(Len(Input294)-1,0))
+						End Select
+					Case 1
+						Select xtemp
+							Case 0 strtemp = "Й"
+							Case 1 strtemp = "Ц"
+							Case 2 strtemp = "У"
+							Case 3 strtemp = "К"
+							Case 4 strtemp = "Е"
+							Case 5 strtemp = "Н"
+							Case 6 strtemp = "Г"
+							Case 7 strtemp = "Ш"
+							Case 8 strtemp = "Щ"
+							Case 9 strtemp = "З"
+							Case 10 strtemp = "Х"
+							Case 11 strtemp = "Ъ"
+						End Select
+					Case 2
+						Select xtemp
+							Case 0 strtemp = "Ф"
+							Case 1 strtemp = "Ы"
+							Case 2 strtemp = "В"
+							Case 3 strtemp = "А"
+							Case 4 strtemp = "П"
+							Case 5 strtemp = "Р"
+							Case 6 strtemp = "О"
+							Case 7 strtemp = "Л"
+							Case 8 strtemp = "Д"
+							Case 9 strtemp = "Ж"
+							Case 10 strtemp = "Э"
+							Case 11 temp = True
+						End Select
+					Case 3
+						Select xtemp
+							Case 0 strtemp = "Я"
+							Case 1 strtemp = "Ч"
+							Case 2 strtemp = "С"
+							Case 3 strtemp = "М"
+							Case 4 strtemp = "И"
+							Case 5 strtemp = "Т"
+							Case 6 strtemp = "Ь"
+							Case 7 strtemp = "Б"
+							Case 8 strtemp = "Ю"
+							Case 9,10 langtemp = 0
+							Case 11 temp = True
+						End Select
+					Case 4 strtemp = " "
+				End Select
+			Else
+				Select ytemp
+					Case 0
+						Select xtemp
+							Case 0 strtemp = "1"
+							Case 1 strtemp = "2"
+							Case 2 strtemp = "3"
+							Case 3 strtemp = "4"
+							Case 4 strtemp = "5"
+							Case 5 strtemp = "6"
+							Case 6 strtemp = "7"
+							Case 7 strtemp = "8"
+							Case 8 strtemp = "9"
+							Case 9 strtemp = "0"
+							Case 10 strtemp = "-"
+							Case 11 Input294 = Left(Input294, Max(Len(Input294)-1,0))
+						End Select
+					Case 1
+						Select xtemp
+							Case 0 strtemp = "Q"
+							Case 1 strtemp = "W"
+							Case 2 strtemp = "E"
+							Case 3 strtemp = "R"
+							Case 4 strtemp = "T"
+							Case 5 strtemp = "Y"
+							Case 6 strtemp = "U"
+							Case 7 strtemp = "I"
+							Case 8 strtemp = "O"
+							Case 9 strtemp = "P"
+							Case 10,11 strtemp = ""	
+						End Select
+					Case 2
+						Select xtemp
+							Case 0 strtemp = "A"
+							Case 1 strtemp = "S"
+							Case 2 strtemp = "D"
+							Case 3 strtemp = "F"
+							Case 4 strtemp = "G"
+							Case 5 strtemp = "H"
+							Case 6 strtemp = "J"
+							Case 7 strtemp = "K"
+							Case 8 strtemp = "L"
+							Case 9,10 strtemp = ""
+							Case 11 temp = True	
+						End Select
+					Case 3
+						Select xtemp
+							Case 0 strtemp = "Z"
+							Case 1 strtemp = "X"
+							Case 2 strtemp = "C"
+							Case 3 strtemp = "V"
+							Case 4 strtemp = "B"
+							Case 5 strtemp = "N"
+							Case 6 strtemp = "M"
+							Case 7,8 strtemp = ""
+							Case 9,10 langtemp = 1
+							Case 11 temp = True
+						End Select
+					Case 4 strtemp = " "
+				End Select
+			EndIf
 			
 			Input294 = Input294 + strtemp
 			
