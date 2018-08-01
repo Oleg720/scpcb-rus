@@ -1690,10 +1690,10 @@ Function UpdateEvents()
 							
 							If Sanity < -1000 Then
 								If WearingNightVision > 1
-									DeathMSG = Chr(34)+"Сотрудник D-Класса смотрел на SCP-895 через цифровые очки ночного видения, предположительно, улучшенные с помощью SCP-914. Вполне возможно, что субъект " ;Class D viewed SCP-895 through a pair of digital night vision goggles, presumably enhanced by SCP-914. It might be possible that the subject 
+									DeathMSG = Chr(34)+"Сотрудник Класса D смотрел на SCP-895 через цифровые очки ночного видения, предположительно, улучшенные с помощью SCP-914. Вполне возможно, что субъект " ;Class D viewed SCP-895 through a pair of digital night vision goggles, presumably enhanced by SCP-914. It might be possible that the subject 
 									DeathMSG = DeathMSG + "был способен частично противостоять меметическому воздействию через эти очки. Очки были взяты для дальнейшего исследования."+Chr(34) ;was able to resist the memetic effects partially through these goggles. The goggles have been stored for further study.
 								Else
-									DeathMSG = Chr(34)+"Сотрудник D-Класса смотрел на SCP-895 через цифровые очки ночного видения, и был убит."+Chr(34) ;Class D viewed SCP-895 through a pair of digital night vision goggles, killing him.
+									DeathMSG = Chr(34)+"Сотрудник Класса D смотрел на SCP-895 через цифровые очки ночного видения, и был убит."+Chr(34) ;Class D viewed SCP-895 through a pair of digital night vision goggles, killing him.
 								EndIf
 								EntityTexture(NVOverlay, NVTexture)
 								If VomitTimer < -10 Then
@@ -2641,7 +2641,7 @@ Function UpdateEvents()
 							If e\EventState > 70*7.5 And e\EventState-FPSfactor =< 70*7.5 Then
 								PlaySound2(NeckSnapSFX(0),Camera,e\room\NPC[0]\Collider,8.0)
 								;Wallet spawning (with 3 coins)
-								it.Items = CreateItem("Wallet","wallet",EntityX(e\room\NPC[0]\Collider,True),EntityY(e\room\NPC[0]\Collider,True),EntityZ(e\room\NPC[0]\Collider,True))
+								it.Items = CreateItem("Кошелёк","wallet",EntityX(e\room\NPC[0]\Collider,True),EntityY(e\room\NPC[0]\Collider,True),EntityZ(e\room\NPC[0]\Collider,True)) ;Wallet
 								EntityType(it\collider, HIT_ITEM)
 								PointEntity it\collider,e\room\NPC[1]\Collider
 								MoveEntity it\collider,-0.4,0,-0.2
