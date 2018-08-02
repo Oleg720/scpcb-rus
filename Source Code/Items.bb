@@ -648,7 +648,7 @@ Function PickItem(item.Items)
 					Case "key6"
 						GiveAchievement(AchvOmni)
 					Case "veryfinevest"
-						Msg = "∆илет слишком т€желый, чтобы подобрать его" ;The vest is too heavy to pick up.
+						Msg = "∆илет слишком т€желый, чтобы подобрать его." ;The vest is too heavy to pick up.
 						MsgTimer = 70*6
 						Exit
 					Case "firstaid", "finefirstaid", "veryfinefirstaid", "firstaid2"
@@ -696,7 +696,7 @@ Function PickItem(item.Items)
 						Next
 						
 						If canpickitem=False Then
-							Msg = "¬ы не можете носить два жилета одновременно" ;You are not able to wear two vests at the same time.
+							Msg = "¬ы не можете носить два жилета одновременно." ;You are not able to wear two vests at the same time.
 							MsgTimer = 70 * 5
 							Return
 						ElseIf canpickitem=2 Then

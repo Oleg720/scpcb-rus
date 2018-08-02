@@ -605,7 +605,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("- 173state")
 							CreateConsoleMsg("- 106state")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Используйте"+Chr(34)+"help 2/3"+Chr(34)+", чтобы найти больше команд.") ;Use ;to find more commands.
+							CreateConsoleMsg("Используйте "+Chr(34)+"help 2/3"+Chr(34)+", чтобы найти больше команд.") ;Use ;to find more commands.
 							CreateConsoleMsg("Используйте "+Chr(34)+"help [имя команды]"+Chr(34)+", чтобы получить больше информации о команде.")  ;Use "+Chr(34)+"help [command name]"+Chr(34)+" to get more information about a command.
 							CreateConsoleMsg("******************************")
 						Case "2"
@@ -648,7 +648,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("Устанавливает дистанцию прорисовки тумана.") ;Sets the draw distance of the fog.
 							CreateConsoleMsg("Туман начивает появляться на 'CameraFogNear'(начало) еденицах") ;The fog begins generating at 'CameraFogNear' units
 							CreateConsoleMsg("от камеры, и становиться полностью непрозрачным") ;away from the camera and becomes completely opaque
-							CreateConsoleMsg("на 'CameraFogFar'(конец) еденицах от камеры") ;at 'CameraFogFar' units away from the camera.
+							CreateConsoleMsg("на 'CameraFogFar'(конец) еденицах от камеры.") ;at 'CameraFogFar' units away from the camera.
 							CreateConsoleMsg("Например: camerafog 20 40") ;Example:
 							CreateConsoleMsg("******************************")
 						Case "gamma"
@@ -722,7 +722,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("СПРАВКА - camerapick") ;HELP
 							CreateConsoleMsg("******************************")
 							CreateConsoleMsg("Выводит имя текстуры и координаты модели,") ;Prints the texture name and coordinates of
-							CreateConsoleMsg("на которую указывает камера..") ;the model the camera is pointing at.
+							CreateConsoleMsg("на которую указывает камера.") ;the model the camera is pointing at.
 							CreateConsoleMsg("******************************")
 						Case "status"
 							CreateConsoleMsg("СПРАВКА - status") ;HELP
@@ -878,13 +878,13 @@ Function UpdateConsole()
 					For itt.Itemtemplates = Each ItemTemplates
 						If (Lower2(itt\name) = StrTemp) Then
 							temp = True
-							CreateConsoleMsg(itt\name + " создан.") ;spawned.
+							CreateConsoleMsg("Предмет "+Chr(34)+ itt\name +Chr(34)+" создан.") ;spawned.
 							it.Items = CreateItem(itt\name, itt\tempname, EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 							EntityType(it\collider, HIT_ITEM)
 							Exit
 						Else If (Lower2(itt\tempname) = StrTemp) Then
 							temp = True
-							CreateConsoleMsg(itt\name + " создан.") ;spawned.
+							CreateConsoleMsg("Предмет "+Chr(34)+ itt\name +Chr(34)+" создан.") ;spawned.
 							it.Items = CreateItem(itt\name, itt\tempname, EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 							EntityType(it\collider, HIT_ITEM)
 							Exit
@@ -938,7 +938,7 @@ Function UpdateConsole()
 					CreateConsoleMsg("SCP-106")
 					CreateConsoleMsg("Позиция: " + EntityX(Curr106\obj) + ", " + EntityY(Curr106\obj) + ", " + EntityZ(Curr106\obj)) ;Position:
 					CreateConsoleMsg("Ожидание: " + Curr106\Idle) ;Idle:
-					CreateConsoleMsg("Статус: " + Curr106\State) ;State:
+					CreateConsoleMsg("Состояние: " + Curr106\State) ;State:
 					;[End Block]
 				Case "reset096"
 					;[Block]
@@ -1331,7 +1331,7 @@ Function UpdateConsole()
 					If NoTarget% = False Then
 						CreateConsoleMsg("NOTARGET ДЕАКТИВИРОВАН") ;OFF
 					Else
-						CreateConsoleMsg("NOTARGET АКТИВИРОВАН")	 ;ON
+						CreateConsoleMsg("NOTARGET АКТИВИРОВАН") ;ON
 					EndIf
 					;[End Block]
 				Case "spawnradio"
@@ -1438,7 +1438,7 @@ Function UpdateConsole()
 					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					BlinkEffect = Float(Left(args, Len(args) - Instr(args, " ")))
 					BlinkEffectTimer = Float(Right(args, Len(args) - Instr(args, " ")))
-					CreateConsoleMsg("BlinkEffect установлен на: " + BlinkEffect + ", а BlinkEffect таймер на: " + BlinkEffectTimer) ;Set BlinkEffect to: " + BlinkEffect + "and BlinkEffect timer:
+					CreateConsoleMsg("BlinkEffect установлен на: " + BlinkEffect + ", а таймер BlinkEffect на: " + BlinkEffectTimer) ;Set BlinkEffect to: " + BlinkEffect + "and BlinkEffect timer:
 					;[End Block]
 				Case "jorge"
 					;[Block]	
@@ -2254,8 +2254,8 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 	If d\KeyCard > 0 Then
 		If SelectedItem = Null Then
 			If showmsg = True Then
-				If (Instr(Msg,"Вы вставили Ключ-карту")=0 And Instr(Msg,"Для взаимодействия")=0) Or (MsgTimer<70*3) Then ;The keycard ;A keycard with
-					Msg = "Для взаимодействия с этой дверью, требуется Ключ-карта" ;A keycard is required to operate this door.
+				If (Instr(Msg,"Вы вставили Ключ-карту")=0 And Instr(Msg,"Требуется Ключ-карта ")=0) Or (MsgTimer<70*3) Then ;The keycard ;A keycard with
+					Msg = "Требуется Ключ-карта." ;A keycard is required to operate this door.
 					MsgTimer = 70 * 7
 				EndIf
 			EndIf
@@ -2280,8 +2280,8 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 			
 			If temp =-1 Then 
 				If showmsg = True Then
-					If (Instr(Msg,"Вы вставили Ключ-карту")=0 And Instr(Msg,"Для взаимодействия")=0) Or (MsgTimer<70*3) Then ;The keycard ;A keycard with
-						Msg = "Для взаимодействия с этой дверью, требуется Ключ-карта" ;A keycard is required to operate this door.
+					If (Instr(Msg,"Вы вставили Ключ-карту")=0 And Instr(Msg,"Требуется Ключ-карта ")=0) Or (MsgTimer<70*3) Then ;The keycard ;A keycard with
+						Msg = "Требуется Ключ-карта." ;A keycard is required to operate this door.
 						MsgTimer = 70 * 7
 					EndIf
 				EndIf
@@ -2307,7 +2307,7 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 					If d\locked Then
 						Msg = "Вы вставили Ключ-карту в слот, но ничего не произошло." ;The keycard was inserted into the slot but nothing happened.
 					Else
-						Msg = "Для взаимодействия с этой дверью, требуется ключ карта "+d\KeyCard+"-го уровня или выше." ;A keycard with security clearance "+d\KeyCard+" or higher is required to operate this door.
+						Msg = "Требуется Ключ-карта "+d\KeyCard+"-го уровня допуска или выше." ;A keycard with security clearance "+d\KeyCard+" or higher is required to operate this door.
 					EndIf
 					MsgTimer = 70 * 7					
 				EndIf
@@ -2323,7 +2323,7 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 		If temp <> 0 Then
 			PlaySound_Strict ScannerSFX1
 			If (Instr(Msg,"Вы положили вашу")=0) Or (MsgTimer < 70*3) Then ;You placed your
-				Msg = "Вы положили ладонь руки на сканер. Сканер написал: "+Chr(34)+"ДНК проверены. Доступ запрещён."+Chr(34) ;You place the palm of the hand onto the scanner. The scanner reads "+Chr(34)+"DNA verified. Access granted.
+				Msg = "Вы положили ладонь руки на сканер. Сканер написал: "+Chr(34)+"ДНК проверены. Доступ разрешён."+Chr(34) ;You place the palm of the hand onto the scanner. The scanner reads "+Chr(34)+"DNA verified. Access granted.
 			EndIf
 			MsgTimer = 70 * 10
 		Else
@@ -3187,7 +3187,7 @@ Repeat
 						MsgTimer = 70 * 4
 						;SetSaveMSG("You cannot save in this location.")
 					ElseIf (Not CanSave) Or QuickLoadPercent > -1
-						Msg = "Вы не можете сохраниться в этой локации." ;You cannot save at this moment.
+						Msg = "Вы не можете сохраниться в этот момент." ;You cannot save at this moment.
 						MsgTimer = 70 * 4
 						;SetSaveMSG("You cannot save at this moment.")
 						If QuickLoadPercent > -1
@@ -3209,7 +3209,7 @@ Repeat
 				;SetSaveMSG("Quick saving is disabled.")
 			EndIf
 		Else If SelectedDifficulty\saveType = SAVEONSCREENS And (SelectedScreen<>Null Or SelectedMonitor<>Null)
-			If (Msg<>"Игра сохранена." And Msg<>"Вы не можете сохраниться в этой локации."And Msg<>"Вы не можете сохраниться в этой локации.") Or MsgTimer<=0 Then ;Game progress saved. ;You cannot save in this location. ;You cannot save at this moment.
+			If (Msg<>"Игра сохранена." And Msg<>"Вы не можете сохраниться в этой локации."And Msg<>"Вы не можете сохраниться в этот момент.") Or MsgTimer<=0 Then ;Game progress saved. ;You cannot save in this location. ;You cannot save at this moment.
 				Msg = "Нажмите "+KeyName(KEY_SAVE)+", чтобы сохраниться." ;Press ;to save.
 				MsgTimer = 70*4
 				;SetSaveMSG("Press "+KeyName(KEY_SAVE)+" to save.")
@@ -3248,7 +3248,7 @@ Repeat
 					If e\EventName = "173" Then
 						If e\EventState3 => 40 And e\EventState3 < 50 Then
 							If InvOpen Then
-								Msg = "Дважды щелкните по документу, чтобы посмотреть его." ;Double click on the document to view it.
+								Msg = "Дважды щёлкните по документу, чтобы посмотреть его." ;Double click on the document to view it.
 								MsgTimer=70*7
 								e\EventState3 = 50
 							EndIf
@@ -3805,7 +3805,7 @@ Function DrawEnding()
 					AAText x, y+20*MenuScale, "Дотижений открыто: " + achievementsUnlocked+"/"+(MAXACHIEVEMENTS) ;Achievements unlocked:
 					AAText x, y+40*MenuScale, "Комнат найдено: " + roomsfound+"/"+roomamount ;Rooms found:
 					AAText x, y+60*MenuScale, "Документов найдено: " +docsfound+"/"+docamount ;Documents discovered
-					AAText x, y+80*MenuScale, "Улучшено предметов в SCP-914: " +RefinedItems ;Items refined in SCP-914:		
+					AAText x, y+80*MenuScale, "Предметов в SCP-914 переработано: " +RefinedItems ;Items refined in SCP-914:		
 					
 					x = GraphicWidth / 2 - width / 2
 					y = GraphicHeight / 2 - height / 2
@@ -5421,7 +5421,7 @@ Function DrawGUI()
 											EndIf
 										Next
 										If SelectedItem <> Null Then
-											Msg = "Планшет недостаточно силён, чтобы хранить большеее количество предметов." ;The paperclip is not strong enough to hold any more items.
+											Msg = "Планшет недостаточно силён, чтобы хранить большее количество предметов." ;The paperclip is not strong enough to hold any more items.
 										Else
 											If added\itemtemplate\tempname = "paper" Or added\itemtemplate\tempname = "oldpaper" Then
 												Msg = "Этот документ добавлен в планшет." ;This document was added to the clipboard.
@@ -5744,7 +5744,7 @@ Function DrawGUI()
 							Case 4
 								BlurTimer = 10000
 								Bloodloss = 0
-								Msg = "Вы чувствуете тошноту.." ;You feel nauseated.
+								Msg = "Вы чувствуете тошноту." ;You feel nauseated.
 								MsgTimer = 70*7
 							Case 5
 								BlinkTimer = -10
@@ -5852,7 +5852,7 @@ Function DrawGUI()
 												Injuries = 0
 												Msg = "Вы перевязали раны. Кровотечение полностью прекратилось, и вы чувствуете себя хорошо." ;You bandaged the wounds. The bleeding stopped completely and you feel fine.
 											Case 6
-												Msg = "Вы перевязали раны и кровь начала резко литься через повязки." ;You bandaged the wounds and blood started pouring heavily through the bandages.
+												Msg = "Вы перевязали раны, и кровь начала резко литься через повязки." ;You bandaged the wounds and blood started pouring heavily through the bandages.
 												Injuries = 3.5
 										End Select
 									EndIf
@@ -6527,7 +6527,7 @@ Function DrawGUI()
 					
 					If SelectedItem\state=100 Then
 						If WearingVest>0 Then
-							Msg = "Вы сняли жилет" ;You removed the vest.
+							Msg = "Вы сняли жилет." ;You removed the vest.
 							WearingVest = False
 							DropItem(SelectedItem)
 						Else
@@ -6554,7 +6554,7 @@ Function DrawGUI()
 						If SelectedItem\itemtemplate\tempname = "supergasmask"
 							Msg = "Вы надели противогаз, и вам стало легче дышать." ;You put on the gas mask and you can breathe easier.
 						Else
-							Msg = "Вы надели противогаз" ;You put on the gas mask.
+							Msg = "Вы надели противогаз." ;You put on the gas mask.
 						EndIf
 						;Wearing178 = 0
 						If WearingNightVision Then CameraFogFar = StoredCameraFogFar
@@ -6945,11 +6945,11 @@ Function DrawGUI()
 				Case "scp427"
 					;[Block]
 					If I_427\Using=1 Then
-						Msg = "Вы закрыли медальон." ;You closed the locket.
+						Msg = "Вы закрыли амулет." ;You closed the locket.
 						I_427\Using = False
 					Else
 						GiveAchievement(Achv427)
-						Msg = "Вы открыли медальон." ;You opened the locket.
+						Msg = "Вы открыли амулет." ;You opened the locket.
 						I_427\Using = True
 					EndIf
 					MsgTimer = 70 * 5
@@ -7232,7 +7232,7 @@ Function DrawMenu()
 					
 					ScreenGamma = (SlideBar(x + 270*MenuScale, y+6*MenuScale, 100*MenuScale, ScreenGamma*50.0)/50.0)
 					Color 255,255,255
-					AAText(x, y, "Уровень гаммы") ;Screen gamma
+					AAText(x, y, "Уровень гаммы:") ;Screen gamma
 					If MouseOn(x+270*MenuScale,y+6*MenuScale,100*MenuScale+14,20) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"gamma")
 					EndIf
@@ -7242,7 +7242,7 @@ Function DrawMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x, y, "Кол-во частиц:") ;Particle amount:
+					AAText(x, y, "Количество частиц:") ;Particle amount:
 					ParticleAmount = Slider3(x+270*MenuScale,y+6*MenuScale,100*MenuScale,ParticleAmount,2,"МИНИМУМ","СРЕДНЕ","ВСЕ") ;MINIMAL REDUCED FULL
 					If (MouseOn(x + 270 * MenuScale, y-6*MenuScale, 100*MenuScale+14, 20) And OnSliderID=0) Or OnSliderID=2
 						DrawOptionsTooltip(tx,ty,tw,th,"particleamount",ParticleAmount)
@@ -7681,7 +7681,7 @@ Function DrawMenu()
 			Else
 				y = y+104*MenuScale
 				If GameSaved And (Not SelectedDifficulty\permaDeath) Then
-					If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "Загрузить игру") Then ;Load Game
+					If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "Загрузить") Then ;Load Game
 						DrawLoading(0)
 						
 						MenuOpen = False
@@ -7724,7 +7724,7 @@ Function DrawMenu()
 				Else
 					DrawButton(x, y, 390*MenuScale, 60*MenuScale, "")
 					Color 50,50,50
-					AAText(x + 185*MenuScale, y + 30*MenuScale, "Загрузить игру", True, True) ;Load Game
+					AAText(x + 185*MenuScale, y + 30*MenuScale, "Загрузить", True, True) ;Load Game
 				EndIf
 				If DrawButton(x, y + 80*MenuScale, 390*MenuScale, 60*MenuScale, "Выйти в меню") Then ;Quit to Menu
 					NullGame()
@@ -10451,7 +10451,7 @@ Function UpdateInfect()
 				Msg = "Вы чувствуете, что у вас жар." ;You feel kinda feverish.
 				MsgTimer = 70*6
 			ElseIf Infect > 40 And temp =< 40.0
-				Msg = "Вы чувствуете тошноту" ;You feel nauseated.
+				Msg = "Вы чувствуете тошноту." ;You feel nauseated.
 				MsgTimer = 70*6
 			ElseIf Infect > 60 And temp =< 60.0
 				Msg = "Тошнота усиливается." ;The nausea's getting worse.
@@ -12027,7 +12027,7 @@ End Function
 
 Function CanUseItem(canUseWithHazmat%, canUseWithGasMask%, canUseWithEyewear%)
 	If (canUseWithHazmat = False And WearingHazmat) Then
-		Msg = "Вы не можете использовать этот предмет во время ношения Защитного костюма." ;You can't use that item while wearing a hazmat suit.
+		Msg = "Вы не можете использовать этот предмет во время ношения защитного костюма." ;You can't use that item while wearing a hazmat suit.
 		MsgTimer = 70*5
 		Return False
 	Else If (canUseWithGasMask = False And (WearingGasMask Or Wearing1499))

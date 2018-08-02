@@ -111,9 +111,9 @@ Function UpdateMainMenu()
 				Case 20
 					MenuStr = "Он взял всё на себя" ;It has taken over everything
 				Case 21
-					MenuStr = "Спираль растёт"
+					MenuStr = "Спираль растёт" ;The spiral is growing
 				Case 22
-					MenuStr = Chr(34)+"Что-то вроде эффекта гештальта, из-за массивного повреждения реальности"+Chr(34)
+					MenuStr = Chr(34)+"Что-то вроде эффекта гештальта, из-за массивного повреждения реальности"+Chr(34) ;Some kind of gestalt effect due to massive reality damage.
 			End Select
 		EndIf
 	EndIf
@@ -644,7 +644,7 @@ Function UpdateMainMenu()
 					;Local prevGamma# = ScreenGamma
 					ScreenGamma = (SlideBar(x + 310*MenuScale, y+6*MenuScale, 150*MenuScale, ScreenGamma*50.0)/50.0)
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "Уровень гаммы") ;Screen gamma
+					AAText(x + 20 * MenuScale, y, "Уровень гаммы:") ;Screen gamma
 					If MouseOn(x+310*MenuScale,y+6*MenuScale,150*MenuScale,20) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"gamma")
 					EndIf
@@ -1301,11 +1301,11 @@ Function UpdateLauncher()
 		PutINIValue(OptionFile, "options", "16bit", "false")
 	EndIf
 	PutINIValue(OptionFile, "options", "gfx driver", SelectedGFXDriver)
-	If UpdateCheckEnabled Then
-		PutINIValue(OptionFile, "options", "check for updates", "true")
-	Else
-		PutINIValue(OptionFile, "options", "check for updates", "false")
-	EndIf
+;	If UpdateCheckEnabled Then
+;		PutINIValue(OptionFile, "options", "check for updates", "true")
+;	Else
+;		PutINIValue(OptionFile, "options", "check for updates", "false")
+;	EndIf
 	
 End Function
 
@@ -1482,7 +1482,7 @@ Function DrawLoading(percent%, shortloading=False)
 				If Rand(5)=1 Then
 					Select Rand(2)
 						Case 1
-							SelectedLoadingScreen\txt[0] = "Это произойдёт " + CurrentDateRus$() + "." ;It will happen on
+							SelectedLoadingScreen\txt[0] = "Это произойдёт " + CurrentDateRus$() + "." ;It will happen on ;CurrentDate
 						Case 2
 							SelectedLoadingScreen\txt[0] = CurrentTime()
 					End Select

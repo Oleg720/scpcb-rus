@@ -371,14 +371,14 @@ Function LoadRMesh(file$,rt.RoomTemplates)
 			Exit
 		EndIf
 	Next
-	If f=0 Then RuntimeError "Ошибка чтения файла "+Chr(34)+file+Chr(34) ;
+	If f=0 Then RuntimeError "Ошибка чтения файла "+Chr(34)+file+Chr(34) ;Error reading file
 	Local isRMesh$ = ReadString(f)
 	If isRMesh$="RoomMesh"
 		;Continue
 	ElseIf isRMesh$="RoomMesh.HasTriggerBox"
 		hasTriggerBox% = True
 	Else
-		RuntimeError Chr(34)+file+Chr(34)+" не RMESH ("+isRMesh+")" ;
+		RuntimeError Chr(34)+file+Chr(34)+" не RMESH ("+isRMesh+")" ;is Not RMESH
 	EndIf
 	
 	file=StripFilename(file)
