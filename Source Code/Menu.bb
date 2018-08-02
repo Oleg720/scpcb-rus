@@ -294,7 +294,7 @@ Function UpdateMainMenu()
 					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "Сид карты:") ;Map seed:
 					RandomSeed = Left(InputBox(x+150*MenuScale, y+55*MenuScale, 200*MenuScale, 30*MenuScale, RandomSeed, 3),15)	
 				Else
-					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "Карты:") ;Selected map:
+					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "Карта:") ;Selected map:
 					Color (255, 255, 255)
 					Rect(x+150*MenuScale, y+55*MenuScale, 200*MenuScale, 30*MenuScale)
 					Color (0, 0, 0)
@@ -479,7 +479,7 @@ Function UpdateMainMenu()
 							
 							AAText(x + 20 * MenuScale, y + 10 * MenuScale, SaveGames(i - 1))
 							AAText(x + 20 * MenuScale, y + (10+18) * MenuScale, SaveGameTime(i - 1)) ;y + (10+23) * MenuScale
-							AAText(x + 120 * MenuScale, y + (10+18) * MenuScale, SaveGameDate(i - 1))
+							AAText(x + 120 * MenuScale, y + (10+18) * MenuScale, SaveGameDateRus(i - 1)) ;SaveGameDate
 							AAText(x + 20 * MenuScale, y + (10+36) * MenuScale, SaveGameVersion(i - 1))
 							
 							If SaveMSG = "" Then
@@ -659,7 +659,7 @@ Function UpdateMainMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "Кол-во частиц:") ;Particle amount:
+					AAText(x + 20 * MenuScale, y, "Количество частиц:") ;Particle amount:
 					ParticleAmount = Slider3(x+310*MenuScale,y+6*MenuScale,150*MenuScale,ParticleAmount,2,"МИНИМУМ","СРЕДНЕ","ВСЕ") ;MINIMAL REDUCED FULL
 					If (MouseOn(x + 310 * MenuScale, y-6*MenuScale, 150*MenuScale+14, 20) And OnSliderID=0) Or OnSliderID=2
 						DrawOptionsTooltip(tx,ty,tw,th,"particleamount",ParticleAmount)
@@ -811,7 +811,7 @@ Function UpdateMainMenu()
 							DrawOptionsTooltip(tx,ty,tw,th,"usertrackscan")
 						EndIf
 						If UserTrackCheck%>0
-							AAText x + 20 * MenuScale, y + 100 * MenuScale, "Пользоватильские треки обнаружены ("+UserTrackCheck2+"/"+UserTrackCheck+" было загружено)" ;User tracks found ("+UserTrackCheck2+"/"+UserTrackCheck+" successfully loaded)
+							AAText x + 20 * MenuScale, y + 100 * MenuScale, "Пользоватильские треки обнаружены ("+UserTrackCheck2+"/"+UserTrackCheck+" загружено)" ;User tracks found ("+UserTrackCheck2+"/"+UserTrackCheck+" successfully loaded)
 						EndIf
 					Else
 						UserTrackCheck%=0
@@ -1482,7 +1482,7 @@ Function DrawLoading(percent%, shortloading=False)
 				If Rand(5)=1 Then
 					Select Rand(2)
 						Case 1
-							SelectedLoadingScreen\txt[0] = "Это произойдёт " + CurrentDate() + "." ;It will happen on
+							SelectedLoadingScreen\txt[0] = "Это произойдёт " + CurrentDateRus$() + "." ;It will happen on
 						Case 2
 							SelectedLoadingScreen\txt[0] = CurrentTime()
 					End Select
@@ -2598,7 +2598,46 @@ Function Button%(x,y,width,height,txt$, disabled%=False)
 	If Pushed And MouseHit1 Then PlaySound_Strict ButtonSFX : Return True
 End Function
 
+;Отображение даты на русском (CWM + сохр.)
+Function SaveGameDateRus$(i$)
+	Local D$ = Left(SaveGameDate(i),2), M$, Y$ = Right(SaveGameDate(i),4)
+	Select Mid$(SaveGameDate(i),4,3)
+		Case "Jan" M = "Янв"
+		Case "Feb" M = "Фев"
+		Case "Mar" M = "Мар"
+		Case "Apr" M = "Апр"
+		Case "May" M = "Мая"
+		Case "Jun" M = "Июн"
+		Case "Jul" M = "Июл"
+		Case "Aug" M = "Авг"
+		Case "Sep" M = "Сен"
+		Case "Oct" M = "Окт"
+		Case "Nov" M = "Ноя"
+		Case "Dec" M = "Дек"
+	End Select
+	Local Date$ = D+" "+M+" "+Y
+	Return Date
+End Function
 
+Function CurrentDateRus$()
+	Local D$ = Left(CurrentDate(),2), M$, Y$ = Right(CurrentDate(),4)
+	Select Mid$(CurrentDate(),4,3)
+		Case "Jan" M = "Января"
+		Case "Feb" M = "Февраля"
+		Case "Mar" M = "Марта"
+		Case "Apr" M = "Апреля"
+		Case "May" M = "Мая"
+		Case "Jun" M = "Июня"
+		Case "Jul" M = "Июля"
+		Case "Aug" M = "Августа"
+		Case "Sep" M = "Сентября"
+		Case "Oct" M = "Октября"
+		Case "Nov" M = "Ноября"
+		Case "Dec" M = "Декабря"
+	End Select
+	Local Date$ = D+" "+M+" "+Y
+	Return Date
+End Function
 
 
 
