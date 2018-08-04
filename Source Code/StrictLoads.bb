@@ -334,17 +334,3 @@ Function LoadFont_Strict(file$="Arial Cyr", height=13, bold=0, italic=0, underli
 	If tmp = 0 Then RuntimeError "Не удалось загрузить шрифт: " + file$ ;Failed to load Font: 
 	Return tmp
 End Function
-
-
-
-
-
-
-
-
-
-
-
-;~IDEal Editor Parameters:
-;~F#F#34#3B
-;~C#Blitz3D

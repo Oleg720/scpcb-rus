@@ -2490,13 +2490,3 @@ Function LoadMap(file$)
 	
 	CatchErrors("LoadMap")
 End Function
-
-
-
-
-
-
-
-
-;~IDEal Editor Parameters:
-;~C#Blitz3D

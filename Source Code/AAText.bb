@@ -332,7 +332,3 @@ Function AALoadFont%(file$="Arial Cyr", height=13, bold=0, italic=0, underline=0
 	EndIf
 	Return Handle(newFont)
 End Function
-
-;~IDEal Editor Parameters:
-;~F#9#19#3F#4B#50#63#6D#7E#88#CB
-;~C#Blitz3D

@@ -172,10 +172,3 @@ Function UpdateAchievementMsg()
 	Next
 	
 End Function
-
-
-
-
-;~IDEal Editor Parameters:
-;~F#31#48
-;~C#Blitz3D

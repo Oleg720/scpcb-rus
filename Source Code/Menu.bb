@@ -2638,11 +2638,3 @@ Function CurrentDateRus$()
 	Local Date$ = D+" "+M+" "+Y
 	Return Date
 End Function
-
-
-
-
-;~IDEal Editor Parameters:
-;~F#33#499#4AB#4B5#4E8#5C3#5D6#5F3#5FA#615#629#64A#662#693#6C4#6EA#710#72D#73E#756
-;~F#764#787#79F#7A8#7D9#7ED#821#867#8A9
-;~C#Blitz3D
