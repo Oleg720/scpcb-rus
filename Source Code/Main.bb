@@ -7360,7 +7360,7 @@ Function DrawMenu()
 					EndIf
 					
 					y = y + 30*MenuScale
-					AAText(x, y, "Настройка управления;") ;Control configuration:
+					AAText(x, y, "Настройка управления:") ;Control configuration:
 					y = y + 10*MenuScale
 					
 					AAText(x, y + 20 * MenuScale, "Идти вперёд") ;Move Forward

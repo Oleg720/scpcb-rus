@@ -841,7 +841,7 @@ Function UpdateMainMenu()
 					EndIf
 					
 					y = y + 30*MenuScale
-					AAText(x + 20 * MenuScale, y, "Настройка управления;") ;Control configuration:
+					AAText(x + 20 * MenuScale, y, "Настройка управления:") ;Control configuration:
 					y = y + 10*MenuScale
 					
 					AAText(x + 20 * MenuScale, y + 20 * MenuScale, "Идти вперёд") ;Move Forward
@@ -2031,8 +2031,8 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 			txt2 = "Эта опция не может быть изменена во время игры." ;This option cannot be changed in-game.
 			R = 255
 		Case "vsync"
-			txt = Chr(34)+"Вертикальная синхронизация"+Chr(34)+" ожидает, пока дисплей завершит текущий цикл обноления, перед построением следующего кадра. Предотвращает " ;Vertical sync"+Chr(34)+" waits for the display to finish its current refresh cycle before calculating the next frame, preventing issues such as 
-			txt = txt + "разрыв кадра. Частота обновлений кадров синхронизируется с частотой обновления вашего монитора. Что может вызвать небольшие задержки." ;screen tearing. This ties the game's frame rate to your display's refresh rate and may cause some input lag.
+			txt = Chr(34)+"Вертикальная синхронизация"+Chr(34)+" ожидает, пока дисплей завершит текущий цикл обновления, перед построением следующего кадра. Предотвращает " ;Vertical sync"+Chr(34)+" waits for the display to finish its current refresh cycle before calculating the next frame, preventing issues such as 
+			txt = txt + "разрыв кадра. Может вызвать небольшие задержки." ;screen tearing. This ties the game's frame rate to your display's refresh rate and may cause some input lag.
 		Case "antialias"
 			txt = Chr(34)+"Сглаживание"+Chr(34)+" используется для сглаживания изображения, перед его отображением. Позволяет избавиться от лесенок на моделях." ;Anti-Aliasing"+Chr(34)+" is used to smooth the rendered image before displaying in order to reduce aliasing around the edges of models.
 			txt2 = "Эта опция работает только в полноэкранном режиме." ;This option only takes effect in fullscreen.
