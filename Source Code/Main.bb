@@ -1442,7 +1442,8 @@ Function UpdateConsole()
 					;[End Block]
 				Case "jorge"
 					;[Block]	
-					CreateConsoleMsg(Chr(74)+Chr(79)+Chr(82)+Chr(71)+Chr(69)+Chr(32)+Chr(72)+Chr(65)+Chr(83)+Chr(32)+Chr(66)+Chr(69)+Chr(69)+Chr(78)+Chr(32)+Chr(69)+Chr(88)+Chr(80)+Chr(69)+Chr(67)+Chr(84)+Chr(73)+Chr(78)+Chr(71)+Chr(32)+Chr(89)+Chr(79)+Chr(85)+Chr(46))
+					;CreateConsoleMsg(Chr(74)+Chr(79)+Chr(82)+Chr(71)+Chr(69)+Chr(32)+Chr(72)+Chr(65)+Chr(83)+Chr(32)+Chr(66)+Chr(69)+Chr(69)+Chr(78)+Chr(32)+Chr(69)+Chr(88)+Chr(80)+Chr(69)+Chr(67)+Chr(84)+Chr(73)+Chr(78)+Chr(71)+Chr(32)+Chr(89)+Chr(79)+Chr(85)+Chr(46))
+					CreateConsoleMsg(Chr(196)+Chr(198)+Chr(206)+Chr(208)+Chr(196)+Chr(198)+Chr(32)+Chr(198)+Chr(196)+Chr(192)+Chr(203)+Chr(32)+Chr(210)+Chr(197)+Chr(193)+Chr(223)) ;ÄÆÎÐÄÆ ÆÄÀË ÒÅÁß
 ;					Return
 ;					ConsoleFlush = True 
 ;					
