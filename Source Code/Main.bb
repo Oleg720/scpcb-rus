@@ -42,8 +42,8 @@ Global UpdaterFont%
 Global Font1%, Font2%, Font3%, Font4%, Font5%
 Global ConsoleFont%, BlitzFont%
 
-Global VersionNumber$ = "1.3.10 [Rus v1.310-TEST]"
-Global CompatibleNumber$ = "1.3.10 [Rus v1.310-TEST]" ;Only change this if the version given isn't working with the current build version - ENDSHN
+Global VersionNumber$ = "1.3.10 [Rus v1.310]"
+Global CompatibleNumber$ = "1.3.10 [Rus v1.310]" ;Only change this if the version given isn't working with the current build version - ENDSHN
 
 Global MenuWhite%, MenuBlack%
 Global ButtonSFX%
@@ -626,7 +626,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("- showfps")
 							CreateConsoleMsg("- 096state")
 							CreateConsoleMsg("- debughud")
-							CreateConsoleMsg("- camerafog [начало] [конец]") ;[near] [far]
+							CreateConsoleMsg("- camerafog [начало тумана] [конец тумана]") ;[near] [far]
 							CreateConsoleMsg("- gamma [value]")
 							CreateConsoleMsg("- infinitestamina")
 							CreateConsoleMsg("******************************")
@@ -646,9 +646,9 @@ Function UpdateConsole()
 							CreateConsoleMsg("СПРАВКА - camerafog") ;HELP
 							CreateConsoleMsg("******************************")
 							CreateConsoleMsg("Устанавливает дистанцию прорисовки тумана.") ;Sets the draw distance of the fog.
-							CreateConsoleMsg("Туман начивает появляться на 'CameraFogNear'(начало) еденицах") ;The fog begins generating at 'CameraFogNear' units
+							CreateConsoleMsg("Туман начивает появляться на 'CameraFogNear'(начало тумана) еденицах") ;The fog begins generating at 'CameraFogNear' units
 							CreateConsoleMsg("от камеры, и становиться полностью непрозрачным") ;away from the camera and becomes completely opaque
-							CreateConsoleMsg("на 'CameraFogFar'(конец) еденицах от камеры.") ;at 'CameraFogFar' units away from the camera.
+							CreateConsoleMsg("на 'CameraFogFar'(конец тумана) еденицах от камеры.") ;at 'CameraFogFar' units away from the camera.
 							CreateConsoleMsg("Например: camerafog 20 40") ;Example:
 							CreateConsoleMsg("******************************")
 						Case "gamma"
@@ -997,9 +997,9 @@ Function UpdateConsole()
 					;[Block]
 					SuperMan = Not SuperMan
 					If SuperMan = True Then
-						CreateConsoleMsg("БЫСТРЕЕ БЫСТРОГО") ;GOTTA GO FAST
+						CreateConsoleMsg("БЫСТРЕЕ БЫСТРОГО!") ;GOTTA GO FAST
 					Else
-						CreateConsoleMsg("ЭЙ, ПОМЕДЛЕННЕЕ") ;WHOA SLOW DOWN
+						CreateConsoleMsg("ЭЙ, ПОМЕДЛЕННЕЕ!") ;WHOA SLOW DOWN
 					EndIf
 					;[End Block]
 				Case "scp-420-j","420","weed"
@@ -1506,7 +1506,7 @@ CreateConsoleMsg("  - noclip [on/off]")
 CreateConsoleMsg("  - noclipspeed [x] (по умолчанию = 2.0)") ;default
 CreateConsoleMsg("  - wireframe [on/off]")
 CreateConsoleMsg("  - debughud [on/off]")
-CreateConsoleMsg("  - camerafog [начало] [конец]") ;[near] [far]
+CreateConsoleMsg("  - camerafog [начало тумана] [конец тумана]") ;[near] [far]
 CreateConsoleMsg(" ")
 CreateConsoleMsg("  - status")
 CreateConsoleMsg("  - heal")
@@ -7519,6 +7519,7 @@ Function DrawMenu()
 						Font4% = AALoadFont("GFX\font\LCDNovaRus.ttf", Int(60 * (GraphicHeight / 1024.0)), 0,0,0)
 						Font5% = AALoadFont("GFX\font\Journal\Journal.ttf", Int(58 * (GraphicHeight / 1024.0)), 0,0,0)
 						ConsoleFont% = AALoadFont("Arial Cyr", Int(22 * (GraphicHeight / 1024.0)), 0,0,0,1) ;Blitz
+						BlitzFont% = AALoadFont("Blitz", Int(20 * (GraphicHeight / 1024.0)), 0,0,0,1) ;Используется для отображения FPS и номера версии
 						;ReloadAAFont()
 						AATextEnable_Prev% = AATextEnable
 					EndIf

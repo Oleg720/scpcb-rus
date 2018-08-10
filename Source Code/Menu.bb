@@ -279,7 +279,7 @@ Function UpdateMainMenu()
 				
 				AASetFont Font1
 				
-				AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Имя:") ;Name:
+				AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Имя субъекта:") ;Name:
 				CurrSave = InputBox(x + 150 * MenuScale, y + 15 * MenuScale, 200 * MenuScale, 30 * MenuScale, CurrSave, 1)
 				CurrSave = Left(CurrSave, 15)
 				CurrSave = Replace(CurrSave,":","")
@@ -313,7 +313,7 @@ Function UpdateMainMenu()
 				EndIf	
 				
 				AAText(x + 20 * MenuScale, y + 110 * MenuScale, "Включить вступление:") ;Enable intro sequence:
-				IntroEnabled = DrawTick(x + 280 * MenuScale, y + 110 * MenuScale, IntroEnabled)	
+				IntroEnabled = DrawTick(x + 230 * MenuScale, y + 110 * MenuScale, IntroEnabled)	
 				
 				;Local modeName$, modeDescription$, selectedDescription$
 				AAText (x + 20 * MenuScale, y + 150 * MenuScale, "Сложность:") ;Difficulty:
@@ -336,7 +336,7 @@ Function UpdateMainMenu()
 						SelectedDifficulty\saveType = SAVEONSCREENS
 					EndIf
 					
-					AAText(x + 200 * MenuScale, y + 195 * MenuScale, "Сохранения везде") ;Save anywhere
+					AAText(x + 200 * MenuScale, y + 195 * MenuScale, "Сохраняться везде") ;Save anywhere
 					
 					SelectedDifficulty\aggressiveNPCs =  DrawTick(x + 160 * MenuScale, y + 225 * MenuScale, SelectedDifficulty\aggressiveNPCs)
 					AAText(x + 200 * MenuScale, y + 225 * MenuScale, "Агрессивные NPC") ;Aggressive NPCs
@@ -514,7 +514,7 @@ Function UpdateMainMenu()
 								
 								DrawFrame(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale)
 								Color(100, 100, 100)
-								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "Удалить", True, True) ;
+								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "Удалить", True, True) ;Delete
 							EndIf
 							
 							y = y + 80 * MenuScale
@@ -1503,7 +1503,7 @@ Function DrawLoading(percent%, shortloading=False)
 						Case 7
 							SelectedLoadingScreen\txt[0] = "???____??_???__????n?"
 						Case 8, 9
-							SelectedLoadingScreen\txt[0] = "Jorge ждёт вас." ;Jorge has been expecting you.
+							SelectedLoadingScreen\txt[0] = "Джордж ждёт вас." ;Jorge has been expecting you.
 						Case 10
 							SelectedLoadingScreen\txt[0] = "???????????"
 						Case 11
