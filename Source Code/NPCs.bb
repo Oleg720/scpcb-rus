@@ -3234,7 +3234,7 @@ Function UpdateNPCs()
 												PlaySound_Strict DamageSFX(Rand(2,3))
 												
 												If Injuries > 3.0 Then
-													If PlayerRoom\RoomTemplate\Name = "room2offices" Then ;..! Надо будет удостовериться в качестве перевода. Ай да ладно, сделаю это позже.
+													If PlayerRoom\RoomTemplate\Name = "room2offices" Then ;..!
 														DeathMSG = Chr(34)+"Кажется, что одна большая и очень активная тентакля " ;One large and highly active tentacle-like appendage seems 
 														DeathMSG = DeathMSG + "выросла из трупа учёного в офисе [УДАЛЕНО]. Её уровень агрессии " ;to have grown outside the dead body of a scientist within office area [REDACTED]. Its level of aggression is 
 														DeathMSG = DeathMSG + "не похож на тот, что мы видели раньше. Похоже, что в какой-то момент " ;unlike anything we've seen before - it looks like it has 
@@ -4143,7 +4143,7 @@ Function UpdateNPCs()
 											Case 1
 												Msg = "Вы чувствуете себя истощённым." ;You feel exhausted.
 											Case 2
-												Msg = Chr(34)+"Мне бы и правда не помешало вздремнуть..."+Chr(34) ;Could really go for a nap now... ..!(?)
+												Msg = Chr(34)+"Мне бы и правда не помешало вздремнуть..."+Chr(34) ;Could really go for a nap now...
 											Case 3
 												Msg = Chr(34)+"Если бы я не был в такой сетуации, я бы вздремнул где-нибудь."+Chr(34) ;If I wasn't in this situation I would take a nap somewhere.
 											Case 4

@@ -655,7 +655,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("СПРАВКА - gamma") ;HELP
 							CreateConsoleMsg("******************************")
 							CreateConsoleMsg("Устанавливает уровень гаммы.") ;Sets the gamma correction.
-							CreateConsoleMsg("Должно быть установлено значение от 0.0 и до 2.0.") ;Should be set to a value between 0.0 and 2.0.
+							CreateConsoleMsg("Может быть установлено значение от 0.0 и до 2.0.") ;Should be set to a value between 0.0 and 2.0.
 							CreateConsoleMsg("Стандартно - 1.0.") ;Default is 1.0.
 							CreateConsoleMsg("******************************")
 						Case "noclip","fly"
@@ -1443,7 +1443,7 @@ Function UpdateConsole()
 				Case "jorge"
 					;[Block]	
 					;CreateConsoleMsg(Chr(74)+Chr(79)+Chr(82)+Chr(71)+Chr(69)+Chr(32)+Chr(72)+Chr(65)+Chr(83)+Chr(32)+Chr(66)+Chr(69)+Chr(69)+Chr(78)+Chr(32)+Chr(69)+Chr(88)+Chr(80)+Chr(69)+Chr(67)+Chr(84)+Chr(73)+Chr(78)+Chr(71)+Chr(32)+Chr(89)+Chr(79)+Chr(85)+Chr(46))
-					CreateConsoleMsg(Chr(196)+Chr(198)+Chr(206)+Chr(208)+Chr(196)+Chr(198)+Chr(32)+Chr(198)+Chr(196)+Chr(192)+Chr(203)+Chr(32)+Chr(210)+Chr(197)+Chr(193)+Chr(223)) ;ДЖОРДЖ ЖДАЛ ТЕБЯ
+					CreateConsoleMsg(Chr(196)+Chr(198)+Chr(206)+Chr(208)+Chr(196)+Chr(198)+Chr(32)+Chr(198)+Chr(196)+Chr(192)+Chr(203)+Chr(32)+Chr(210)+Chr(197)+Chr(193)+Chr(223))
 ;					Return
 ;					ConsoleFlush = True 
 ;					
@@ -1512,7 +1512,7 @@ CreateConsoleMsg(" ")
 CreateConsoleMsg("  - status")
 CreateConsoleMsg("  - heal")
 CreateConsoleMsg(" ")
-CreateConsoleMsg("  - spawnitem [имя комнаты]") ;item name
+CreateConsoleMsg("  - spawnitem [имя предмета]") ;item name
 CreateConsoleMsg(" ")
 CreateConsoleMsg("  - 173speed [x] (по умолчанию = 35)") ;default
 CreateConsoleMsg("  - disable173/enable173")
@@ -3041,7 +3041,7 @@ Repeat
 				If EyeStuck < 9000 Then BlurTimer = Max(BlurTimer, (9000-EyeStuck)*0.5)
 				If EyeStuck < 6000 Then darkA = Min(Max(darkA, (6000-EyeStuck)/5000.0),1.0)
 				If EyeStuck < 9000 And EyeStuck+FPSfactor =>9000 Then 
-					Msg = "От глазных капель у вас текут слезы." ;The eyedrops are causing your eyes to tear up. ..!
+					Msg = "От глазных капель у вас текут слезы." ;The eyedrops are causing your eyes to tear up.
 					MsgTimer = 70*6
 				EndIf
 			EndIf
@@ -3803,7 +3803,7 @@ Function DrawEnding()
 					Next
 					
 					AAText x, y, "SCP встречено: " +scpsEncountered ;SCPs encountered
-					AAText x, y+20*MenuScale, "Дотижений открыто: " + achievementsUnlocked+"/"+(MAXACHIEVEMENTS) ;Achievements unlocked:
+					AAText x, y+20*MenuScale, "Достижений открыто: " + achievementsUnlocked+"/"+(MAXACHIEVEMENTS) ;Achievements unlocked:
 					AAText x, y+40*MenuScale, "Комнат найдено: " + roomsfound+"/"+roomamount ;Rooms found:
 					AAText x, y+60*MenuScale, "Документов найдено: " +docsfound+"/"+docamount ;Documents discovered
 					AAText x, y+80*MenuScale, "Предметов в SCP-914 переработано: " +RefinedItems ;Items refined in SCP-914:		
@@ -4295,7 +4295,7 @@ Function MovePlayer()
 		EndIf
 		
 		If temp2 <= 60 And Bloodloss > 60 Then
-			Msg = "Вы чувствуете слабость, из-за кропопотери." ;You are feeling faint from the amount of blood you have lost.
+			Msg = "Вы чувствуете слабость, из-за кровопотери." ;You are feeling faint from the amount of blood you have lost.
 			MsgTimer = 70*4
 		EndIf
 	EndIf
@@ -4780,9 +4780,9 @@ Function DrawGUI()
 			
 			;Text x + 250, 50, "Zone: " + (EntityZ(Collider)/8.0)
 			AAText x - 50, 50, "Позиция игрока: (" + f2s(EntityX(Collider), 3) + ", " + f2s(EntityY(Collider), 3) + ", " + f2s(EntityZ(Collider), 3) + ")" ;Player Position:
-			AAText x - 50, 70, "Позиция камерыы: (" + f2s(EntityX(Camera), 3)+ ", " + f2s(EntityY(Camera), 3) +", " + f2s(EntityZ(Camera), 3) + ")" ;Camera Position:
+			AAText x - 50, 70, "Позиция камеры: (" + f2s(EntityX(Camera), 3)+ ", " + f2s(EntityY(Camera), 3) +", " + f2s(EntityZ(Camera), 3) + ")" ;Camera Position:
 			AAText x - 50, 100, "Угол поворота игрока: (" + f2s(EntityPitch(Collider), 3) + ", " + f2s(EntityYaw(Collider), 3) + ", " + f2s(EntityRoll(Collider), 3) + ")" ;Player Rotation:
-			AAText x - 50, 120, "Угол поворота игрока: (" + f2s(EntityPitch(Camera), 3)+ ", " + f2s(EntityYaw(Camera), 3) +", " + f2s(EntityRoll(Camera), 3) + ")" ;Camera Rotation:
+			AAText x - 50, 120, "Угол поворота камеры: (" + f2s(EntityPitch(Camera), 3)+ ", " + f2s(EntityYaw(Camera), 3) +", " + f2s(EntityRoll(Camera), 3) + ")" ;Camera Rotation:
 			AAText x - 50, 150, "Имя: " + PlayerRoom\RoomTemplate\Name ;Room:
 			For ev.Events = Each Events
 				If ev\room = PlayerRoom Then
@@ -4840,7 +4840,7 @@ Function DrawGUI()
 			AAText x + 350, 90, (m\dwAvailPhys%/1024/1024)+" MБ/"+(m\dwTotalPhys%/1024/1024)+" MБ ("+(m\dwAvailPhys%/1024)+" KБ/"+(m\dwTotalPhys%/1024)+" KБ)"
 			AAText x + 350, 110, "Треугольников отображено: "+CurrTrisAmount ;Triangles rendered:
 			AAText x + 350, 130, "Активных текстур: "+ActiveTextures() ;Active textures:
-			AAText x + 350, 150, "SCP-427 state (secs): "+Int(I_427\Timer/70.0) ;SCP-427 state (secs)
+			AAText x + 350, 150, "SCP-427 state (secs): "+Int(I_427\Timer/70.0)
 			AAText x + 350, 170, "Инфекция SCP-008: "+Infect ;SCP-008 infection:
 			For i = 0 To 5
 				AAText x + 350, 190+(20*i), "Состояние SCP-1025 "+i+": "+SCP1025state[i] ;SCP-1025 State
@@ -5587,7 +5587,7 @@ Function DrawGUI()
 						Msg = "Вы сняли очки." ;You removed the goggles.
 						CameraFogFar = StoredCameraFogFar
 					Else
-						Msg = "Вы одели очки" ;You put on the goggles.
+						Msg = "Вы надели очки" ;You put on the goggles.
 						;WearingGasMask = 0
 						;Wearing178 = False
 						TakeOffStuff(1+2+8+32+64)
@@ -5606,7 +5606,7 @@ Function DrawGUI()
 						Msg = "Вы сняли очки." ;You removed the goggles.
 						CameraFogFar = StoredCameraFogFar
 					Else
-						Msg = "Вы одели очки" ;You put on the goggles.
+						Msg = "Вы надели очки" ;You put on the goggles.
 						;WearingGasMask = 0
 						;Wearing178 = False
 						TakeOffStuff(1+2+8+32+64)
@@ -5625,7 +5625,7 @@ Function DrawGUI()
 						Msg = "Вы сняли очки." ;You removed the goggles.
 						CameraFogFar = StoredCameraFogFar
 					Else
-						Msg = "Вы одели очки" ;You put on the goggles.
+						Msg = "Вы надели очки" ;You put on the goggles.
 						;WearingGasMask = 0
 						;Wearing178 = False
 						TakeOffStuff(1+2+8+32+64)
@@ -5644,7 +5644,7 @@ Function DrawGUI()
 						Wearing714 = False
 					Else
 						;Achievements(Achv714)=True
-						Msg = "Вы одели кольцо." ;You put on the ring.
+						Msg = "Вы надели кольцо." ;You put on the ring.
 						Wearing714 = 2
 						TakeOffStuff(1+2+8+32+64)
 					EndIf
@@ -6461,7 +6461,7 @@ Function DrawGUI()
 						Wearing714 = False
 					Else
 						GiveAchievement(Achv714)
-						Msg = "Вы одели кольцо." ;You put on the ring.
+						Msg = "Вы надели кольцо." ;You put on the ring.
 						Wearing714 = True
 					EndIf
 					MsgTimer = 70 * 5
@@ -6501,7 +6501,7 @@ Function DrawGUI()
 								WearingHazmat = 3
 							EndIf
 							If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))
-							Msg = "Вы одели защитный костюм." ;You put on the hazmat suit.
+							Msg = "Вы надели защитный костюм." ;You put on the hazmat suit.
 							TakeOffStuff(1+16)
 						EndIf
 						SelectedItem\state=0
@@ -6631,7 +6631,7 @@ Function DrawGUI()
 								For z2 = Max(0, PlayerZ - 6) To Min(MapHeight, PlayerZ + 6)
 									
 									If CoffinDistance > 16.0 Or Rnd(16.0)<CoffinDistance Then 
-										If MapTemp(x2, z2)>0 And (MapFound(x2, z2) > 0 Or SelectedItem\itemtemplate\name = "S-NAV 310 Navigator" Or SelectedItem\itemtemplate\name = "S-NAV Navigator Ultimate") Then ;..!
+										If MapTemp(x2, z2)>0 And (MapFound(x2, z2) > 0 Or SelectedItem\itemtemplate\name = "Навигатор S-NAV 310" Or SelectedItem\itemtemplate\name = "Навигатор S-NAV Ultimate") Then ;S-NAV 310 Navigator ;S-NAV Navigator Ultimate
 											Local drawx% = x + (PlayerX - 1 - x2) * 24 , drawy% = y - (PlayerZ - 1 - z2) * 24
 											
 											If x2+1<=MapWidth Then
