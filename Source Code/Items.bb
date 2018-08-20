@@ -170,21 +170,21 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Обгоревшая записка д-ра Л", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL5.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0 ;Dr L's Burnt Note
 	it = CreateItemTemplate("Выжженная записка", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL6.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0 ;Scorched Note
 	
-	it = CreateItemTemplate("Страница журнала", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docGonzales.jpg", 0.0025) : it\sound = 0 ;Journal Page
+	it = CreateItemTemplate("Страница из дневника", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docGonzales.jpg", 0.0025) : it\sound = 0 ;Journal Page
 	
 	
-	it = CreateItemTemplate("Журнал #1", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f4.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0 ;Log #1
-	it = CreateItemTemplate("Журнал #2", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f5.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0 ;Log #2
-	it = CreateItemTemplate("Журнал #3", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f6.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0 ;Log #3
+	it = CreateItemTemplate("Запись №1", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f4.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0 ;Log #1
+	it = CreateItemTemplate("Запись №2", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f5.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0 ;Log #2
+	it = CreateItemTemplate("Запись №3", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f6.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0 ;Log #3
 	
 	it = CreateItemTemplate("Странная записка", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docStrange.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0 ;Strange Note
 	
-	it = CreateItemTemplate("Документ об Ядерном устройстве", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docNDP.jpg", 0.003) : it\sound = 0 ;Nuclear Device Document
-	it = CreateItemTemplate("Ориентационная листовка класса D", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docORI.jpg", 0.003) : it\sound = 0 ;Class D Orientation Leaflet
+	it = CreateItemTemplate("Документ о ядерных устройствах", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docNDP.jpg", 0.003) : it\sound = 0 ;Nuclear Device Document
+	it = CreateItemTemplate("Информационная листовка для персонала класса D", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docORI.jpg", 0.003) : it\sound = 0 ;Class D Orientation Leaflet
 	
 	it = CreateItemTemplate("Записка от Даниэля", "paper", "GFX\items\note.x", "GFX\items\INVnote2.jpg", "GFX\items\docdan.jpg", 0.0025) : it\sound = 0 ;Note from Daniel
 	
-	it = CreateItemTemplate("Разъеденный документ", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\bn.it", 0.003, "GFX\items\BurntNoteTexture.jpg") ;Burnt Note
+	it = CreateItemTemplate("Обгоревший документ", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\bn.it", 0.003, "GFX\items\BurntNoteTexture.jpg") ;Burnt Note
 	it\img = BurntNote : it\sound = 0
 	
 	it = CreateItemTemplate("Загадочная записка", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\sn.it", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 ;Mysterious Note
@@ -193,7 +193,7 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Уровни допуска", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docSC.jpg", 0.003) : it\sound = 0 ;Security Clearance Levels
 	it = CreateItemTemplate("Классы объектов", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docOBJC.jpg", 0.003) : it\sound = 0 ;Object Classes
 	it = CreateItemTemplate("Документ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRAND3.jpg", 0.003) : it\sound = 0 ;Document
-	it = CreateItemTemplate("Дополнение: 5/14 Протокол исследований", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND2.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 ;Addendum: 5/14 Test Log
+	it = CreateItemTemplate("Дополнение: Протокол исследований 5/14", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND2.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 ;Addendum: 5/14 Test Log
 	it = CreateItemTemplate("Уведомление", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND1.jpg", 0.003, "GFX\items\notetexture.jpg") :it\sound = 0 ;Notification
 	it = CreateItemTemplate("Отчёт об инциденте SCP-106-0204", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docIR106.jpg", 0.003) : it\sound = 0 ;Incident Report SCP-106-0204
 	
@@ -252,14 +252,14 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Оторванная рука", "hand", "GFX\items\severedhand.b3d", "GFX\items\INVhand.jpg", "", 0.04) : it\sound = 2 ;Severed Hand
 	it = CreateItemTemplate("Чёрная оторванная рука", "hand2", "GFX\items\severedhand.b3d", "GFX\items\INVhand2.jpg", "", 0.04, "GFX\items\shand2.png") : it\sound = 2 ;Black Severed Hand
 	
-	CreateItemTemplate("9V батарейка", "bat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery9v.jpg", "", 0.008) ;9V Battery
-	CreateItemTemplate("18V батарейка", "18vbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery18v.jpg", "", 0.01, "GFX\items\Battery\Battery 18V.jpg") ;18V Battery
+	CreateItemTemplate("9V-батарейка", "bat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery9v.jpg", "", 0.008) ;9V Battery
+	CreateItemTemplate("18V-батарейка", "18vbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery18v.jpg", "", 0.01, "GFX\items\Battery\Battery 18V.jpg") ;18V Battery
 	CreateItemTemplate("Странная батарейка", "killbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery22900.jpg", "", 0.01,"GFX\items\Battery\Strange Battery.jpg") ;Strange Battery
 	
 	CreateItemTemplate("Глазные капли", "fineeyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;Eyedrops
 	CreateItemTemplate("Глазные капли", "supereyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;Eyedrops
-	CreateItemTemplate("Глазные капли РеЗрение", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;ReVision Eyedrops
-	CreateItemTemplate("Красные глазные капли РеЗрение", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg") ;ReVision Eyedrops
+	CreateItemTemplate("Глазные капли Зрение +", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;ReVision Eyedrops
+	CreateItemTemplate("Красные глазные капли Зрение+", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg") ;ReVision Eyedrops
 	
 	it = CreateItemTemplate("SCP-714", "scp714", "GFX\items\scp714.b3d", "GFX\items\INV714.jpg", "", 0.3) ;
 	it\sound = 3
@@ -299,7 +299,7 @@ Function InitItemTemplates()
 	it = CreateItemTemplate("Билет в кино", "ticket", "GFX\items\key.b3d", "GFX\items\INVticket.jpg", "GFX\items\ticket.png", 0.002, "GFX\items\tickettexture.png","",0,1+2+8) : it\sound = 0 ;Movie Ticket
 	CreateItemTemplate("Старый бейдж", "badge", "GFX\items\badge.x", "GFX\items\INVoldbadge.jpg", "GFX\items\badge2.png", 0.0001, "GFX\items\badge2_tex.png","",0,1+2+8) ;Old Badge
 	
-	it = CreateItemTemplate("50 центная монета","50ct", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3 ;50 Cent Coin
+	it = CreateItemTemplate("Четвертак","25ct", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3 ;Quarter
 	it = CreateItemTemplate("Кошелёк","wallet", "GFX\items\wallet.b3d", "GFX\items\INVwallet.jpg", "", 0.0005,"","",1) : it\sound = 2 ;Wallet
 	
 	CreateItemTemplate("SCP-427","scp427","GFX\items\427.b3d","GFX\items\INVscp427.jpg", "", 0.001)
@@ -455,7 +455,7 @@ Function RemoveItem(i.Items)
 				WearingGasMask = False
 			Case "vest", "finevest", "veryfinevest"
 				WearingVest = False
-			Case "hazmatsuit","hazmatsuit2"
+			Case "hazmatsuit","hazmatsuit2","hazmatsuit3"
 				WearingHazmat = False	
 			Case "scp714"
 				Wearing714 = False
@@ -479,9 +479,10 @@ End Function
 
 Function UpdateItems()
 	CatchErrors("Uncaught (UpdateItems)")
-	Local n, i.Items
+	Local n, i.Items, i2.Items
 	Local xtemp#, ytemp#, ztemp#
 	Local temp%, np.NPCs
+	Local pick%
 	
 	Local HideDist = HideDistance*0.5
 	Local deletedItem% = False
@@ -492,26 +493,29 @@ Function UpdateItems()
 		
 		If (Not i\Picked) Then
 			If i\disttimer < MilliSecs2() Then
-				i\dist = EntityDistance(Collider, i\collider)
-				i\disttimer = MilliSecs2() + Rand(600,800)
+				i\dist = EntityDistance(Camera, i\collider)
+				i\disttimer = MilliSecs2() + 700
 				If i\dist < HideDist Then ShowEntity i\collider
 			EndIf
 			
 			If i\dist < HideDist Then
 				ShowEntity i\collider
 				
-				If (Not EntityVisible(i\collider,Camera)) Then
-					;the player can't grab this
-					If (Not EntityVisible(i\collider,Collider)) Then i\dist = 2.5
-				EndIf
-				
 				If i\dist < 1.2 Then
 					If ClosestItem = Null Then
-						If EntityInView(i\model, Camera) Then ClosestItem = i
-					Else If ClosestItem = i Or i\dist < EntityDistance(Collider, ClosestItem\collider) Then 
-						If EntityInView(i\model, Camera) Then ClosestItem = i
-					End If
-				EndIf					
+						If EntityInView(i\model, Camera) Then
+							If EntityVisible(i\collider,Camera) Then
+								ClosestItem = i
+							EndIf
+						EndIf
+					ElseIf ClosestItem = i Or i\dist < EntityDistance(Camera, ClosestItem\collider) Then 
+						If EntityInView(i\model, Camera) Then
+							If EntityVisible(i\collider,Camera) Then
+								ClosestItem = i
+							EndIf
+						EndIf
+					EndIf
+				EndIf
 				
 				If EntityCollided(i\collider, HIT_MAP) Then
 					i\DropSpeed = 0
@@ -519,7 +523,7 @@ Function UpdateItems()
 					i\zspeed = 0.0
 				Else
 					If ShouldEntitiesFall
-						Local pick = LinePick(EntityX(i\collider),EntityY(i\collider),EntityZ(i\collider),0,-10,0)
+						pick = LinePick(EntityX(i\collider),EntityY(i\collider),EntityZ(i\collider),0,-10,0)
 						If pick
 							i\DropSpeed = i\DropSpeed - 0.0004 * FPSfactor
 							TranslateEntity i\collider, i\xspeed*FPSfactor, i\DropSpeed * FPSfactor, i\zspeed*FPSfactor
@@ -584,7 +588,7 @@ Function UpdateItems()
 		;DrawHandIcon = True
 		
 		If MouseHit1 Then PickItem(ClosestItem)
-	End If
+	EndIf
 	
 End Function
 
@@ -599,7 +603,13 @@ Function PickItem(item.Items)
 			Exit
 		EndIf
 	Next
-	
+
+	If WearingHazmat > 0 Then
+		Msg = "Вы не можете подбирать предметы во время ношения защитного костюма."
+		MsgTimer = 70*5
+		Return
+	EndIf
+
 	CatchErrors("Uncaught (PickItem)")
 	If (Not fullINV) Then
 		For n% = 0 To MaxItemAmount - 1
@@ -612,8 +622,8 @@ Function PickItem(item.Items)
 								LightFlash = 7
 								PlaySound_Strict(LoadTempSound("SFX\SCP\1123\Touch.ogg"))
 								DeathMSG = "Субъект D-9341 был застрелен после попытки напасть на члена Девятихвостой Лисы. Записи с камер наблюдения показывают, " ;Subject D-9341 was shot dead after attempting to attack a member of Nine-Tailed Fox. Surveillance tapes show that the subject had been 
-								DeathMSG = DeathMSG + "что примерно за 9 минут до этого субъект блуждал по Зоне, выкрикивая фразу " + Chr(34) + "избавиться от четырёх вредителей" + Chr(34) ;wandering around the site approximately 9 minutes prior, shouting the phrase " + Chr(34) + "get rid of the four pests
-								DeathMSG = DeathMSG + " на китайском языке. Неподалёку в [УДАЛЕНО] был обнаружен SCP-1123, что даёт предположить, что субъект вступил в физический контакт с ним. Как " ; in chinese. SCP-1123 was found in [REDACTED] nearby, suggesting the subject had come into physical contact with it. How 
+								DeathMSG = DeathMSG + "что примерно за 9 минут до этого субъект блуждал по Зоне, выкрикивая фразу " + Chr(34) + "Избавиться от четырёх вредителей!" + Chr(34) ;wandering around the site approximately 9 minutes prior, shouting the phrase " + Chr(34) + "get rid of the four pests
+								DeathMSG = DeathMSG + " на китайском языке. Неподалёку в [УДАЛЕНО] был обнаружен SCP-1123, что даёт основания предполагать, что субъект вступил с ним в физический контакт. Как " ; in chinese. SCP-1123 was found in [REDACTED] nearby, suggesting the subject had come into physical contact with it. How 
 								DeathMSG = DeathMSG + "именно SCP-1123 был изъят из своей камеры содержания, до сих пор неизвестно." ;exactly SCP-1123 was removed from its containment chamber is still unknown.
 								Kill()
 							EndIf
@@ -636,8 +646,8 @@ Function PickItem(item.Items)
 						ShowEntity Light
 						LightFlash = 1.0
 						PlaySound_Strict(IntroSFX(11))
-						DeathMSG = "Субъект D-9341 найден мёртвым в отсеке выхода SCP-914 рядом с предметом, похожим на обычную 9V батарейку. Субъект покрыт сильными " ;Subject D-9341 found dead inside SCP-914's output booth next to what appears to be an ordinary nine-volt battery. The subject is covered in severe 
-						DeathMSG = DeathMSG + "электрическими ожогами, предполагается, что он был убит током от этой батарейки. Батарейка хранится для дальнейшего изучения." ;electrical burns, and assumed to be killed via an electrical shock caused by the battery. The battery has been stored for further study.
+						DeathMSG = "Субъект D-9341 найден мёртвым в отсеке вывода SCP-914 рядом с предметом, похожим на обычную 9V-батарейку. Субъект покрыт сильными " ;Subject D-9341 found dead inside SCP-914's output booth next to what appears to be an ordinary nine-volt battery. The subject is covered in severe 
+						DeathMSG = DeathMSG + "электрическими ожогами, предполагается, что он был убит током от этой батарейки. Батарейка взята на хранение для дальнейшего изучения." ;electrical burns, and assumed to be killed via an electrical shock caused by the battery. The battery has been stored for further study.
 						Kill()
 					Case "scp148"
 						GiveAchievement(Achv148)	
@@ -729,6 +739,12 @@ Function PickItem(item.Items)
 End Function
 
 Function DropItem(item.Items,playdropsound%=True)
+	If WearingHazmat > 0 Then
+		Msg = "Вы не можете выбрасывать предметы во время ношения защитного костюма."
+		MsgTimer = 70*5
+		Return
+	EndIf
+	
 	CatchErrors("Uncaught (DropItem)")
 	If playdropsound Then
 		If item\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(item\itemtemplate\sound))

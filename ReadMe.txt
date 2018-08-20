@@ -6,7 +6,7 @@
 
 				  www.scpcbgame.ru
 
-				v1.3.10 [Rus 1.310]
+				v1.3.11 [Rus 1.311]
 
 Данная игра базируется на работах фонда SCP (http://www.scp-wiki.net/ или http://scpfoundation.ru).
 Смотрите "Credits.txt" для подробностей.

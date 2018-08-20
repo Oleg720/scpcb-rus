@@ -151,7 +151,7 @@ Function UpdateAchievementMsg()
 			Rect(x+10*scale,y+10*scale,64*scale,64*scale,False)
 			Color 255,255,255
 			AASetFont Font1
-			RowText("Открыто достижение:      "+amsg\txt,x+84*scale,y+10*scale,width-94*scale,y-20*scale) ;Achievement Unlocked - 
+			RowText("Новое достижение:      "+amsg\txt,x+84*scale,y+10*scale,width-94*scale,y-20*scale) ;Achievement Unlocked - 
 			If amsg\msgtime > 0.0 And amsg\msgtime < 70*7
 				amsg\msgtime = amsg\msgtime + FPSfactor2
 				If amsg\msgx > -width%

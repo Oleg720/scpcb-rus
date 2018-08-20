@@ -25,7 +25,7 @@ Const EASY = 0, NORMAL = 1, HARD = 2
 
 difficulties(SAFE) = New Difficulty
 difficulties(SAFE)\name = "Безопасно" ;Safe
-difficulties(SAFE)\description ="Можно сохраняться везде. Однако, Безопасный уровень сложности не значит, что можно расслабиться." ;The game can be saved any time. However, as in the case of SCP Objects, a Safe classification does not mean that handling it does not pose a threat.
+difficulties(SAFE)\description ="Можно сохранять игру в любом месте. Однако, как и с объектами SCP этого класса, Безопасный уровень сложности не означает, что можно расслабиться." ;The game can be saved any time. However, as in the case of SCP Objects, a Safe classification does not mean that handling it does not pose a threat.
 difficulties(SAFE)\permaDeath = False
 difficulties(SAFE)\aggressiveNPCs = False
 difficulties(SAFE)\saveType = SAVEANYWHERE
@@ -36,7 +36,7 @@ difficulties(SAFE)\b = 50
 
 difficulties(EUCLID) = New Difficulty
 difficulties(EUCLID)\name = "Евклид" ;Euclid
-difficulties(EUCLID)\description = "На сложности Евклид сохранение разрешено только в специальных местах, отмеченных освещёнными экранами мониторов " ;In Euclid difficulty, saving is only allowed at specific locations marked by lit up computer screens. 
+difficulties(EUCLID)\description = "На сложности Евклид сохранение возможно только возле включенных экранов компьютеров. " ;In Euclid difficulty, saving is only allowed at specific locations marked by lit up computer screens. 
 difficulties(EUCLID)\description = difficulties(EUCLID)\description +"К объектам класса Евклид относятся недостаточно изученные или непредсказуемые аномалии, надёжное содержание которых не всегда возможно." ;Euclid-class objects are inherently unpredictable, so that reliable containment is not always possible.
 difficulties(EUCLID)\permaDeath = False
 difficulties(EUCLID)\aggressiveNPCs = False
@@ -48,8 +48,8 @@ difficulties(EUCLID)\b = 0
 
 difficulties(KETER) = New Difficulty
 difficulties(KETER)\name = "Кетер" ;Keter
-difficulties(KETER)\description = "Объекты класса Кетер - аномалии, которые настроены враждебно, представляют опасность для сотрудников Фонда. " ;Keter-class objects are considered the most dangerous ones in Foundation containment. 
-difficulties(KETER)\description = difficulties(KETER)\description +"Тоже самое можно сказать и о уровне сложности: SCP более агрессивны, и у вас только одна жизнь. Погибли? Игра окончена." ;The same can be said for this difficulty level: the SCPs are more aggressive, and you have only one life - when you die, the game is over. 
+difficulties(KETER)\description = "Объекты класса Кетер - аномалии, которые настроены враждебно и представляют опасность для сотрудников Фонда. " ;Keter-class objects are considered the most dangerous ones in Foundation containment. 
+difficulties(KETER)\description = difficulties(KETER)\description +"То же самое можно сказать и об этом уровне сложности: SCP более агрессивны, и у вас только одна жизнь. Погибли? Игра окончена." ;The same can be said for this difficulty level: the SCPs are more aggressive, and you have only one life - when you die, the game is over. 
 difficulties(KETER)\permaDeath = True
 difficulties(KETER)\aggressiveNPCs = True
 difficulties(KETER)\saveType = SAVEONQUIT
