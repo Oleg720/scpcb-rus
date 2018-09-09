@@ -8,13 +8,13 @@
 
 				v1.3.11 [Rus 1.311]
 
-Данная игра базируется на работах фонда SCP (http://www.scp-wiki.net/ или http://scpfoundation.ru).
+Данная игра базируется на работах Фонда SCP (http://www.scp-wiki.net/ или http://scpfoundation.ru).
 Смотрите "Credits.txt" для подробностей.
 
 Данная игра использует лицензию Creative Commons Attribution-ShareAlike 3.0.
 (https://creativecommons.org/licenses/by-sa/3.0/deed.ru)
 
-Исходный код игры доступен на Github: https://github.com/Regalis11/scpcb
+Исходный код игры доступен на Github (https://github.com/Regalis11/scpcb).
 
 
 **** КАК ЗАПУСТИТЬ ИГРУ *********************************

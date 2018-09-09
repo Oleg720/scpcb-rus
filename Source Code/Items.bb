@@ -258,7 +258,7 @@ Function InitItemTemplates()
 	
 	CreateItemTemplate("√лазные капли", "fineeyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;Eyedrops
 	CreateItemTemplate("√лазные капли", "supereyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;Eyedrops
-	CreateItemTemplate("√лазные капли «рение +", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;ReVision Eyedrops
+	CreateItemTemplate("√лазные капли «рение+", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg") ;ReVision Eyedrops
 	CreateItemTemplate(" расные глазные капли «рение+", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg") ;ReVision Eyedrops
 	
 	it = CreateItemTemplate("SCP-714", "scp714", "GFX\items\scp714.b3d", "GFX\items\INV714.jpg", "", 0.3) ;
