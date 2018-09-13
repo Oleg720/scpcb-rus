@@ -168,10 +168,10 @@ SetStatusText(Loadingwindow, "Запуск")
 ; Now create a whole bunch of menus and sub-items - first of all the FILE menu
 file=CreateMenu("Файл",0,menu) ; main menu
 CreateMenu "Новая карта",0,file ; child menu 
-CreateMenu "Открыть",1,file ; child menu 
+CreateMenu "Открыть карту",1,file ; child menu 
 CreateMenu "",1000,file ; Use an empty string to generate separator bars
-CreateMenu "Сохранить",2,file ; child menu 
-CreateMenu "Сохранить как...",3,file ; child menu 
+CreateMenu "Сохранить карту",2,file ; child menu 
+CreateMenu "Сохранить карту как...",3,file ; child menu 
 CreateMenu "",1000,file ; Use an empty string to generate separator bars
 CreateMenu "Выйти",10001,file ; another child menu
 
@@ -1125,7 +1125,7 @@ Repeat
 			EndIf
 		EndIf
 		If EID=6 Then ExecFile "Manual.pdf"
-		If EID=40  Then Notify "SCP Containement Breach Редактор карт v"+versionnumber+""+Chr$(13)+" Разработали: Vane Brain and ENDSHN."+Chr$(13)+" Перевёл: Олег Сиряк"
+		If EID=40  Then Notify "SCP Containement Breach Редактор карт v"+versionnumber+""+Chr$(13)+" Разработали: Vane Brain и ENDSHN."+Chr$(13)+" Перевёл: Олег Сиряк"
 		If EID=17 Then 
 			ShowGadget optionwin
 		EndIf

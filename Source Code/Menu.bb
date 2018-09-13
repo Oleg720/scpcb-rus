@@ -933,7 +933,7 @@ Function UpdateMainMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "Открыть консоль при ошибках:") ;Open console on error:
+					AAText(x + 20 * MenuScale, y, "Открыть консоль при ошибке:") ;Open console on error:
 					ConsoleOpening = DrawTick(x + 310 * MenuScale, y + MenuScale, ConsoleOpening)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"consoleerror")
