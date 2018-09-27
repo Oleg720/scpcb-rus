@@ -681,7 +681,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("Переключает wireframe, если не указан") ;Toggles wireframe, unless a valid parameter
 							CreateConsoleMsg("параметр (on/off).") ;is specified
 							CreateConsoleMsg("Позволяет отображать только рёбра геометрии,") ;Allows only the edges of geometry to be rendered,
-							CreateConsoleMsg("делая всё отсальное прозрачным.") ;making everything else transparent.
+							CreateConsoleMsg("делая всё остальное прозрачным.") ;making everything else transparent.
 							CreateConsoleMsg("******************************")
 						Case "spawnitem"
 							CreateConsoleMsg("СПРАВКА - spawnitem") ;HELP
@@ -718,7 +718,7 @@ Function UpdateConsole()
 						Case "stopsound", "stfu"
 							CreateConsoleMsg("СПРАВКА - stopsound") ;HELP
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Останавливает все текущие звуки.") ;Stops all currently playing sounds.
+							CreateConsoleMsg("Останавливает все звуки, проигрываемые в данный момент.") ;Stops all currently playing sounds.
 							CreateConsoleMsg("******************************")
 						Case "camerapick"
 							CreateConsoleMsg("СПРАВКА - camerapick") ;HELP
@@ -1090,7 +1090,7 @@ Function UpdateConsole()
 				Case "showfps"
 					;[Block]
 					ShowFPS = Not ShowFPS
-					CreateConsoleMsg("ShowFPS: "+Str(ShowFPS))
+					CreateConsoleMsg("Отображение FPS: "+Str(ShowFPS)) ;ShowFPS
 					;[End Block]
 				Case "096state"
 					;[Block]
