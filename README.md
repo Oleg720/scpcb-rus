@@ -1,9 +1,14 @@
 # SCP - Containment Breach | Русская локализация
 
-Репозиторий для более удобной работы над локализацией
+Версия оригинальной игры: 1.3.11
+Локализация за авторством команд [CreatorMasters] и [Trill Team].
+Репозиторий с оригинальной игрой [Regalis11/scpcb][OriginalRep].
+Все разработчики игры и локализации указаны в [Credits.txt].
 
->Локализация для версии: 1.3.11
+Скачать уже готовую русскую версию можно на [русскоязычном сайте][scpcbgame.ru].
 
->Ответственный за репозиторий и сборку локализации: Oleg720
-
->Все разработчики игры и локализации указаны в Credits.txt
+[CreatorMasters]: <https://vk.com/creatormteam>
+[Trill Team]: <https://vk.com/trill_team>
+[Credits.txt]: <https://github.com/Oleg720/scpcb-rus/blob/1.3.11/Credits.txt>
+[OriginalRep]: <https://github.com/Regalis11/scpcb>
+[scpcbgame.ru]: <http://scpcbgame.ru>
