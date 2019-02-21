@@ -3,7 +3,7 @@ Const C_WS_POPUP = $80000000
 Const C_HWND_TOP = 0
 Const C_SWP_SHOWWINDOW = $0040
 
-Global versionnumber$ = "2.1 [Rus]"
+Global versionnumber$ = "2.1 [Rus]" ;2.1
 
 Const ClrR = 50, ClrG = 50, ClrB = 50
 
@@ -546,26 +546,26 @@ Repeat
 			Local rAngle% = Int(PickedRoom\angle)
 			
 			Color 0,0,0
-			Rect 2,32,StringWidth("Имя комнаты: "+rname),StringHeight("Имя комнаты: "+rname)
-			Rect 2,52,StringWidth("Комната (Ось X): "+rX),StringHeight("Комната (Ось X): "+rX)
-			Rect 2,72,StringWidth("Комната (Ось Z): "+rZ),StringHeight("Комната (Ось Z): "+rZ)
+			Rect 2,32,StringWidth("Имя комнаты: "+rname),StringHeight("Имя комнаты: "+rname) ;Room name:
+			Rect 2,52,StringWidth("Комната (Ось X): "+rX),StringHeight("Комната (Ось X): "+rX) ;Room X:
+			Rect 2,72,StringWidth("Комната (Ось Z): "+rZ),StringHeight("Комната (Ось Z): "+rZ) ;Room Z:
 			
 			Color 255,255,255
-			Text 2,32,"Имя комнаты: "+rname
-			Text 2,52,"Комната (Ось X): "+rX
-			Text 2,72,"Комната (Ось Z): "+rZ
+			Text 2,32,"Имя комнаты: "+rname ;Room name:
+			Text 2,52,"Комната (Ось X): "+rX ;Room X:
+			Text 2,72,"Комната (Ось Z): "+rZ ;Room Z:
 			
 			If PickedRoom\event<>""
 				ename$ = PickedRoom\event
 				Local echance# = PickedRoom\eventchance
 				
 				Color 0,0,0
-				Rect 2,92,StringWidth("Событие: "+ename),StringHeight("Событие: "+ename)
-				Rect 2,112,StringWidth("Шанс события: "+Int(echance*100)+"%"),StringHeight("Шанс события: "+Int(echance*100)+"%")
+				Rect 2,92,StringWidth("Событие: "+ename),StringHeight("Событие: "+ename) ;Room event:
+				Rect 2,112,StringWidth("Шанс события: "+Int(echance*100)+"%"),StringHeight("Шанс события: "+Int(echance*100)+"%") ;Room event chance:
 				
 				Color 255,255,255
-				Text 2,92,"Событие: "+ename
-				Text 2,112,"Шанс события: "+Int(echance*100)+"%"
+				Text 2,92,"Событие: "+ename ;Room event:
+				Text 2,112,"Шанс события: "+Int(echance*100)+"%" ;Room event chance:
 			EndIf
 		EndIf
 		
@@ -573,15 +573,12 @@ Repeat
 			rname$ = CurrSelectedRoom\RoomTemplate\Name
 			
 			Color 0,0,0
-			Rect 2,142,StringWidth("Выбранная комната: "+rname),StringHeight("Выбранная комната: "+rname)
+			Rect 2,142,StringWidth("Выбранная комната: "+rname),StringHeight("Выбранная комната: "+rname) ;Selected room:
 			
 			Color 255,255,255
-			Text 2,142,"Выбранная комната: "+rname
+			Text 2,142,"Выбранная комната: "+rname ;Selected room:
 		EndIf
 
-;			Rect (ResWidth-2)-StringWidth("Выбранная комната: "+rname),2,StringWidth("Выбранная комната: "+rname),StringHeight("Выбранная комната: "+rname)
-;			Text (ResWidth-2)-StringWidth("Выбранная комната: "+rname),2,"Выбранная комната: "+rname
-		
 		Color CursorColorR,CursorColorG,CursorColorB
 		Rect (ResWidth/2)-25,(ResHeight/2)-2.5,20,5,True
 		Rect (ResWidth/2)+5,(ResHeight/2)-2.5,20,5,True
@@ -594,7 +591,7 @@ Repeat
 	Else
 		Flip False
 	EndIf
-Until api_FindWindow( "BlitzMax_Window_Class" , "SCP-CB Редактор карт "+versionnumber) = 0
+Until api_FindWindow( "BlitzMax_Window_Class" , "SCP-CB Редактор карт "+versionnumber) = 0 ;Map Creator
 End
 
 
@@ -1039,7 +1036,7 @@ Function LoadRoomMesh(rt.RoomTemplates)
 		;If rt\objPath <> "" Then rt\obj = LoadWorld(rt\objPath, rt) Else rt\obj = CreatePivot()
 	EndIf
 	
-	If (Not rt\obj) Then RuntimeError "Ошибка загрузки файла карты "+Chr(34)+rt\objPath+Chr(34)+"."
+	If (Not rt\obj) Then RuntimeError "Ошибка загрузки файла карты "+Chr(34)+rt\objPath+Chr(34)+"." ;Failed to load map file
 	
 	HideEntity(rt\obj)
 	
@@ -2021,16 +2018,16 @@ Function load_terrain(hmap,yscale#=0.7,t1%,t2%,mask%)
 	DebugLog "load_terrain: "+hmap
 	
 	; load the heightmap
-	If hmap = 0 Then RuntimeError "Изображения карты высот "+hmap+" не существует."
+	If hmap = 0 Then RuntimeError "Изображения карты высот "+hmap+" не существует." ;Heightmap image "+hmap+" does not exist.
 	
 	; store heightmap dimensions
 	Local x = ImageWidth(hmap)-1, y = ImageHeight(hmap)-1
 	Local lx,ly,index
 	
 	; load texture and lightmaps
-	If t1 = 0 Then RuntimeError "load_terrain ошибка: неверная текстура 1"
-	If t2 = 0 Then RuntimeError "load_terrain ошибка: неверная текстура 2"
-	If mask = 0 Then RuntimeError "load_terrain ошибка: неверня маска текстуры"
+	If t1 = 0 Then RuntimeError "load_terrain ошибка: неверная текстура 1" ;load_terrain error: invalid texture 1
+	If t2 = 0 Then RuntimeError "load_terrain ошибка: неверная текстура 2" ;load_terrain error: invalid texture 2
+	If mask = 0 Then RuntimeError "load_terrain ошибка: неверня маска текстуры" ;load_terrain error: invalid texture mask
 	
 	; auto scale the textures to the right size
 	If t1 Then ScaleTexture t1,x/4,y/4

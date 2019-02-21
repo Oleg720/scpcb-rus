@@ -1,13 +1,13 @@
 Global ResWidth% = 910
 Global ResHeight% = 660
-Global versionnumber$ = "2.1 [Rus]"
+Global versionnumber$ = "2.1 [Rus]" ;2.1
 
 Loadingwindow=CreateWindow("", GraphicsWidth()/2-160,GraphicsHeight()/2-120,320,260,winhandle,8)
 panelloading = CreatePanel(0,0,320,260,Loadingwindow,0)
 SetPanelImage(panelloading,"Assets\map_logo.jpg")
 
 ; create a window to put the toolbar in
-WinHandle=CreateWindow("SCP-CB Редактор карт "+versionnumber,GraphicsWidth()/2-ResWidth/2, GraphicsHeight()/2-ResHeight/2,ResWidth,ResHeight,0, 13) 
+WinHandle=CreateWindow("SCP-CB Редактор карт "+versionnumber,GraphicsWidth()/2-ResWidth/2, GraphicsHeight()/2-ResHeight/2,ResWidth,ResHeight,0, 13) ;SCP-CB Map Creator
 Global MainHwnd = GetActiveWindow();User32.dll
 HideGadget WinHandle
 
@@ -26,7 +26,7 @@ SetGadgetLayout listbox, 3,3,2,2
 InitEvents("..\Data\events.ini")
 AddEvents()
 ;room_desc = CreateLabel("Room description:",5,40+ResHeight/2,ResWidth/4,ResHeight/8.05,WinHandle,3)
-Global room_desc = CreateLabel("Описание комнаты:",5,40+ResHeight/2,ResWidth/4,ResHeight/11.8,WinHandle,3)
+Global room_desc = CreateLabel("Описание комнаты:",5,40+ResHeight/2,ResWidth/4,ResHeight/11.8,WinHandle,3) ;Room description:
 SetGadgetLayout room_desc , 3,3,2,2
 
 Global grid_room_info = CreateLabel("",5,200+Resheight/2,ResWidth/4,ResHeight/11.6,WinHandle,3) ;95
@@ -57,7 +57,7 @@ DisableGadget combobox
 
 txtbox=CreateTextField(5,40,150,20,winhandle) ;create ;textfield in that window
 SetGadgetText txtbox,"" ;set ;text in that ;textfield for info
-ok=CreateButton("Поиск",155,40,50,20,winhandle) ;create button
+ok=CreateButton("Поиск",155,40,50,20,winhandle) ;create button ;Search
 clean_txt=CreateButton("X",210,40,20,20,winhandle) ;create button
 
 ;map_2d = CreateLabel("",300,25,550,550,WinHandle,3)
@@ -154,35 +154,35 @@ SetGadgetLayout ok , 3,3,3,3
 SetGadgetLayout clean_txt , 3,3,3,3
 tab=CreateTabber(0,5,ResWidth/4+20,ResHeight-60,winhandle)
 
-InsertGadgetItem(tab,0,"2D/Редактор карты")
-InsertGadgetItem(tab,1,"3D/Просмотр карты")
+InsertGadgetItem(tab,0,"2D/Редактор карты") ;2D/Map Creator
+InsertGadgetItem(tab,1,"3D/Просмотр карты") ;3D/Map Viewer
 SetGadgetLayout tab , 3,3,2,2
 
 tab2=CreateTabber(300,5,ResWidth/4+20,ResHeight-100,winhandle)
-InsertGadgetItem(tab2,0,"Комплекс")
-InsertGadgetItem(tab2,1,"Лес")
-InsertGadgetItem(tab2,2,"Туннели обслуживания")
+InsertGadgetItem(tab2,0,"Комплекс") ;Facility
+InsertGadgetItem(tab2,1,"Лес") ;Forest
+InsertGadgetItem(tab2,2,"Туннели обслуживания") ;Maintenance Tunnels
 SetGadgetLayout tab2 , 3,3,2,2
 
-SetStatusText(Loadingwindow, "Запуск")
+SetStatusText(Loadingwindow, "Запуск") ;Starting up
 ; Now create a whole bunch of menus and sub-items - first of all the FILE menu
-file=CreateMenu("Файл",0,menu) ; main menu
-CreateMenu "Новая карта",0,file ; child menu 
-CreateMenu "Открыть карту",1,file ; child menu 
+file=CreateMenu("Файл",0,menu) ; main menu ;File
+CreateMenu "Новая карта",0,file ; child menu ;New
+CreateMenu "Открыть карту",1,file ; child menu ;Open
 CreateMenu "",1000,file ; Use an empty string to generate separator bars
-CreateMenu "Сохранить карту",2,file ; child menu 
-CreateMenu "Сохранить карту как...",3,file ; child menu 
+CreateMenu "Сохранить карту",2,file ; child menu ;Save
+CreateMenu "Сохранить карту как...",3,file ; child menu ;Save as...
 CreateMenu "",1000,file ; Use an empty string to generate separator bars
-CreateMenu "Выйти",10001,file ; another child menu
+CreateMenu "Выйти",10001,file ; another child menu ;Quit
 
-options=CreateMenu("Опции",0,menu)
-event_default = CreateMenu("Устанавливать стандартные события для комнат",15,options)
-Global adjdoor_place = CreateMenu("Отображать смежные двери в 3D просмотре",16,options)
+options=CreateMenu("Опции",0,menu) ;Options
+event_default = CreateMenu("Устанавливать стандартные события для комнат",15,options) ;Set the event for the rooms by default
+Global adjdoor_place = CreateMenu("Отображать смежные двери в 3D просмотре",16,options) ;Place adjacent doors in 3D view
 CreateMenu "",1000,options
-zone_trans = CreateMenu("Настройки карты",18,options)
-author_descr = CreateMenu("Изменить автора и описание",19,options)
+zone_trans = CreateMenu("Настройки карты",18,options) ;Map Settings
+author_descr = CreateMenu("Изменить автора и описание",19,options) ;Edit Author and Description
 CreateMenu "",1000,options
-CreateMenu "Настройки камеры",17,options
+CreateMenu "Edit Camera",17,options
 
 Local option_event = GetINIInt("options.INI","general","events_default")
 If (Not option_event)
@@ -198,9 +198,9 @@ Else
 EndIf
 
 ; Now the Edit menu
-edit=CreateMenu("&Помощь",0,menu) ; Main menu with Alt Shortcut - Use & to specify the shortcut key
-CreateMenu "Руководство"+Chr$(8)+"F1",6,edit ; Another Child menu with Alt Shortcut
-CreateMenu "О программе"+Chr$(8)+"F12",40,edit ; Child menu with Alt Shortcut
+edit=CreateMenu("&Помощь",0,menu) ; Main menu with Alt Shortcut - Use & to specify the shortcut key ;&Help
+CreateMenu "Руководство"+Chr$(8)+"F1",6,edit ; Another Child menu with Alt Shortcut ;Manual
+CreateMenu "О программе"+Chr$(8)+"F12",40,edit ; Child menu with Alt Shortcut ;About
 
 HotKeyEvent 59,0,$1001,6
 
@@ -210,14 +210,14 @@ HotKeyEvent 88,0,$1001,40
 ; Finally, once all menus are set up / updated, we call UpdateWindowMenu to tell the OS about the menu
 UpdateWindowMenu WinHandle
 
-SetStatusText(Loadingwindow, "Создание 2D сцены...")
-Optionwin=CreateWindow("Настройки камеры", GraphicsWidth()/2-160,GraphicsHeight()/2-120,300,280,winhandle,1)
+SetStatusText(Loadingwindow, "Создание 2D сцены...") ;Creating 2D scene...
+Optionwin=CreateWindow("Настройки камеры", GraphicsWidth()/2-160,GraphicsHeight()/2-120,300,280,winhandle,1) ;Edit Camera
 HideGadget optionwin
 LabelColor = CreateLabel("",5,5,285,60, optionwin,1)
 LabelColor2 = CreateLabel("",5,70,285,60,optionwin,1)
 LabelRange = CreateLabel("",5,135,285,60, optionwin,1) ;70
-color_button = CreateButton("Изменить цвет тумана", 25,20,150,30,optionwin)
-color_button2 = CreateButton("Изменить цвет курсора", 25,85,150,30,optionwin)
+color_button = CreateButton("Изменить цвет тумана", 25,20,150,30,optionwin) ;Change CameraFog Color
+color_button2 = CreateButton("Изменить цвет курсора", 25,85,150,30,optionwin) ;Change Cursor Color
 
 labelfogR=CreateLabel("R "+GetINIInt("options.INI","3d scene","bg color R"),225,15,40,15, optionwin)
 labelfogG=CreateLabel("G "+GetINIInt("options.INI","3d scene","bg color G"),225,30,40,15, optionwin)
@@ -235,7 +235,7 @@ Global redcursor = GetINIInt("options.INI","3d scene","cursor color R")
 Global greencursor = GetINIInt("options.INI","3d scene","cursor color G")
 Global bluecursor = GetINIInt("options.INI","3d scene","cursor color B")
 
-labelrange=CreateLabel("Дальность прорисовки",15,140,80,30, optionwin)
+labelrange=CreateLabel("Дальность прорисовки",15,140,80,30, optionwin) ;Culling Range
 Global camerarange = CreateTextField(25, 170, 40, 20, optionwin)
 SetGadgetText camerarange, GetINIInt("options.INI","3d scene","camera range")
 
@@ -243,48 +243,48 @@ SetGadgetText camerarange, GetINIInt("options.INI","3d scene","camera range")
 ;camerarange = CreateTextField(25, 145, 40, 20, optionwin)
 ;SetGadgetText camerarange, GetINIInt("options.INI","3d scene","camera range")
 
-Global vsync = CreateButton("Верх. синх.", 123, 140, 150, 30, optionwin, 2)
+Global vsync = CreateButton("Верх. синх.", 123, 140, 150, 30, optionwin, 2) ;Vsync
 SetButtonState vsync, GetINIInt("options.INI","3d scene","vsync")
 
-Global showfps = CreateButton("Отображать FPS", 123, 160, 150, 30, optionwin, 2)
+Global showfps = CreateButton("Отображать FPS", 123, 160, 150, 30, optionwin, 2) ;Show FPS
 SetButtonState showfps, GetINIInt("options.INI","3d scene","show fps")
 
-cancelopt_button=CreateButton("Отмена",10,210,100,30,optionwin)
-saveopt_button=CreateButton("Сохранить",185,210,100,30,optionwin) ;create button
+cancelopt_button=CreateButton("Отмена",10,210,100,30,optionwin) ;Cancel
+saveopt_button=CreateButton("Сохранить",185,210,100,30,optionwin) ;create button ;Save
 
-map_settings=CreateWindow("Настройки карты", GraphicsWidth()/2-120,GraphicsHeight()/2-80,245,160,winhandle,1) ;240< - 280> \
+map_settings=CreateWindow("Настройки карты", GraphicsWidth()/2-120,GraphicsHeight()/2-80,245,160,winhandle,1) ;240< - 280> \ ;Map Settings
 HideGadget map_settings
 
-zonetext = CreateLabel("Настройки перехода между зонами:",10,10,200,20,map_settings)
-labelzonetrans1 = CreateLabel("Переход между ЗЛС и ЗТС",10,40,140,20,map_settings)
+zonetext = CreateLabel("Настройки перехода между зонами:",10,10,200,20,map_settings) ;Zone transition settings:
+labelzonetrans1 = CreateLabel("Переход между ЗЛС и ЗТС",10,40,140,20,map_settings) ;LCZ to HCZ transition
 Global zonetrans1 = CreateTextField(160,37,40,20,map_settings)
 SetGadgetText zonetrans1,5
-labelzonetrans2 = CreateLabel("Переход между ЗТС и ВЗ",10,60,140,20,map_settings)
+labelzonetrans2 = CreateLabel("Переход между ЗТС и ВЗ",10,60,140,20,map_settings) ;HCZ to EZ transition
 Global zonetrans2 = CreateTextField(160,57,40,20,map_settings)
 SetGadgetText zonetrans2,11
 
 Global zonetransvalue1 = 13, zonetransvalue2 = 7
 
-resetzonetrans = CreateButton("Сбросить",10,90,100,30,map_settings)
-applyzonetrans = CreateButton("Принять",120,90,100,30,map_settings)
+resetzonetrans = CreateButton("Сбросить",10,90,100,30,map_settings) ;Reset
+applyzonetrans = CreateButton("Принять",120,90,100,30,map_settings) ;Apply
 
-authordescr_settings=CreateWindow("Изменить автора и описание", GraphicsWidth()/2-200,GraphicsHeight()/2-80,400,200,winhandle,1)
+authordescr_settings=CreateWindow("Изменить автора и описание", GraphicsWidth()/2-200,GraphicsHeight()/2-80,400,200,winhandle,1) ;Edit Author and Description
 HideGadget authordescr_settings
 
 Global MapAuthor$ = "", MapDescription$ = ""
 Global map_author_text = CreateTextField(120,30,140,20,authordescr_settings)
-map_author_label = CreateLabel("Автор карты:",140,10,160,20,authordescr_settings)
+map_author_label = CreateLabel("Автор карты:",140,10,160,20,authordescr_settings) ;Map author:
 Global descr_text = CreateTextArea(20,80,350,80,authordescr_settings,1)
-descr_label = CreateLabel("Описание:",140,60,160,20,authordescr_settings)
+descr_label = CreateLabel("Описание:",140,60,160,20,authordescr_settings) ;Description:
 
-SetStatusText(Loadingwindow, "Инициализация 3D просмотра...")
+SetStatusText(Loadingwindow, "Инициализация 3D просмотра...") ;Executing 3D viewer...
 ExecFile("window3d.exe")
 
 Repeat
 	vwprt = FindWindow("Blitz Runtime Class" , "MapCreator 3d view");User32.dll
 	ShowGadget Loadingwindow
 Until vwprt <> 0
-SetStatusText(Loadingwindow, "Создание 3D сцены...")
+SetStatusText(Loadingwindow, "Создание 3D сцены...") ;Creating 3D scene...
 
 SetParent(vwprt,MainHwnd);User32.dll				
 api_SetWindowPos( vwprt , 0 , 5 , 30 , 895 , 560 , 1);User32.dll
@@ -305,12 +305,12 @@ Repeat
 	MouseHit3 = MouseHit(3)
 	
 	SetGadgetText(map_author_text,(Left(TextFieldText(map_author_text),15)))
-	SetGadgetText(map_author_label,("Автор карты ("+(Len(TextFieldText(map_author_text)))+"/15) :"))
+	SetGadgetText(map_author_label,("Автор карты ("+(Len(TextFieldText(map_author_text)))+"/15) :")) ;Map author
 	
 	If Len(TextAreaText(descr_text))>200 Then
 		SetGadgetText(descr_text,(Left(TextAreaText(descr_text),200)))
 	EndIf
-	SetGadgetText(descr_label,("Описание ("+(Len(TextAreaText(descr_text)))+"/200) :"))
+	SetGadgetText(descr_label,("Описание ("+(Len(TextAreaText(descr_text)))+"/200) :")) ;Description
 	
 	If FileType("CONFIG_TO2D.SI")=1
 		f = ReadFile("CONFIG_TO2D.SI")
@@ -342,7 +342,7 @@ Repeat
 							InsertGadgetItem combobox, i+1, rt\events[i]
 						EndIf
 					Next
-					SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+					SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 					Exit
 				EndIf
 			Next 
@@ -353,13 +353,13 @@ Repeat
 				SetGadgetText event_prob_label, ""
 				SetSliderValue event_prob,99
 				DisableGadget event_prob
-				GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+				GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 			Else
 				EnableGadget combobox
 				If MapEvent(Grid_SelectedX,Grid_SelectedY)<>"" And MapEvent(Grid_SelectedX,Grid_SelectedY)<>"[none]"
 					For ev.event = Each event
 						If ev\name = MapEvent(Grid_SelectedX,Grid_SelectedY)
-							SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description
+							SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description ;Event description:
 							Exit
 						EndIf
 					Next
@@ -367,15 +367,15 @@ Repeat
 					SetGadgetText event_desc, ""
 				EndIf
 				If MapEvent(Grid_SelectedX,Grid_SelectedY)<>"" And MapEvent(Grid_SelectedX,Grid_SelectedY)<>"[none]"
-					SetGadgetText event_prob_label, "Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%"
+					SetGadgetText event_prob_label, "Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%" ;Event chance:
 					SetSliderValue event_prob,Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)-1
 					EnableGadget event_prob
-					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"+Chr(13)+"Событие: "+MapEvent(Grid_SelectedX,Grid_SelectedY)+Chr(13)+"Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%"
+					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"+Chr(13)+"Событие: "+MapEvent(Grid_SelectedX,Grid_SelectedY)+Chr(13)+"Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%" ;Name: ;Angle: ;Event: ;Event Chance:
 				Else
 					SetGadgetText event_prob_label, ""
 					SetSliderValue event_prob,99
 					DisableGadget event_prob
-					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 				EndIf
 			EndIf
 			
@@ -390,7 +390,7 @@ Repeat
 		ElseIf CurrMapGrid%=1
 			For rt.RoomTemplates = Each RoomTemplates
 				If rt = ForestPlace(Grid_SelectedX,Grid_SelectedY)
-					SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+					SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 					Exit
 				EndIf
 			Next 
@@ -400,11 +400,11 @@ Repeat
 			SetGadgetText event_prob_label, ""
 			SetSliderValue event_prob,99
 			DisableGadget event_prob
-			GridGadgetText="Имя: "+ForestPlace(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+ForestPlaceAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+			GridGadgetText="Имя: "+ForestPlace(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+ForestPlaceAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 		Else
 			For rt.RoomTemplates = Each RoomTemplates
 				If rt = MTRoom(Grid_SelectedX,Grid_SelectedY)
-					SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+					SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 					Exit
 				EndIf
 			Next 
@@ -414,7 +414,7 @@ Repeat
 			SetGadgetText event_prob_label, ""
 			SetSliderValue event_prob,99
 			DisableGadget event_prob
-			GridGadgetText="Имя: "+MTRoom(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MTRoomAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+			GridGadgetText="Имя: "+MTRoom(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MTRoomAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 		EndIf
 		
 		CloseFile f
@@ -501,7 +501,7 @@ Repeat
 															InsertGadgetItem combobox, i+1, rt\events[i]
 														EndIf
 													Next
-													SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+													SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 													Exit
 												EndIf
 											Next 
@@ -517,7 +517,7 @@ Repeat
 												If MapEvent(x,y)<>"" And MapEvent(x,y)<>"[none]"
 													For ev.event = Each event
 														If ev\name = MapEvent(x,y)
-															SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description
+															SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description ;Event description:
 															Exit
 														EndIf
 													Next
@@ -525,7 +525,7 @@ Repeat
 													SetGadgetText event_desc, ""
 												EndIf
 												If MapEvent(x,y)<>"" And MapEvent(x,y)<>"[none]"
-													SetGadgetText event_prob_label, "Шанс события: 100%"
+													SetGadgetText event_prob_label, "Шанс события: 100%" ;Event chance: 100%
 													SetSliderValue event_prob,99
 													EnableGadget event_prob
 												Else
@@ -642,14 +642,14 @@ Repeat
 							If PrevSelectedX<>Grid_SelectedX Or PrevSelectedY<>Grid_SelectedY
 								ChangeGridGadget = True
 								If MapEvent(x,y)<>"" And MapEvent(x,y)<>"[none]"
-									GridGadgetText = "Имя: "+Map(x,y)\Name+Chr(13)+"Угол: "+MapAngle(x,y)+"°"+Chr(13)+"Событие: "+MapEvent(x,y)+Chr(13)+"Шанс события: "+Int(MapEventProb(x,y)*100)+"%"
+									GridGadgetText = "Имя: "+Map(x,y)\Name+Chr(13)+"Угол: "+MapAngle(x,y)+"°"+Chr(13)+"Событие: "+MapEvent(x,y)+Chr(13)+"Шанс события: "+Int(MapEventProb(x,y)*100)+"%" ;Name: ;Angle: ;Event: ;Event Chance:
 									SetSliderValue(event_prob,Int(MapEventProb(x,y)*100)-1)
 								Else
-									GridGadgetText = "Имя: "+Map(x,y)\Name+Chr(13)+"Угол: "+MapAngle(x,y)+"°"
+									GridGadgetText = "Имя: "+Map(x,y)\Name+Chr(13)+"Угол: "+MapAngle(x,y)+"°" ;Name: ;Angle:
 									;SetSliderValue(event_prob,99)
 								EndIf
 								If GadgetText(event_prob_label)<>""
-									SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%"
+									SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%" ;Event chance:
 								EndIf
 							EndIf
 						EndIf
@@ -686,9 +686,9 @@ Repeat
 								If prevAngle<>MapAngle(Grid_SelectedX,Grid_SelectedY)
 									ChangeGridGadget = True
 									If MapEvent(Grid_SelectedX,Grid_SelectedY)<>"" And MapEvent(Grid_SelectedX,Grid_SelectedY)<>"[none]"
-										GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"+Chr(13)+"Шанс: "+MapEvent(Grid_SelectedX,Grid_SelectedY)+Chr(13)+"Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%"
+										GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"+Chr(13)+"Событие: "+MapEvent(Grid_SelectedX,Grid_SelectedY)+Chr(13)+"Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%" ;Name: ;Angle: ;Event: ;Event Chance:
 									Else
-										GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+										GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 									EndIf
 								EndIf
 							EndIf
@@ -753,7 +753,7 @@ Repeat
 										
 										For rt.RoomTemplates = Each RoomTemplates
 											If rt = ForestPlace(x,y)
-												SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+												SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 												Exit
 											EndIf
 										Next 
@@ -828,7 +828,7 @@ Repeat
 						If Grid_SelectedX=x And Grid_SelectedY=y
 							If PrevSelectedX<>Grid_SelectedX Or PrevSelectedY<>Grid_SelectedY
 								ChangeGridGadget = True
-								GridGadgetText = "Имя: "+ForestPlace(x,y)\Name+Chr(13)+"Угол: "+ForestPlaceAngle(x,y)+"°"
+								GridGadgetText = "Имя: "+ForestPlace(x,y)\Name+Chr(13)+"Угол: "+ForestPlaceAngle(x,y)+"°" ;Name: ;Angle:
 							EndIf
 						EndIf
 					EndIf
@@ -862,7 +862,7 @@ Repeat
 							DrawImage Arrows(Floor(ForestPlaceAngle(Grid_SelectedX,Grid_SelectedY)/90)),Float(width-1)/Float(ForestGridSize+1)*Grid_SelectedX+width2,Float(height-1)/Float(ForestGridSize+1)*Grid_SelectedY+height2
 							If prevAngle<>ForestPlaceAngle(Grid_SelectedX,Grid_SelectedY)
 								ChangeGridGadget = True
-								GridGadgetText="Имя: "+ForestPlace(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+ForestPlaceAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+								GridGadgetText="Имя: "+ForestPlace(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+ForestPlaceAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 							EndIf
 						EndIf
 					EndIf
@@ -905,7 +905,7 @@ Repeat
 										
 										For rt.RoomTemplates = Each RoomTemplates
 											If rt = MTRoom(x,y)
-												SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+												SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 												Exit
 											EndIf
 										Next 
@@ -980,7 +980,7 @@ Repeat
 						If Grid_SelectedX=x And Grid_SelectedY=y
 							If PrevSelectedX<>Grid_SelectedX Or PrevSelectedY<>Grid_SelectedY
 								ChangeGridGadget = True
-								GridGadgetText = "Имя: "+MTRoom(x,y)\Name+Chr(13)+"Угол: "+MTRoomAngle(x,y)+"°"
+								GridGadgetText = "Имя: "+MTRoom(x,y)\Name+Chr(13)+"Угол: "+MTRoomAngle(x,y)+"°" ;Name: ;Angle:
 							EndIf
 						EndIf
 					EndIf
@@ -1014,7 +1014,7 @@ Repeat
 							DrawImage Arrows(Floor(MTRoomAngle(Grid_SelectedX,Grid_SelectedY)/90)),Float(width)/Float(MT_GridSize+1)*Grid_SelectedX+width2,Float(height)/Float(MT_GridSize+1)*Grid_SelectedY+height2
 							If prevAngle<>MTRoomAngle(Grid_SelectedX,Grid_SelectedY)
 								ChangeGridGadget = True
-								GridGadgetText="Имя: "+MTRoom(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Имя: "+MTRoomAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+								GridGadgetText="Имя: "+MTRoom(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MTRoomAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 							EndIf
 						EndIf
 					EndIf
@@ -1032,12 +1032,12 @@ Repeat
 				If event_name$<>"" And event_name$<>"[none]"
 					MapEvent(Grid_SelectedX,Grid_SelectedY)=event_name
 					MapEventProb(Grid_SelectedX,Grid_SelectedY)=Float((SliderValue(event_prob)+1)/100.0)
-					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"+Chr(13)+"Событие: "+MapEvent(Grid_SelectedX,Grid_SelectedY)+Chr(13)+"Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%"
+					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"+Chr(13)+"Событие: "+MapEvent(Grid_SelectedX,Grid_SelectedY)+Chr(13)+"Шанс события: "+Int(MapEventProb(Grid_SelectedX,Grid_SelectedY)*100)+"%" ;Name: ;Angle: ;Event: ;Event Chance:
 					ChangeGridGadget=True
 				Else
 					MapEvent(Grid_SelectedX,Grid_SelectedY)=event_name
 					MapEventProb(Grid_SelectedX,Grid_SelectedY)=0.0
-					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°"
+					GridGadgetText="Имя: "+Map(Grid_SelectedX,Grid_SelectedY)\Name+Chr(13)+"Угол: "+MapAngle(Grid_SelectedX,Grid_SelectedY)+"°" ;Name: ;Angle:
 					ChangeGridGadget=True
 				EndIf
 			EndIf
@@ -1057,11 +1057,11 @@ Repeat
 	EID=EventData() 
 	    If EID=0 Then 
 			
-			result = Proceed("Сохранить текущую карту?",True) 
+			result = Proceed("Сохранить текущую карту?",True) ;Save current map?
 			If result=1 Then
-				SetStatusText(winhandle, "Создана новая карта и сохранена предыдущая")
+				SetStatusText(winhandle, "Создана новая карта и сохранена предыдущая") ;Created new map and saving prev. map
 				If FileType(filename$) <>1
-  			   		filename$ = RequestFile("Открыть карту","cbmap",True,"")
+  			   		filename$ = RequestFile("Открыть карту","cbmap",True,"") ;Open map
 				EndIf
 				If filename<>""
 					SaveMap(filename$)
@@ -1072,7 +1072,7 @@ Repeat
 				EndIf
 				filename$ = ""
 			ElseIf result=0 Then 
-				SetStatusText(winhandle, "Создана новая карта без сохранения предыдущей")
+				SetStatusText(winhandle, "Создана новая карта без сохранения предыдущей") ;Created new map without saving prev. map
 				EraseMap()
 				If ShowGrid=False
 					SaveMap("CONFIG_MAPINIT.SI",True)
@@ -1083,7 +1083,7 @@ Repeat
 			EndIf
 		EndIf
 		If EID=1 Then
-			filename$ = RequestFile("Открыть карту","*cbmap2;*cbmap,*cbmap2,*cbmap",False,"") 
+			filename$ = RequestFile("Открыть карту","*cbmap2;*cbmap,*cbmap2,*cbmap",False,"") ;Creating new map has been cancelled
 			If filename<>""
 				LoadMap(filename$)
 			Else
@@ -1092,11 +1092,11 @@ Repeat
 		EndIf
 		If EID=2 Then
 			If FileType(filename) <> 1
-  			   filename$ = RequestFile("Сохранить карту","cbmap2,cbmap",True,"")
+  			   filename$ = RequestFile("Сохранить карту","cbmap2,cbmap",True,"") ;Save Map
 			EndIf
 			If filename<>""
 				If Right(filename,5)="cbmap" Then
-					value = Confirm("cbmap - это устаревший формат файла. При сохранении карты в этой формате, некоторые данные могут быть потеряны."+Chr(13)+"Вы действительно хотите продолжить?",0)
+					value = Confirm("cbmap - это устаревший формат файла. При сохранении карты в этой формате, некоторые данные могут быть потеряны."+Chr(13)+"Вы действительно хотите продолжить?",0) ;cbmap is an outdated file format. Some data can be lost if you save your map to this file format."+Chr(13)+"Are you sure you want to proceed?
 					If value=1 Then
 						SaveMap(filename$,False,1)
 					EndIf
@@ -1109,10 +1109,10 @@ Repeat
 		EndIf	
 		If EID=3 Then
 			.back
-			filename$ = RequestFile("Сохранить карту","cbmap2,cbmap",True,"")
+			filename$ = RequestFile("Сохранить карту","cbmap2,cbmap",True,"") ;Save Map
 			If filename<>""
 				If Right(filename,5)="cbmap" Then
-					value = Confirm("cbmap - это устаревший формат файла. При сохранении карты в этом формате, некоторые данные могут быть потеряны."+Chr(13)+"Вы действительно хотите продолжить?",0)
+					value = Confirm("cbmap - это устаревший формат файла. При сохранении карты в этом формате, некоторые данные могут быть потеряны."+Chr(13)+"Вы действительно хотите продолжить?",0) ;cbmap is an outdated file format. Some data can be lost if you save your map to this file format."+Chr(13)+"Are you sure you want to proceed?
 					If value=0 Then
 						Goto back
 					EndIf
@@ -1125,7 +1125,7 @@ Repeat
 			EndIf
 		EndIf
 		If EID=6 Then ExecFile "Manual.pdf"
-		If EID=40  Then Notify "SCP Containement Breach Редактор карт v"+versionnumber+""+Chr$(13)+" Разработали: Vane Brain и ENDSHN."+Chr$(13)+" Перевёл: Олег Сиряк"
+		If EID=40  Then Notify "SCP Containement Breach Редактор карт v"+versionnumber+""+Chr$(13)+" Разработали: Vane Brain и ENDSHN."+Chr$(13)+" Переведено командой CreatorMasters" ;Map Creator ;created by Vane Brain and ENDSHN.
 		If EID=17 Then 
 			ShowGadget optionwin
 		EndIf
@@ -1209,7 +1209,7 @@ Repeat
 			SetGadgetText event_prob_label, ""
 			SetSliderValue event_prob,99
 			DisableGadget event_prob
-			SetGadgetText room_desc,"Описание комнаты:"
+			SetGadgetText room_desc,"Описание комнаты:" ;Room description:
 			Grid_SelectedX=-1
 			Grid_SelectedY=-1
 		EndIf
@@ -1248,7 +1248,7 @@ Repeat
 		EndIf	
 		If EventSource()=saveopt_button Then
 			HideGadget optionwin
-			SetStatusText(winhandle, "Новые настройки сохранены")
+			SetStatusText(winhandle, "Новые настройки сохранены") ;New settings are saved
 			PutINIValue("options.INI","3d scene","bg color R",redfog)
 			PutINIValue("options.INI","3d scene","bg color G",greenfog)
 			PutINIValue("options.INI","3d scene","bg color B",bluefog)
@@ -1308,11 +1308,11 @@ Repeat
 				If item > 0
 					For ev.event = Each event
 						If ev\name = name
-							SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description
+							SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description ;Event description:
 							Exit
 						EndIf
 					Next
-					SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%"
+					SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%" ;Event chance:
 					EnableGadget event_prob
 					SetSliderValue event_prob,99
 				Else
@@ -1357,7 +1357,7 @@ Repeat
 								InsertGadgetItem combobox, i+1, rt\events[i]
 							EndIf
 						Next
-						SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description
+						SetGadgetText room_desc,"Описание комнаты:"+Chr(13)+rt\Description ;Room description:
 						currRT = rt
 						Exit
 					EndIf
@@ -1382,11 +1382,11 @@ Repeat
 					If SelectedGadgetItem(combobox)<>0
 						For ev.event = Each event
 							If ev\name = currRT\events[0]
-								SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description
+								SetGadgetText event_desc, "Описание события:"+Chr(13)+ev\description ;Event description:
 								Exit
 							EndIf
 						Next
-						SetGadgetText event_prob_label, "Шанс события: 100%"
+						SetGadgetText event_prob_label, "Шанс события: 100%" ;Event chance:
 						SetSliderValue event_prob,99
 						EnableGadget event_prob
 					Else
@@ -1402,13 +1402,13 @@ Repeat
 			EndIf
 		EndIf
 		If EventSource()=event_prob
-			SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%"
+			SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%" ;Event chance:
 			If Grid_SelectedX<>-1 And Grid_SelectedY<>-1
 				x=Grid_SelectedX
 				y=Grid_SelectedY
 				MapEventProb(x,y)=Float((SliderValue(event_prob)+1)/100.0)
 				If MapEvent(x,y)<>""
-					GridGadgetText = "Имя: "+Map(x,y)\Name+Chr(13)+"Угол: "+MapAngle(x,y)+"°"+Chr(13)+"Событие: "+MapEvent(x,y)+Chr(13)+"Шанс события: "+Int(MapEventProb(x,y)*100)+"%"
+					GridGadgetText = "Имя: "+Map(x,y)\Name+Chr(13)+"Угол: "+MapAngle(x,y)+"°"+Chr(13)+"Событие: "+MapEvent(x,y)+Chr(13)+"Шанс события: "+Int(MapEventProb(x,y)*100)+"%" ;Name: ;Angle: ;Event: ;Event Chance:
 				EndIf
 				SetGadgetText grid_room_info, GridGadgetText
 			EndIf
@@ -1853,7 +1853,7 @@ Function EraseMap()
 		DisableGadget event_prob
 	Else
 		SetSliderValue event_prob,99
-		SetGadgetText event_prob_label,"Шанс событие: "+(SliderValue(event_prob)+1)+"%"
+		SetGadgetText event_prob_label,"Шанс события: "+(SliderValue(event_prob)+1)+"%" ;Event chance:
 	EndIf
 	
 	For x = 0 To MapWidth
