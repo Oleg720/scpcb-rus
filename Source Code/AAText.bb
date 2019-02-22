@@ -1,4 +1,3 @@
-;Благодаря неведомой магии, в игре заработало Сглаживание текста
 Global AATextEnable% = GetINIInt(OptionFile, "options", "antialiased text")
 Global AASelectedFont%
 Global AATextCam%,AATextSprite%[255] ;150

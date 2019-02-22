@@ -3137,7 +3137,7 @@ Function UpdateNPCs()
 													If PlayerRoom\RoomTemplate\Name = "exit1" Then
 														DeathMSG = Chr(34)+"CH-2 Центру. Убил убегающего сотрудника класса D у Выхода B."+Chr(34) ;CH-2 to control. Shot down a runaway Class D at Gate B.
 													Else
-														DeathMSG = Chr(34)+"CH-2 Центру. Убил убегающего сотрудника класса D у Выхода A."+Chr(34)
+														DeathMSG = Chr(34)+"CH-2 Центру. Убил убегающего сотрудника класса D у Выхода A."+Chr(34) ;CH-2 to control. Shot down a runaway Class D at Gate A.
 													EndIf
 													
 													Shoot( EntityX(pvt),EntityY(pvt), EntityZ(pvt),((10/dist)*(1/dist))*(n\State=2),(n\State=2))
@@ -3284,7 +3284,7 @@ Function UpdateNPCs()
 														DeathMSG = DeathMSG + "не похож на тот, что мы видели раньше. Видимо, в какой-то момент " ;unlike anything we've seen before - it looks like it has 
 														DeathMSG = DeathMSG + "это щупальце избило какого-то бедолагу класса D до смерти."+Chr(34) ;beaten some unfortunate Class D to death at some point during the breach.
 													Else
-														DeathMSG = Chr(34)+"Чтобы с этим разобраться, обычной группой чистильщиков не обойдешься. " ;We will need more than the regular cleaning team to take care of this. 
+														DeathMSG = Chr(34)+"Чтобы с этим разобраться, обычной группой чистильщиков не обойдёшься. " ;We will need more than the regular cleaning team to take care of this. 
 														DeathMSG = DeathMSG + "Два больших и очень активных щупальца, похоже, сформаровались " ;Two large and highly active tentacle-like appendages seem 
 														DeathMSG = DeathMSG + "внутри камеры. Их уровень агрессии не похож на тот, " ;to have formed inside the chamber. Their level of aggression is 
 														DeathMSG = DeathMSG + "что мы видели раньше. Видимо, в какой-то момент " ;unlike anything we've seen before - it looks like they have 
@@ -4081,9 +4081,9 @@ Function UpdateNPCs()
 								Case 3
 									Msg="Вы чувствуете, как будто рядом с вами что-то есть, но ничего не видите." ;You feel like something is here with you, but you do not see anything.
 								Case 4
-									Msg=Chr(34)+"Это шалит моя психика, или здесь есть кто-то еще?"+Chr(34) ;Is my mind playing tricks on me or is there someone else here?
+									Msg=Chr(34)+"Это шалит моя психика, или здесь есть кто-то ещё?"+Chr(34) ;Is my mind playing tricks on me or is there someone else here?
 								Case 5
-									Msg="YВы чувствуете, как будто что-то преследует Вас." ;You feel like something is following you.
+									Msg="Вы чувствуете, как будто что-то преследует Вас." ;You feel like something is following you.
 								Case 6
 									Msg="Вы чувствуете что-то рядом с собой, но не способны это увидеть. Возможно, время пришло." ;You can feel something near you, but you are unable to see it. Perhaps its time is now.
 							End Select
@@ -4927,7 +4927,7 @@ Function UpdateNPCs()
 										PlaySound_Strict DamageSFX(Rand(5,8))
 										Injuries = Injuries+Rnd(0.4,1.0)
 										Infect = Infect + (1+(1*SelectedDifficulty\aggressiveNPCs))
-										DeathMSG = "Субъект D-9341. Причина смерти: многочисленные рваные раны и травмы от ударов тупым предметом, нанесенные [ДАННЫЕ УДАЛЕНЫ], который был заражён SCP-008. Данный субъект был обнаружен и ликвидирован подразделением Девятихвостая лиса." ;Subject D-9341. Cause of death: multiple lacerations and severe blunt force trauma caused by [DATA EXPUNGED], who was infected with SCP-008. Said subject was located by Nine-Tailed Fox and terminated.
+										DeathMSG = "Субъект D-9341. Причина смерти: многочисленные рваные раны и травмы от ударов тупым предметом, нанесённые [ДАННЫЕ УДАЛЕНЫ], который был заражён SCP-008. Данный субъект был обнаружен и ликвидирован подразделением Девятихвостая лиса." ;Subject D-9341. Cause of death: multiple lacerations and severe blunt force trauma caused by [DATA EXPUNGED], who was infected with SCP-008. Said subject was located by Nine-Tailed Fox and terminated.
 									EndIf
 								EndIf
 							ElseIf n\Frame => 164
@@ -6845,7 +6845,7 @@ Function Shoot(x#, y#, z#, hitProb# = 1.0, particles% = True, instaKill% = False
 						Case 1,2,3,4,5
 							BlurTimer = 500
 							Stamina = 0
-							ShotMessageUpdate = "Пуля прошла сквозь жилет, вы задыхаетесь." ;A bullet penetrated your vest, making you gasp.
+							ShotMessageUpdate = "Пуля прошла сквозь жилет, Вы задыхаетесь." ;A bullet penetrated your vest, making you gasp.
 							Injuries = Injuries + Rnd(0.1,0.5)
 						Case 6
 							BlurTimer = 500
@@ -6858,7 +6858,7 @@ Function Shoot(x#, y#, z#, hitProb# = 1.0, particles% = True, instaKill% = False
 						Case 8
 							BlurTimer = 500
 							Stamina = 0
-							ShotMessageUpdate = "Пуля попала вам в шею, вы задыхаетесь." ;A bullet struck your neck, making you gasp.
+							ShotMessageUpdate = "Пуля попала вам в шею, Вы задыхаетесь." ;A bullet struck your neck, making you gasp.
 							Injuries = Injuries + Rnd(1.2,1.6)
 					End Select	
 				Else
@@ -7064,7 +7064,7 @@ Function Find860Angle(n.NPCs, fr.Forest)
 	EndIf		
 End Function
 
-Function Console_SpawnNPC(c_input$, c_state$ = "") ;Нужно перевести, но позже
+Function Console_SpawnNPC(c_input$, c_state$ = "")
 	Local n.NPCs
 	Local consoleMSG$
 	
@@ -7072,7 +7072,7 @@ Function Console_SpawnNPC(c_input$, c_state$ = "") ;Нужно перевести, но позже
 		Case "008", "008zombie"
 			n.NPCs = CreateNPC(NPCtype008, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
 			n\State = 1
-			consoleMSG = "SCP-008 infected human spawned."
+			consoleMSG = "Заражённый SCP-008 человек создан." ;SCP-008 infected human spawned.
 			
 		Case "049", "scp049", "scp-049"
 			n.NPCs = CreateNPC(NPCtype049, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
@@ -7143,11 +7143,11 @@ Function Console_SpawnNPC(c_input$, c_state$ = "") ;Нужно перевести, но позже
 			
 		Case "apache", "helicopter"
 			n.NPCs = CreateNPC(NPCtypeApache, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "Апач создан." ;Apache spawned.
+			consoleMSG = "Вертолёт Апач создан." ;Apache spawned.
 			
 		Case "tentacle"
 			n.NPCs = CreateNPC(NPCtypeTentacle, EntityX(Collider), EntityY(Collider), EntityZ(Collider))
-			consoleMSG = "Щупальца SCP-035 созданы." ;SCP-035 tentacle spawned.
+			consoleMSG = "Щупалец SCP-035 создан." ;SCP-035 tentacle spawned.
 			
 		Case "clerk"
 			n.NPCs = CreateNPC(NPCtypeClerk, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))

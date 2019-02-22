@@ -163,7 +163,7 @@ Function StreamSound_Strict(file$,volume#=1.0,custommode=Mode)
 	st\sfx = FSOUND_Stream_Open(file$,custommode,0)
 	
 	If st\sfx = 0
-		CreateConsoleMsg("Ќе удалось передать звук (возвращено 0): " + Chr(34) + file$ + Chr(34)) ;Failed to stream Sound (returned 0): 
+		CreateConsoleMsg("Ќе удалось передать звук (возвращено значение 0): " + Chr(34) + file$ + Chr(34)) ;Failed to stream Sound (returned 0): 
 		If ConsoleOpening
 			ConsoleOpen = True
 		EndIf
@@ -173,7 +173,7 @@ Function StreamSound_Strict(file$,volume#=1.0,custommode=Mode)
 	st\chn = FSOUND_Stream_Play(FreeChannel,st\sfx)
 	
 	If st\chn = -1
-		CreateConsoleMsg("Ќе удалось передать звук (возвращено -1): " + Chr(34) + file$ + Chr(34)) ;Failed to stream Sound (returned -1): 
+		CreateConsoleMsg("Ќе удалось передать звук (возвращено значение -1): " + Chr(34) + file$ + Chr(34)) ;Failed to stream Sound (returned -1): 
 		If ConsoleOpening
 			ConsoleOpen = True
 		EndIf

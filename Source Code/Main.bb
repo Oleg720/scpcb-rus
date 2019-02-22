@@ -42,7 +42,7 @@ Global UpdaterFont%
 Global Font1%, Font2%, Font3%, Font4%, Font5%
 Global ConsoleFont%, BlitzFont%
 
-Global VersionNumber$ = "1.3.11 [Rus v1.311]"
+Global VersionNumber$ = "1.3.11 [Rus v1.311.1]"
 Global CompatibleNumber$ = "1.3.11 [Rus v1.311]" ;Only change this if the version given isn't working with the current build version - ENDSHN
 
 Global MenuWhite%, MenuBlack%
@@ -648,38 +648,38 @@ Function UpdateConsole()
 							CreateConsoleMsg("СПРАВКА - camerafog") ;HELP
 							CreateConsoleMsg("******************************")
 							CreateConsoleMsg("Устанавливает дистанцию прорисовки тумана.") ;Sets the draw distance of the fog.
-							CreateConsoleMsg("Туман начивает появляться на 'CameraFogNear'(начало тумана) еденицах") ;The fog begins generating at 'CameraFogNear' units
-							CreateConsoleMsg("от камеры, и становиться полностью непрозрачным") ;away from the camera and becomes completely opaque
-							CreateConsoleMsg("на 'CameraFogFar'(конец тумана) еденицах от камеры.") ;at 'CameraFogFar' units away from the camera.
+							CreateConsoleMsg("Первый параметр отвечает за дистанцию от камеры") ;The fog begins generating at 'CameraFogNear' units
+							CreateConsoleMsg("на которой начинает появляться туман, а второй за") ;away from the camera and becomes completely opaque
+							CreateConsoleMsg("дистанцию на которой туман заканчивается.") ;at 'CameraFogFar' units away from the camera.
 							CreateConsoleMsg("Например: camerafog 20 40") ;Example:
 							CreateConsoleMsg("******************************")
 						Case "gamma"
 							CreateConsoleMsg("СПРАВКА - gamma") ;HELP
 							CreateConsoleMsg("******************************")
 							CreateConsoleMsg("Устанавливает уровень гаммы.") ;Sets the gamma correction.
-							CreateConsoleMsg("Может быть установлено значение от 0.0 и до 2.0.") ;Should be set to a value between 0.0 and 2.0.
+							CreateConsoleMsg("Может быть установлено значение от 0.0 до 2.0.") ;Should be set to a value between 0.0 and 2.0.
 							CreateConsoleMsg("Стандартно - 1.0.") ;Default is 1.0.
 							CreateConsoleMsg("******************************")
 						Case "noclip","fly"
 							CreateConsoleMsg("СПРАВКА - noclip") ;HELP
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Переключает noclip, если не указан") ;Toggles noclip, unless a valid parameter
-							CreateConsoleMsg("параметр (on/off).") ;is specified
+							CreateConsoleMsg("Переключает noclip, если не указан параметр (on/off).") ;Toggles noclip, unless a valid parameter
+;							CreateConsoleMsg("параметр (on/off).") ;is specified
 							CreateConsoleMsg("Позволяет камере двигаться в любом направлении,") ;Allows the camera to move in any direction while
 							CreateConsoleMsg("и проходить сквозь объекты.") ;bypassing collision.
 							CreateConsoleMsg("******************************")
 						Case "godmode","god"
 							CreateConsoleMsg("СПРАВКА - godmode") ;HELP
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Переключает godmode, если не указан") ;Toggles godmode, unless a valid parameter
-							CreateConsoleMsg("параметр (on/off).") ;is specified
+							CreateConsoleMsg("Переключает godmode, если не указан параметр (on/off).") ;Toggles godmode, unless a valid parameter
+;							CreateConsoleMsg("параметр (on/off).") ;is specified
 							CreateConsoleMsg("Предотвращает смерть игрока при нормальных обстоятельствах.") ;Prevents player death under normal circumstances.
 							CreateConsoleMsg("******************************")
 						Case "wireframe"
 							CreateConsoleMsg("СПРАВКА - wireframe") ;HELP
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Переключает wireframe, если не указан") ;Toggles wireframe, unless a valid parameter
-							CreateConsoleMsg("параметр (on/off).") ;is specified
+							CreateConsoleMsg("Переключает wireframe, если не указан параметр (on/off).") ;Toggles wireframe, unless a valid parameter
+;							CreateConsoleMsg("параметр (on/off).") ;is specified
 							CreateConsoleMsg("Позволяет отображать только рёбра геометрии,") ;Allows only the edges of geometry to be rendered,
 							CreateConsoleMsg("делая всё остальное прозрачным.") ;making everything else transparent.
 							CreateConsoleMsg("******************************")
@@ -744,7 +744,7 @@ Function UpdateConsole()
 							CreateConsoleMsg("******************************")
 							
 						Default
-							CreateConsoleMsg("Справка для этой команды недоступна",255,150,0) ;There is no help available for that command.
+							CreateConsoleMsg("Справка для этой команды недоступна.",255,150,0) ;There is no help available for that command.
 					End Select
 					
 					;[End Block]
@@ -812,7 +812,7 @@ Function UpdateConsole()
 				Case "hidedistance"
 					;[Block]
 					HideDistance = Float(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
-					CreateConsoleMsg("Hidedistance установлена на "+HideDistance) ;set to
+					CreateConsoleMsg("Дальность прорисовки установлена на "+HideDistance) ;set to
 					;[End Block]
 				Case "ending"
 					;[Block]
@@ -873,7 +873,7 @@ Function UpdateConsole()
 					
 					If PlayerRoom\RoomTemplate\Name <> StrTemp Then CreateConsoleMsg("Комната не найдена.",255,150,0) ;Room not found.
 					;[End Block]
-				Case "spawnitem"
+				Case "spawnitem" ;..!
 					;[Block]
 					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					temp = False 
@@ -909,9 +909,9 @@ Function UpdateConsole()
 					End Select
 					
 					If WireframeState Then
-						CreateConsoleMsg("WIREFRAME АКТИВИРОВАН") ;ON
+						CreateConsoleMsg("КАРКАСНЫЙ РЕЖИМ АКТИВИРОВАН") ;WIREFRAME ON
 					Else
-						CreateConsoleMsg("WIREFRAME ДЕАКТИВИРОВАН") ;OFF
+						CreateConsoleMsg("КАРКАСНЫЙ РЕЖИМ ДЕАКТИВИРОВАН") ;WIREFRAME OFF
 					EndIf
 					
 					WireFrame WireframeState
@@ -1029,9 +1029,9 @@ Function UpdateConsole()
 							GodMode = Not GodMode
 					End Select	
 					If GodMode Then
-						CreateConsoleMsg("GODMODE АКТИВИРОВАН") ;ON
+						CreateConsoleMsg("БЕССМЕРТИЕ АКТИВИРОВАНО") ;GODMODE ON
 					Else
-						CreateConsoleMsg("GODMODE ДЕАКТИВИРОВАН") ;OFF
+						CreateConsoleMsg("БЕССМЕРТИЕ ДЕАКТИВИРОВАНО") ;GODMODE OFF
 					EndIf
 					;[End Block]
 				Case "revive","undead","resurrect"
@@ -1080,9 +1080,9 @@ Function UpdateConsole()
 					End Select
 					
 					If NoClip Then
-						CreateConsoleMsg("NOCLIP АКТИВИРОВАН") ;ON
+						CreateConsoleMsg("РЕЖИМ ПОЛЁТА АКТИВИРОВАН") ;NOCLIP ON
 					Else
-						CreateConsoleMsg("NOCLIP ДЕАКТИВИРОВАН") ;OFF
+						CreateConsoleMsg("РЕЖИМ ПОЛЁТА ДЕАКТИВИРОВАН") ;NOCLIP OFF
 					EndIf
 					
 					DropSpeed = 0
@@ -1103,7 +1103,7 @@ Function UpdateConsole()
 							Exit
 						EndIf
 					Next
-					CreateConsoleMsg("SCP-096-го нет на карте.") ;has not spawned.
+					CreateConsoleMsg("SCP-096 нет на карте.") ;has not spawned.
 					;[End Block]
 				Case "debughud"
 					;[Block]
@@ -1118,9 +1118,9 @@ Function UpdateConsole()
 					End Select
 					
 					If DebugHUD Then
-						CreateConsoleMsg("Debug Mode Активирован") ;On
+						CreateConsoleMsg("Режим отладки Активирован") ;Debug Mode On
 					Else
-						CreateConsoleMsg("Debug Mode Деактивирован") ;Off
+						CreateConsoleMsg("Режим отладки Деактивирован") ;Debug Mode Off
 					EndIf
 					;[End Block]
 				Case "stopsound", "stfu"
@@ -1315,7 +1315,7 @@ Function UpdateConsole()
 					PositionEntity Camera,Float(StrTemp$),Float(StrTemp2$),Float(StrTemp3$)
 					ResetEntity Collider
 					ResetEntity Camera
-					CreateConsoleMsg("Телепортированы на координаты (X|Y|Z): "+EntityX(Collider)+"|"+EntityY(Collider)+"|"+EntityZ(Collider)) ;Teleported to coordinates
+					CreateConsoleMsg("Телепортация на координаты (X|Y|Z): "+EntityX(Collider)+"|"+EntityY(Collider)+"|"+EntityZ(Collider)) ;Teleported to coordinates
 					;[End Block]
 				Case "notarget"
 					;[Block]
@@ -1331,9 +1331,9 @@ Function UpdateConsole()
 					End Select
 					
 					If NoTarget% = False Then
-						CreateConsoleMsg("NOTARGET ДЕАКТИВИРОВАН") ;OFF
+						CreateConsoleMsg("ВИДИМОСТЬ ВРАГАМИ АКТИВИРОВАНА") ;NOTARGET OFF
 					Else
-						CreateConsoleMsg("NOTARGET АКТИВИРОВАН") ;ON
+						CreateConsoleMsg("ВИДИМОСТЬ ВРАГАМИ ДЕАКТИВИРОВАНА") ;NOTARGET ON
 					EndIf
 					;[End Block]
 				Case "spawnradio"
@@ -1350,7 +1350,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "spawnpumpkin","pumpkin"
 					;[Block]
-					CreateConsoleMsg("Какая свинья?") ;What pumpkin?
+					CreateConsoleMsg("Какая тыква?") ;What pumpkin?
 					;[End Block]
 				Case "spawnnav"
 					;[Block]
@@ -1440,9 +1440,9 @@ Function UpdateConsole()
 					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					BlinkEffect = Float(Left(args, Len(args) - Instr(args, " ")))
 					BlinkEffectTimer = Float(Right(args, Len(args) - Instr(args, " ")))
-					CreateConsoleMsg("BlinkEffect установлен на: " + BlinkEffect + ", а таймер BlinkEffect на: " + BlinkEffectTimer) ;Set BlinkEffect to: " + BlinkEffect + "and BlinkEffect timer:
+					CreateConsoleMsg("Эффект моргания установлен на: " + BlinkEffect + ", а его таймер на: " + BlinkEffectTimer) ;Set BlinkEffect to: " + BlinkEffect + "and BlinkEffect timer:
 					;[End Block]
-				Case "jorge"
+				Case "jorge","джордж"
 					;[Block]	
 					;CreateConsoleMsg(Chr(74)+Chr(79)+Chr(82)+Chr(71)+Chr(69)+Chr(32)+Chr(72)+Chr(65)+Chr(83)+Chr(32)+Chr(66)+Chr(69)+Chr(69)+Chr(78)+Chr(32)+Chr(69)+Chr(88)+Chr(80)+Chr(69)+Chr(67)+Chr(84)+Chr(73)+Chr(78)+Chr(71)+Chr(32)+Chr(89)+Chr(79)+Chr(85)+Chr(46))
 					CreateConsoleMsg(Chr(196)+Chr(198)+Chr(206)+Chr(208)+Chr(196)+Chr(198)+Chr(32)+Chr(198)+Chr(196)+Chr(192)+Chr(203)+Chr(32)+Chr(210)+Chr(197)+Chr(193)+Chr(223))
@@ -1505,7 +1505,7 @@ CreateConsoleMsg("Консольные команды: ") ;Console commands
 CreateConsoleMsg("  - teleport [имя комнаты]") ;[room name]
 CreateConsoleMsg("  - godmode [on/off]")
 CreateConsoleMsg("  - noclip [on/off]")
-CreateConsoleMsg("  - noclipspeed [x] (по умолчанию = 2.0)") ;default
+CreateConsoleMsg("  - noclipspeed [x] (стандартно = 2.0)") ;default
 CreateConsoleMsg("  - wireframe [on/off]")
 CreateConsoleMsg("  - debughud [on/off]")
 CreateConsoleMsg("  - camerafog [начало тумана] [конец тумана]") ;[near] [far]
@@ -1515,7 +1515,7 @@ CreateConsoleMsg("  - heal")
 CreateConsoleMsg(" ")
 CreateConsoleMsg("  - spawnitem [имя предмета]") ;[item name]
 CreateConsoleMsg(" ")
-CreateConsoleMsg("  - 173speed [x] (по умолчанию = 35)") ;default
+CreateConsoleMsg("  - 173speed [x] (стандартно = 35)") ;default
 CreateConsoleMsg("  - disable173/enable173")
 CreateConsoleMsg("  - disable106/enable106")
 CreateConsoleMsg("  - 173state/106state/096state")
@@ -2361,13 +2361,13 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 						If (Msg="Вы уже вызвали лифт.") Or (MsgTimer<70*3) ;You already called the elevator.
 							Select Rand(10)
 								Case 1
-									Msg = "Хватит тыкать по кнопке" ;Stop spamming the button.
+									Msg = "Хватит тыкать по кнопке." ;Stop spamming the button.
 									MsgTimer = 70 * 7
 								Case 2
 									Msg = "Многократное нажатие не ускорит лифт." ;Pressing it harder does not make the elevator come faster.
 									MsgTimer = 70 * 7
 								Case 3
-									Msg = "Если вы продолжите тыкать по кнопке, то я крашну игру." ;If you continue pressing this button I will generate a Memory Access Violation.
+									Msg = "Если Вы продолжите тыкать по кнопке, то я крашну игру." ;If you continue pressing this button I will generate a Memory Access Violation.
 									MsgTimer = 70 * 7
 								Default
 									Msg = "Вы уже вызвали лифт." ;You already called the elevator.
@@ -3041,7 +3041,7 @@ Repeat
 				If EyeStuck < 9000 Then BlurTimer = Max(BlurTimer, (9000-EyeStuck)*0.5)
 				If EyeStuck < 6000 Then darkA = Min(Max(darkA, (6000-EyeStuck)/5000.0),1.0)
 				If EyeStuck < 9000 And EyeStuck+FPSfactor =>9000 Then 
-					Msg = "От глазных капель у вас текут слезы." ;The eyedrops are causing your eyes to tear up.
+					Msg = "От глазных капель у вас текут слёзы." ;The eyedrops are causing your eyes to tear up.
 					MsgTimer = 70*6
 				EndIf
 			EndIf
@@ -4797,7 +4797,7 @@ Function DrawGUI()
 			AAText x - 50, 70, "Позиция камеры: (" + f2s(EntityX(Camera), 3)+ ", " + f2s(EntityY(Camera), 3) +", " + f2s(EntityZ(Camera), 3) + ")" ;Camera Position:
 			AAText x - 50, 100, "Угол поворота игрока: (" + f2s(EntityPitch(Collider), 3) + ", " + f2s(EntityYaw(Collider), 3) + ", " + f2s(EntityRoll(Collider), 3) + ")" ;Player Rotation:
 			AAText x - 50, 120, "Угол поворота камеры: (" + f2s(EntityPitch(Camera), 3)+ ", " + f2s(EntityYaw(Camera), 3) +", " + f2s(EntityRoll(Camera), 3) + ")" ;Camera Rotation:
-			AAText x - 50, 150, "Имя: " + PlayerRoom\RoomTemplate\Name ;Room:
+			AAText x - 50, 150, "Комната: " + PlayerRoom\RoomTemplate\Name ;Room:
 			For ev.Events = Each Events
 				If ev\room = PlayerRoom Then
 					AAText x - 50, 170, "Событие: " + ev\EventName ;Room event:
@@ -4854,7 +4854,7 @@ Function DrawGUI()
 			AAText x + 350, 90, (m\dwAvailPhys%/1024/1024)+" MБ/"+(m\dwTotalPhys%/1024/1024)+" MБ ("+(m\dwAvailPhys%/1024)+" KБ/"+(m\dwTotalPhys%/1024)+" KБ)"
 			AAText x + 350, 110, "Треугольников отображено: "+CurrTrisAmount ;Triangles rendered:
 			AAText x + 350, 130, "Активных текстур: "+ActiveTextures() ;Active textures:
-			AAText x + 350, 150, "SCP-427 state (secs): "+Int(I_427\Timer/70.0)
+			AAText x + 350, 150, "Состояние SCP-427 (сек): "+Int(I_427\Timer/70.0) ;state (secs)
 			AAText x + 350, 170, "Инфекция SCP-008: "+Infect ;SCP-008 infection:
 			For i = 0 To 5
 				AAText x + 350, 190+(20*i), "Состояние SCP-1025 "+i+": "+SCP1025state[i] ;SCP-1025 State
@@ -5451,13 +5451,13 @@ Function DrawGUI()
 										Next
 										If SelectedItem <> Null Then
 											Msg = "Планшет не удержит большее количество предметов." ;The paperclip is not strong enough to hold any more items.
-										Else
+										Else ;..!
 											If added\itemtemplate\tempname = "paper" Or added\itemtemplate\tempname = "oldpaper" Then
 												Msg = "Документ добавлен в планшет." ;This document was added to the clipboard.
-											ElseIf added\itemtemplate\tempname = "badge"
-												Msg = added\itemtemplate\name + " добавлен в планшет" ;was added to the clipboard.
+											ElseIf b="key1" Or b="key2" Or b="key3" Or b="key4" Or b="key5" Or b="key6" Or b2="Игральная карта" Or b2="Mastercard" Or b="coin"
+												Msg = added\itemtemplate\name + " добавлена в планшет."
 											Else
-												Msg = "The " + added\itemtemplate\name + " добавлен в планшет." ;The " + added\itemtemplate\name + " was added to the clipboard.
+												Msg =  added\itemtemplate\name + " добавлен в планшет." ;"The " + added\itemtemplate\name + " was added to the clipboard.
 											EndIf
 											
 										EndIf
@@ -5804,7 +5804,7 @@ Function DrawGUI()
 											Exit
 										EndIf
 									Next
-									Msg = "По неизвестным причинам вы оказались внутри карманного измерения." ;For some inexplicable reason. You find yourself inside the pocket dimension.
+									Msg = "По неизвестным причинам Вы оказались внутри карманного измерения." ;For some inexplicable reason. You find yourself inside the pocket dimension.
 									MsgTimer = 70*8
 								EndIf
 						End Select
@@ -5888,7 +5888,7 @@ Function DrawGUI()
 											Case 5
 												Bloodloss = 0
 												Injuries = 0
-												Msg = "Вы перевязали раны. Кровотечение полностью прекратилось, и вы чувствуете себя хорошо." ;You bandaged the wounds. The bleeding stopped completely and you feel fine.
+												Msg = "Вы перевязали раны. Кровотечение полностью прекратилось, и Вы чувствуете себя хорошо." ;You bandaged the wounds. The bleeding stopped completely and you feel fine.
 											Case 6
 												Msg = "Вы перевязали раны, но кровь сильно полилась сквозь повязки." ;You bandaged the wounds and blood started pouring heavily through the bandages.
 												Injuries = 3.5
@@ -6095,7 +6095,7 @@ Function DrawGUI()
 								Msg = "Вы сделали себе укол и почувствовали сильный прилив адреналина." ;You injected yourself with the syringe and feel a huge adrenaline rush.
 							Case 2
 								SuperMan = True
-								Msg = "Вы сделали себе укол и почувствовали чрезмерный прилив адреналина.." ;You injected yourself with the syringe and feel a humongous adrenaline rush.
+								Msg = "Вы сделали себе укол и почувствовали чрезмерный прилив адреналина." ;You injected yourself with the syringe and feel a humongous adrenaline rush.
 							Case 3
 								VomitTimer = 30
 								Msg = "Вы сделали себе укол и почувствовали боль в животе." ;You injected yourself with the syringe and feel a pain in your stomach.
@@ -6481,7 +6481,7 @@ Function DrawGUI()
 						Else
 							DeathMSG = "Субъект D-9341 найден в коматозном состоянии в [ДАННЫЕ УДАЛЕНЫ]. Субъект держал в руке предмет, похожий на сигарету, и широко улыбался. " ;Subject D-9341 found in a comatose state in [DATA REDACTED]. The subject was holding what appears to be a cigarette while smiling widely. 
 							DeathMSG = DeathMSG+"Химический анализ сигареты не дал результатов, но похоже, что она содержит высокую концентрацию неизвестных химикатов, " ;Chemical analysis of the cigarette has been inconclusive, although it seems to contain a high concentration of an unidentified chemical 
-							DeathMSG = DeathMSG+"но похоже, что она содержит высокую концентрацию неизвестных химикатов, молекулярная структура которых похожа на тетрагидроканнабинол." ;whose molecular structure is remarkably similar to that of tetrahydrocannabinol.
+							DeathMSG = DeathMSG+"молекулярная структура которых похожа на тетрагидроканнабинол." ;whose molecular structure is remarkably similar to that of tetrahydrocannabinol.
 							Msg = Chr(34) + "Э-Э, ГДЕ... ЧТО ЭТО Я ДЕЛАЛ... МНЕ НУЖНО ПОСПАТЬ..." + Chr(34) ;UH WHERE... WHAT WAS I DOING AGAIN... MAN I NEED TO TAKE A NAP...
 							KillTimer = -1						
 						EndIf
@@ -6727,7 +6727,7 @@ Function DrawGUI()
 							EndIf
 							If (MilliSecs2() Mod 1000) > 300 Then
 								If SelectedItem\itemtemplate\name <> "Навигатор S-NAV 310" And SelectedItem\itemtemplate\name <> "Навигатор S-NAV Ultimate" Then ;S-NAV 310 Navigator ;S-NAV Navigator Ultimate
-									AAText(x - width/2 + 10, y - height/2 + 10, "БАЗА ДАННЫХ ОФФЛАЙН") ;MAP DATABASE OFFLINE
+									AAText(x - width/2 + 10, y - height/2 + 10, "ОФФЛАЙН КАРТА") ;MAP DATABASE OFFLINE
 								EndIf
 								
 								yawvalue = EntityYaw(Collider)-90
@@ -7173,7 +7173,7 @@ Function DrawMenu()
 			AASetFont Font1
 		ElseIf OptionsMenu > 0 Then
 			AASetFont Font2
-			AAText(x, y-(122-45)*MenuScale, "ОПЦИИ",False,True) ;OPTIONS
+			AAText(x, y-(122-45)*MenuScale, "НАСТРОЙКИ",False,True) ;OPTIONS
 			AASetFont Font1
 		ElseIf QuitMSG > 0 Then
 			AASetFont Font2
@@ -7240,7 +7240,7 @@ Function DrawMenu()
 					y=y+50*MenuScale
 					
 					Color 100,100,100
-					AAText(x, y, "Включить bump mapping:") ;Enable bump mapping:
+					AAText(x, y, "Рельефное текстурирование:") ;Enable bump mapping:
 					BumpEnabled = DrawTick(x + 270 * MenuScale, y + MenuScale, BumpEnabled, True)
 					If MouseOn(x + 270 * MenuScale, y + MenuScale, 20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"bump")
@@ -7288,7 +7288,7 @@ Function DrawMenu()
 					
 					Color 255,255,255
 					AAText(x, y, "Количество частиц:") ;Particle amount:
-					ParticleAmount = Slider3(x+270*MenuScale,y+6*MenuScale,100*MenuScale,ParticleAmount,2,"MINIMAL","REDUCED","FULL")
+					ParticleAmount = Slider3(x+270*MenuScale,y+6*MenuScale,100*MenuScale,ParticleAmount,2,"МИНИМУМ","СРЕДНЕ","ВСЕ") ;MINIMAL REDUCED FULL
 					If (MouseOn(x + 270 * MenuScale, y-6*MenuScale, 100*MenuScale+14, 20) And OnSliderID=0) Or OnSliderID=2
 						DrawOptionsTooltip(tx,ty,tw,th,"particleamount",ParticleAmount)
 					EndIf
@@ -7296,7 +7296,7 @@ Function DrawMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x, y, "LOD`ы текстур:") ;Texture LOD Bias:
+					AAText(x, y, "Детализация текстур:") ;Texture LOD Bias:
 					TextureDetails = Slider5(x+270*MenuScale,y+6*MenuScale,100*MenuScale,TextureDetails,3,"0.8","0.4","0.0","-0.4","-0.8")
 					Select TextureDetails%
 						Case 0
@@ -7731,7 +7731,7 @@ Function DrawMenu()
 				
 				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "Достижения") Then AchievementsMenu = 1 ;Achievements
 				y = y + 75*MenuScale
-				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "Опции") Then OptionsMenu = 1 ;Options
+				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "Настройки") Then OptionsMenu = 1 ;Options
 				y = y + 75*MenuScale
 			Else
 				y = y+104*MenuScale
@@ -9582,7 +9582,7 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					EndIf
 			End Select
 			RemoveItem(item)
-		Case "Аптечка первой помощи", "Blue First Aid Kit" ;First Aid Kit ;Blue First Aid Kit
+		Case "Аптечка первой помощи", "Синяя аптечка первой помощи" ;First Aid Kit ;Blue First Aid Kit
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
@@ -11756,7 +11756,7 @@ Function CatchErrors(location$)
 			WriteLine errF,"Состояние памяти: "+(m\dwAvailPhys%/1024/1024)+" MБ/"+(m\dwTotalPhys%/1024/1024)+" MБ ("+(m\dwAvailPhys%/1024)+" KБ/"+(m\dwTotalPhys%/1024)+" KБ)" ;Global memory status:
 			WriteLine errF,"Отображено треугольников: "+CurrTrisAmount ;Triangles rendered
 			WriteLine errF,"Активных текстур: "+ActiveTextures() ;Active textures:
-			WriteLine errF,"Отправьте этот файл на contact@oleg720.ru"
+			WriteLine errF,"Сообщите об этом на contact@oleg720.ru (Прикрипите этот лог и файл сохранения!)"
 			WriteLine errF,""
 			WriteLine errF,"Ошибки:" ;Error(s):
 		Else

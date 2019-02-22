@@ -113,7 +113,7 @@ Function UpdateMainMenu()
 				Case 21
 					MenuStr = "Спираль растёт" ;The spiral is growing
 				Case 22
-					MenuStr = Chr(34)+"Что-то вроде эффекта гештальта из-за массивного повреждения реальности"+Chr(34) ;Some kind of gestalt effect due to massive reality damage.
+					MenuStr = Chr(34)+"Что-то вроде эффекта гештальта из-за массивного повреждения реальности."+Chr(34) ;Some kind of gestalt effect due to massive reality damage.
 			End Select
 		EndIf
 	EndIf
@@ -197,7 +197,7 @@ Function UpdateMainMenu()
 						MainMenuTab = 2
 					EndIf
 				Case 2
-					txt = "ОПЦИИ" ;OPTIONS
+					txt = "НАСТРОЙКИ" ;OPTIONS
 					If temp Then MainMenuTab = 3
 				Case 3
 					txt = "ВЫХОД" ;QUIT
@@ -340,10 +340,10 @@ Function UpdateMainMenu()
 						SelectedDifficulty\saveType = SAVEONSCREENS
 					EndIf
 					
-					AAText(x + 200 * MenuScale, y + 195 * MenuScale, "Сохраняться везде") ;Save anywhere
+					AAText(x + 200 * MenuScale, y + 195 * MenuScale, "Сохраняться в любом месте") ;Save anywhere
 					
 					SelectedDifficulty\aggressiveNPCs =  DrawTick(x + 160 * MenuScale, y + 225 * MenuScale, SelectedDifficulty\aggressiveNPCs)
-					AAText(x + 200 * MenuScale, y + 225 * MenuScale, "Агрессивные NPC") ;Aggressive NPCs
+					AAText(x + 200 * MenuScale, y + 225 * MenuScale, "Более агрессивные враги") ;Aggressive NPCs
 					
 					;Other factor's difficulty
 					Color 255,255,255
@@ -559,7 +559,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "ОПЦИИ", True, True) ;OPTIONS
+				AAText(x + width / 2, y + height / 2, "НАСТРОЙКИ", True, True) ;OPTIONS
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -608,7 +608,7 @@ Function UpdateMainMenu()
 					y=y+20*MenuScale
 					
 					Color 255,255,255				
-					AAText(x + 20 * MenuScale, y, "Включить bump mapping:") ;Enable bump mapping:
+					AAText(x + 20 * MenuScale, y, "Рельефное текстурирование:") ;Enable bump mapping:
 					BumpEnabled = DrawTick(x + 310 * MenuScale, y + MenuScale, BumpEnabled)
 					If MouseOn(x + 310 * MenuScale, y + MenuScale, 20*MenuScale,20*MenuScale) And OnSliderID=0
 						;DrawTooltip("Not available in this version")
@@ -665,7 +665,7 @@ Function UpdateMainMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "LOD`ы текстур:") ;Texture LOD Bias:
+					AAText(x + 20 * MenuScale, y, "Детализация текстур:") ;Texture LOD Bias:
 					TextureDetails = Slider5(x+310*MenuScale,y+6*MenuScale,150*MenuScale,TextureDetails,3,"0.8","0.4","0.0","-0.4","-0.8")
 					Select TextureDetails%
 						Case 0
@@ -1237,7 +1237,7 @@ Function UpdateLauncher()
 		Text(40 + 430 + 15, 262 - 55 + 5 - 8, "Полный экран") ;Fullscreen
 		Color 255, 255, 255
 		Text(40 + 430 + 15, 262 - 55 + 35 - 8, "Оконный режим",False,False) ;Borderless
-		Text(40 + 430 + 15, 262 - 55 + 35 + 12, "без рамок",False,False) ;windowed mode
+		Text(40 + 430 + 15, 262 - 55 + 35 + 12, "(без рамки)",False,False) ;windowed mode
 
 		If BorderlessWindowed Or (Not Fullscreen)
  		   Color 255, 0, 0
@@ -2035,12 +2035,12 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 		;Graphic options
 			;[Block]
 		Case "bump"
-			txt = Chr(34)+"Bump mapping"+Chr(34)+" используется для иммитации вмятин, искажая карты света." ;Bump mapping"+Chr(34)+" is used to simulate bumps and dents by distorting the lightmaps.
+			txt = Chr(34)+"Рельефное текстурирование"+Chr(34)+" используется для иммитации вмятин, искажая карты света." ;Bump mapping"+Chr(34)+" is used to simulate bumps and dents by distorting the lightmaps.
 			txt2 = "Эта опция не может быть изменена во время игры." ;This option cannot be changed in-game.
 			R = 255
 		Case "vsync"
 			txt = Chr(34)+"Вертикальная синхронизация"+Chr(34)+" ожидает, пока дисплей завершит текущий цикл обновления, перед построением следующего кадра. Предотвращает " ;Vertical sync"+Chr(34)+" waits for the display to finish its current refresh cycle before calculating the next frame, preventing issues such as 
-			txt = txt + "разрыв кадра. Может вызвать небольшие задержки." ;screen tearing. This ties the game's frame rate to your display's refresh rate and may cause some input lag.
+			txt = txt + "разрыв кадра. Может вызвать небольшие задержки в отрисовке." ;screen tearing. This ties the game's frame rate to your display's refresh rate and may cause some input lag.
 		Case "antialias"
 			txt = Chr(34)+"Сглаживание"+Chr(34)+" используется для сглаживания изображения перед его отображением. Позволяет избавиться от лесенок на моделях." ;Anti-Aliasing"+Chr(34)+" is used to smooth the rendered image before displaying in order to reduce aliasing around the edges of models.
 			txt2 = "Эта опция работает только в полноэкранном режиме." ;This option only takes effect in fullscreen.
@@ -2055,7 +2055,7 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 			B = 255
 			txt2 = "Текущее значение: "+Int(value*100)+"% (стандартно - 100%)" ;Current value:  ;% (default is 100%)
 		Case "texquality"
-			txt = Chr(34)+"LOD`ы текстур"+Chr(34)+" устанавливает дистанцию, на которой будет изменяться детализация текстур. Измените этот параметр, если текстуры мерцают или быглядят слишком размытыми." ;Texture LOD Bias"+Chr(34)+" affects the distance at which texture detail will change to prevent aliasing. Change this option if textures flicker or look too blurry.
+			txt = Chr(34)+"Детализация текстур"+Chr(34)+" устанавливает дистанцию, на которой будет изменяться детализация текстур. Измените этот параметр, если текстуры мерцают или выглядят слишком размытыми." ;Texture LOD Bias"+Chr(34)+" affects the distance at which texture detail will change to prevent aliasing. Change this option if textures flicker or look too blurry.
 		Case "particleamount"
 			txt = "Определяет кол-во частиц, которые могут быть отображены в кадре." ;Determines the amount of particles that can be rendered per tick.
 			Select value
@@ -2090,11 +2090,11 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 			B = 255
 			txt2 = "Текущее значение: "+Int(value*100)+"% (стандартно - 100%)" ;Current value:  ;% (default is 100%)
 		Case "sfxautorelease"
-			txt = Chr(34)+"Авто-высвобождение звука"+Chr(34)+" высвободит из памяти звук, который не используется более 5 секунд. Предотвращает ошибки с распределением памяти." ;Sound auto-release"+Chr(34)+" will free a sound from memory if it not used after 5 seconds. Prevents memory allocation issues.
+			txt = Chr(34)+"Автовысвобождение звука"+Chr(34)+" высвободит из памяти звук, который не используется более 5 секунд. Предотвращает ошибки с распределением памяти." ;Sound auto-release"+Chr(34)+" will free a sound from memory if it not used after 5 seconds. Prevents memory allocation issues.
 			R = 255
 			txt2 = "Эта опция не может быть изменена во время игры." ;This option cannot be changed in-game.
 		Case "usertrack"
-			txt = "Включает вохможность прослушивания пользовательский треков на 1-ом канале радио. Треки загружаются из " + Chr(34) + "SFX\Radio\UserTracks\" + Chr(34) ;Toggles the ability to play custom tracks over channel 1 of the radio. These tracks are loaded from the 
+			txt = "Включает возможность прослушивания пользовательский треков на 1-ом канале радио. Треки загружаются из " + Chr(34) + "SFX\Radio\UserTracks\" + Chr(34) ;Toggles the ability to play custom tracks over channel 1 of the radio. These tracks are loaded from the 
 			txt = txt + " Нажмите " + Chr(34) + "1" + Chr(34) + " когда выбрано радио, чтобы прослушать ваши треки." ; directory. Press  ;when the radio is selected to change track.
 			R = 255
 			txt2 = "Эта опция не может быть изменена во время игры." ;This option cannot be changed in-game.
@@ -2116,7 +2116,7 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 			B = 255
 			txt2 = "Текущее значение: "+Int((0.5+value)*100)+"% (стандартно - 50%)" ;Current value:  ;% (default is 50%)
 		Case "mouseinvert"
-			txt = Chr(34)+"Не требует пояснений." ;Invert mouse Y-axis"+Chr(34)+" is self-explanatory.
+			txt = "Не требует пояснений." ;Invert mouse Y-axis"+Chr(34)+" is self-explanatory.
 		Case "mousesmoothing"
 			txt = "Сглаживание указателя мыши." ;Adjusts the amount of smoothing of the mouse pointer.
 			R = 255
@@ -2129,24 +2129,24 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 		;Advanced options	
 			;[Block]
 		Case "hud"
-			txt = "Отображает индикаторы моргания и бега." ;Display the blink and stamina meters.
+			txt = "Отображает индикаторы моргания и выносливости." ;Display the blink and stamina meters.
 		Case "consoleenable"
-			txt = "Включает возможность использования консоли разработчика в игре. Открывается в игре по нажатию клавиши " + KeyName(KEY_CONSOLE) + "." ;Toggles the use of the developer console. Can be used in-game by pressing 
+			txt = "Включает возможность использования консоли разработчика в игре. Открывается по нажатию клавиши " + KeyName(KEY_CONSOLE) + "." ;Toggles the use of the developer console. Can be used in-game by pressing 
 		Case "consoleerror"
 			txt = "Не требует пояснений." ;Open console on error"+Chr(34)+" is self-explanatory.
 		Case "achpopup"
-			txt = "Выводит уведомление при получении нового достижения." ;Displays a pop-up notification when an achievement is unlocked.
+			txt = "Выводит всплывающее уведомление при получении нового достижения." ;Displays a pop-up notification when an achievement is unlocked.
 		Case "showfps"
 			txt = "Отображает кол-во кадров в секунду в левом верхнем углу экрана." ;Displays the frames per second counter at the top left-hand corner.
 		Case "framelimit"
-			txt = "Ограничиает частоту кадров в игре." ;Limits the frame rate that the game can run at to a desired value.
+			txt = "Ограничивает частоту кадров в игре." ;Limits the frame rate that the game can run at to a desired value.
 			If value > 0 And value < 60
 				R = 255
 				G = 255
-				txt2 = "Предпочительно 60 FPS или выше. Если вы замечаете чрезмерную прерывистость кадров, попробуйте уменьшить этот параметр, чтобы сделать FPS более стабильным." ;Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent.
+				txt2 = "Предпочительно 60 FPS или выше. Если Вы замечаете чрезмерную прерывистость кадров, попробуйте уменьшить этот параметр, чтобы сделать FPS более стабильным." ;Usually, 60 FPS or higher is preferred. If you are noticing excessive stuttering at this setting, try lowering it to make your framerate more consistent.
 			EndIf
 		Case "antialiastext"
-			txt = "Сглаживает текст, делая его читабельным на мониторах с большим разрешением экрана." ;Antialiased text"+Chr(34)+" smooths out the text before displaying. Makes text easier to read at high resolutions.
+			txt = "Сглаживает текст, делая его читабельным на мониторах с высоким разрешением экрана." ;Antialiased text"+Chr(34)+" smooths out the text before displaying. Makes text easier to read at high resolutions.
 			;[End Block]
 	End Select
 	

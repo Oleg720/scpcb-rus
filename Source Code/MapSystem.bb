@@ -378,7 +378,7 @@ Function LoadRMesh(file$,rt.RoomTemplates)
 	ElseIf isRMesh$="RoomMesh.HasTriggerBox"
 		hasTriggerBox% = True
 	Else
-		RuntimeError Chr(34)+file+Chr(34)+" не RMESH ("+isRMesh+")" ;is Not RMESH
+		RuntimeError Chr(34)+file+Chr(34)+" не является RMESH ("+isRMesh+")" ;is Not RMESH
 	EndIf
 	
 	file=StripFilename(file)

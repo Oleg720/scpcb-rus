@@ -6510,7 +6510,7 @@ Function UpdateEvents()
 											e\EventState3 = 0.0
 										Else
 											PlaySound_Strict(LoadTempSound("SFX\Door\WoodenDoorBudge.ogg"))
-											Msg = "Дверь не поддается." ;The door will not budge.
+											Msg = "Дверь не поддаётся." ;The door will not budge.
 											MsgTimer = 70*5
 										EndIf
 									EndIf
@@ -6548,7 +6548,7 @@ Function UpdateEvents()
 								If SelectedItem = Null Then
 									If MouseHit1 Then
 										PlaySound_Strict(LoadTempSound("SFX\Door\WoodenDoorBudge.ogg"))
-										Msg = "Дверь не поддается." ;The door will not budge.
+										Msg = "Дверь не поддаётся." ;The door will not budge.
 										MsgTimer = 5*70
 									EndIf
 								ElseIf SelectedItem\itemtemplate\tempname="scp860" 
@@ -7611,7 +7611,7 @@ Function UpdateEvents()
 									e\EventState = 3	
 									PlaySound_Strict e\Sound2
 									
-									Msg = "Вокруг вашего тела что-то растет." ;Something is growing all around your body.
+									Msg = "Вокруг вашего тела что-то растёт." ;Something is growing all around your body.
 									MsgTimer = 70.0 * 3.0
 								Else
 									e\EventState3 = 70*30
@@ -7627,7 +7627,7 @@ Function UpdateEvents()
 									Case 1
 										Msg = "По всему ващему телу растут уши." ;Ears are growing all over your body.
 									Case 2
-										Msg = "По всему ващему телу растет нечто похожее на уши." ;Ear-like organs are growing all over your body.
+										Msg = "По всему ващему телу растёт нечто похожее на уши." ;Ear-like organs are growing all over your body.
 									Case 3
 										Msg = "По всему ващему телу растут уши. Они ползают по вашей коже." ;Ears are growing all over your body. They are crawling on your skin.
 								End Select
@@ -7638,7 +7638,7 @@ Function UpdateEvents()
 									Case 1
 										Msg = "Становится трудно дышать." ;It is becoming difficult to breathe.
 									Case 2
-										Msg = "Теперь у вас отличный слух. А ещё, вы умираете." ;You have excellent hearing now. Also, you are dying.
+										Msg = "Теперь у вас отличный слух. А ещё, Вы умираете." ;You have excellent hearing now. Also, you are dying.
 									Case 3
 										Msg = "Уши прорастают внутрь тела." ;The ears are growing inside your body.
 									Case 4
@@ -7649,7 +7649,7 @@ Function UpdateEvents()
 							EndIf
 							
 							If (e\EventState2>70*15) Then
-								DeathMSG = "В [УДАЛЕНО] был обнаружен труп. Предположительно, субъект подвергся нападению со стороны SCP-1048-A и задохнулся ушей, проросших внутрь тела. " ;A dead body covered in ears was found in [REDACTED]. Subject was presumably attacked by an instance of SCP-1048-A and suffocated to death by the ears. 
+								DeathMSG = "В [УДАЛЕНО] был обнаружен труп. Предположительно, субъект подвергся нападению со стороны SCP-1048-A и задохнулся от ушей, проросших внутрь тела. " ;A dead body covered in ears was found in [REDACTED]. Subject was presumably attacked by an instance of SCP-1048-A and suffocated to death by the ears. 
 								DeathMSG = DeathMSG + "Тело отправлено на вскрытие." ;Body was sent for autopsy.
 								Kill()
 								e\EventState = 4
