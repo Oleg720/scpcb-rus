@@ -182,7 +182,7 @@ CreateMenu "",1000,options
 zone_trans = CreateMenu("Настройки карты",18,options) ;Map Settings
 author_descr = CreateMenu("Изменить автора и описание",19,options) ;Edit Author and Description
 CreateMenu "",1000,options
-CreateMenu "Edit Camera",17,options
+CreateMenu "Настройки камеры",17,options ;Edit Camera
 
 Local option_event = GetINIInt("options.INI","general","events_default")
 If (Not option_event)
