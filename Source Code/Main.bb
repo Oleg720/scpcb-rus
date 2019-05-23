@@ -2355,7 +2355,7 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 						Msg = "Вы вызвали лифт." ;You called the elevator.
 						MsgTimer = 70 * 5
 					ElseIf d\IsElevatorDoor = 3 Then
-						Msg = "Литф уже на этом этаже." ;The elevator is already on this floor.
+						Msg = "Лифт уже на этом этаже." ;The elevator is already on this floor.
 						MsgTimer = 70 * 5
 					ElseIf (Msg<>"Вы вызвали лифт.") ;You called the elevator.
 						If (Msg="Вы уже вызвали лифт.") Or (MsgTimer<70*3) ;You already called the elevator.
