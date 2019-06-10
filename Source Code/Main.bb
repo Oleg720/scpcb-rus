@@ -42,7 +42,7 @@ Global UpdaterFont%
 Global Font1%, Font2%, Font3%, Font4%, Font5%
 Global ConsoleFont%, BlitzFont%
 
-Global VersionNumber$ = "1.3.11 [Rus v1.311.1]"
+Global VersionNumber$ = "1.3.11 [Rus v1.311.2]"
 Global CompatibleNumber$ = "1.3.11 [Rus v1.311]" ;Only change this if the version given isn't working with the current build version - ENDSHN
 
 Global MenuWhite%, MenuBlack%
@@ -5815,7 +5815,7 @@ Function DrawGUI()
 				Case "firstaid", "finefirstaid", "firstaid2"
 					;[Block]
 					If Bloodloss = 0 And Injuries = 0 Then
-						Msg = "Сейчас вам не нужна аптечка." ;You do not need to use a first aid right now.
+						Msg = "Сейчас Вам не нужна аптечка." ;You do not need to use a first aid right now.
 						MsgTimer = 70*5
 						SelectedItem = Null
 					Else
@@ -5867,7 +5867,7 @@ Function DrawGUI()
 											Msg = "Вы приняли обезболивающее, и боль немного отступила." ;You took a painkiller, easing the pain slightly."
 										Else
 											Injuries = 0.5
-											Msg = "Вы приняли обезболивающее, но вам всё ещё больно ходить." ;You took a painkiller, but it still hurts to walk.
+											Msg = "Вы приняли обезболивающее, но Вам всё ещё больно ходить." ;You took a painkiller, but it still hurts to walk.
 										EndIf
 									EndIf
 									
@@ -5878,7 +5878,7 @@ Function DrawGUI()
 												Msg = "Вы переполнены адреналиномтвоюматьОДААААА~!" ;You have becomed overwhelmedwithadrenalineholyshitWOOOOOO~!
 											Case 2
 												InvertMouse = (Not InvertMouse)
-												Msg = "Неожиданно вам становится трудно поворачивать голову." ;You suddenly find it very difficult to turn your head.
+												Msg = "Неожиданно Вам становится трудно поворачивать голову." ;You suddenly find it very difficult to turn your head.
 											Case 3
 												BlurTimer = 5000
 												Msg = "Вы чувствуете тошноту." ;You feel nauseated.
@@ -6592,7 +6592,7 @@ Function DrawGUI()
 							Msg = "Вы сняли противогаз." ;You removed the gas mask.
 						Else
 							If SelectedItem\itemtemplate\tempname = "supergasmask"
-								Msg = "Вы надели противогаз, и вам стало легче дышать." ;You put on the gas mask and you can breathe easier.
+								Msg = "Вы надели противогаз, и Вам стало легче дышать." ;You put on the gas mask and you can breathe easier.
 							Else
 								Msg = "Вы надели противогаз." ;You put on the gas mask.
 							EndIf
@@ -10330,7 +10330,7 @@ Function Use427()
 			Msg = "Ваши мышцы набухают. Вы чувствуете себя сильнее, чем когда-либо." ;Your muscles are swelling. You feel more powerful than ever.
 			MsgTimer = 70*5
 		ElseIf prevI427Timer-FPSfactor < 70*390 And I_427\Timer => 70*390 Then
-			Msg = "Вы не чувствуете своих ног. Но вам больше не нужны ноги." ;You can't feel your legs. But you don't need legs anymore.
+			Msg = "Вы не чувствуете своих ног. Но Вам больше не нужны ноги." ;You can't feel your legs. But you don't need legs anymore.
 			MsgTimer = 70*5
 		EndIf
 		I_427\Timer = I_427\Timer + FPSfactor

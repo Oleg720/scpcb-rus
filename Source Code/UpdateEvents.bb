@@ -231,7 +231,7 @@ Function UpdateEvents()
                                                 PositionEntity Curr173\Collider, 0,0,0
                                             EndIf
 											ResetEntity Curr173\Collider
-											Msg = "Удерживайте "+KeyName(KEY_SPRINT)+", чтобы бежать."
+											Msg = "Удерживайте "+KeyName(KEY_SPRINT)+", чтобы бежать." ;Hold ;to run.
 											MsgTimer = 70*8
 										EndIf
 									EndIf
@@ -2555,11 +2555,11 @@ Function UpdateEvents()
 										If Using294 Then MouseHit1=False
 									ElseIf e\EventState2 = 1 And (Not inserted) Then
 										Using294=False
-										Msg = "Для использования этой машины вам требуется вставить ещё один Четвертак." ;You need to insert another Quarter in order to use this machine.
+										Msg = "Для использования этой машины Вам требуется вставить ещё один Четвертак." ;You need to insert another Quarter in order to use this machine.
 										MsgTimer = 70*5
 									ElseIf (Not inserted) Then
 										Using294=False
-										Msg = "Для использования этой машины вам требуется вставить два Четвертака." ;You need to insert two Quarters in order to use this machine.
+										Msg = "Для использования этой машины Вам требуется вставить два Четвертака." ;You need to insert two Quarters in order to use this machine.
 										MsgTimer = 70*5
 									EndIf
 								EndIf
@@ -7163,7 +7163,7 @@ Function UpdateEvents()
 										If (Not WearingHazmat) Then
 											Injuries=Injuries+0.1
 											If Infect=0 Then Infect=1
-											Msg = "Окно разбилось, и осколок стекла порезал вам руку." ;The window shattered and a piece of glass cut your arm.
+											Msg = "Окно разбилось, и осколок стекла порезал Вам руку." ;The window shattered and a piece of glass cut your arm.
 											MsgTimer = 70*8
 										EndIf
 										

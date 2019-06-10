@@ -831,7 +831,7 @@ Function UpdateNPCs()
 												
 												Select PlayerRoom\RoomTemplate\Name
 													Case "lockroom", "room2closets", "coffin"
-														DeathMSG = "Субъект D-9341. Причина смерти: смертельный перелом шеи. Записи с камер наблюдения подтверждают, что субъект был убит SCP-173." ;Subject D-9341. Cause of death: Fatal cervical fracture. The surveillance tapes confirm that the subject was killed by SCP-173.	
+														DeathMSG = "Субъект D-9341. Причина смерти: смертельный перелом шеи. Записи с камер наблюдения подтверждают, что субъект был убит SCP-173." ;Subject D-9341. Cause of death: Fatal cervical fracture. The surveillance tapes confirm that the subject was killed by SCP-173.
 													Case "173"
 														DeathMSG = "Субъект D-9341. Причина смерти: смертельный перелом шеи. По словам начальника службы безопасности Франклина, который присутствовал в камере SCP-173 " ;Subject D-9341. Cause of death: Fatal cervical fracture. According to Security Chief Franklin who was present at SCP-173's containment 
 														DeathMSG = DeathMSG + "во время нарушения условий содержания, субъект был убит SCP-173, как только начались сбои в электрической сети." ;chamber during the breach, the subject was killed by SCP-173 as soon as the disruptions in the electrical network started.
@@ -6849,26 +6849,26 @@ Function Shoot(x#, y#, z#, hitProb# = 1.0, particles% = True, instaKill% = False
 							Injuries = Injuries + Rnd(0.1,0.5)
 						Case 6
 							BlurTimer = 500
-							ShotMessageUpdate = "Пуля попала вам в левую ногу." ;A bullet hit your left leg.
+							ShotMessageUpdate = "Пуля попала Вам в левую ногу." ;A bullet hit your left leg.
 							Injuries = Injuries + Rnd(0.8,1.2)
 						Case 7
 							BlurTimer = 500
-							ShotMessageUpdate = "Пуля попала вам в правую ногу." ;A bullet hit your right leg.
+							ShotMessageUpdate = "Пуля попала Вам в правую ногу." ;A bullet hit your right leg.
 							Injuries = Injuries + Rnd(0.8,1.2)
 						Case 8
 							BlurTimer = 500
 							Stamina = 0
-							ShotMessageUpdate = "Пуля попала вам в шею, Вы задыхаетесь." ;A bullet struck your neck, making you gasp.
+							ShotMessageUpdate = "Пуля попала Вам в шею, Вы задыхаетесь." ;A bullet struck your neck, making you gasp.
 							Injuries = Injuries + Rnd(1.2,1.6)
 					End Select	
 				Else
 					If Rand(10)=1 Then
 						BlurTimer = 500
 						Stamina = Stamina - 1
-						ShotMessageUpdate = "Поля попала вам в грудь. Жилет поглотил часть урона." ;A bullet hit your chest. The vest absorbed some of the damage.
+						ShotMessageUpdate = "Поля попала Вам в грудь. Жилет поглотил часть урона." ;A bullet hit your chest. The vest absorbed some of the damage.
 						Injuries = Injuries + Rnd(0.8,1.1)
 					Else
-						ShotMessageUpdate = "Поля попала вам в грудь. Жилет поглотил часть урона." ;A bullet hit your chest. The vest absorbed some of the damage.
+						ShotMessageUpdate = "Поля попала Вам в грудь. Жилет поглотил часть урона." ;A bullet hit your chest. The vest absorbed some of the damage.
 						Injuries = Injuries + Rnd(0.1,0.5)
 					EndIf
 				EndIf
@@ -6882,23 +6882,23 @@ Function Shoot(x#, y#, z#, hitProb# = 1.0, particles% = True, instaKill% = False
 						Kill()
 					Case 2
 						BlurTimer = 500
-						ShotMessageUpdate = "Пуля попала вам в левую ногу." ;A bullet hit your left leg.
+						ShotMessageUpdate = "Пуля попала Вам в левую ногу." ;A bullet hit your left leg.
 						Injuries = Injuries + Rnd(0.8,1.2)
 					Case 3
 						BlurTimer = 500
-						ShotMessageUpdate = "Пуля попала вам в правую ногу." ;A bullet hit your right leg.
+						ShotMessageUpdate = "Пуля попала Вам в правую ногу." ;A bullet hit your right leg.
 						Injuries = Injuries + Rnd(0.8,1.2)
 					Case 4
 						BlurTimer = 500
-						ShotMessageUpdate = "Пуля попала вам в правое плечо." ;A bullet hit your right shoulder.
+						ShotMessageUpdate = "Пуля попала Вам в правое плечо." ;A bullet hit your right shoulder.
 						Injuries = Injuries + Rnd(0.8,1.2)	
 					Case 5
 						BlurTimer = 500
-						ShotMessageUpdate = "Пуля попала вам в левое плечо." ;A bullet hit your left shoulder.
+						ShotMessageUpdate = "Пуля попала Вам в левое плечо." ;A bullet hit your left shoulder.
 						Injuries = Injuries + Rnd(0.8,1.2)	
 					Case 6
 						BlurTimer = 500
-						ShotMessageUpdate = "Пуля попала вам в правое плечо." ;A bullet hit your right shoulder.
+						ShotMessageUpdate = "Пуля попала Вам в правое плечо." ;A bullet hit your right shoulder.
 						Injuries = Injuries + Rnd(2.5,4.0)
 				End Select
 			EndIf

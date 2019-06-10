@@ -605,7 +605,7 @@ Function PickItem(item.Items)
 	Next
 
 	If WearingHazmat > 0 Then
-		Msg = "Вы не можете подбирать предметы во время ношения защитного костюма."
+		Msg = "Вы не можете подбирать предметы во время ношения защитного костюма." ;You cannot pick up any items while wearing a hazmat suit.
 		MsgTimer = 70*5
 		Return
 	EndIf
@@ -740,7 +740,7 @@ End Function
 
 Function DropItem(item.Items,playdropsound%=True)
 	If WearingHazmat > 0 Then
-		Msg = "Вы не можете выбрасывать предметы во время ношения защитного костюма."
+		Msg = "Вы не можете выбрасывать предметы во время ношения защитного костюма." ;You cannot drop any items while wearing a hazmat suit.
 		MsgTimer = 70*5
 		Return
 	EndIf
