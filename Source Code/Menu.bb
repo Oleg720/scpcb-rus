@@ -1371,7 +1371,7 @@ Function InitLoadingScreens(file$)
 			
 			ls\disablebackground = GetINIInt(file, TemporaryString, "disablebackground")
 			
-			Select Lower2(GetINIString(file, TemporaryString, "align x"))
+			Select lower(GetINIString(file, TemporaryString, "align x"))
 				Case "left"
 					ls\alignx = -1
 				Case "middle", "center"
@@ -1380,7 +1380,7 @@ Function InitLoadingScreens(file$)
 					ls\alignx = 1
 			End Select 
 			
-			Select Lower2(GetINIString(file, TemporaryString, "align y"))
+			Select lower(GetINIString(file, TemporaryString, "align y"))
 				Case "top", "up"
 					ls\aligny = -1
 				Case "middle", "center"
@@ -2031,7 +2031,7 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 	
 	AASetFont Font1
 	Color 255,255,255
-	Select Lower2(option$)
+	Select lower(option$)
 		;Graphic options
 			;[Block]
 		Case "bump"

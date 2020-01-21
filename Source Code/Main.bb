@@ -42,7 +42,7 @@ Global UpdaterFont%
 Global Font1%, Font2%, Font3%, Font4%, Font5%
 Global ConsoleFont%, BlitzFont%
 
-Global VersionNumber$ = "1.3.11 [Rus v1.311.2]"
+Global VersionNumber$ = "1.3.11 [Rus v1.311.3]"
 Global CompatibleNumber$ = "1.3.11 [Rus v1.311]" ;Only change this if the version given isn't working with the current build version - ENDSHN
 
 Global MenuWhite%, MenuBlack%
@@ -571,22 +571,22 @@ Function UpdateConsole()
 			ConsoleScroll = 0
 			CreateConsoleMsg(ConsoleInput,255,255,0,True)
 			If Instr(ConsoleInput, " ") > 0 Then
-				StrTemp$ = Lower2(Left(ConsoleInput, Instr(ConsoleInput, " ") - 1))
+				StrTemp$ = lower(Left(ConsoleInput, Instr(ConsoleInput, " ") - 1))
 			Else
-				StrTemp$ = Lower2(ConsoleInput)
+				StrTemp$ = lower(ConsoleInput)
 			End If
 			
-			Select Lower2(StrTemp)
+			Select lower(StrTemp)
 				Case "help"
 					;[Block]
 					If Instr(ConsoleInput, " ")<>0 Then
-						StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+						StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Else
 						StrTemp$ = ""
 					EndIf
 					ConsoleR = 0 : ConsoleG = 255 : ConsoleB = 255
 					
-					Select Lower2(StrTemp)
+					Select lower(StrTemp)
 						Case "1",""
 							CreateConsoleMsg("СПИСОК КОМАНД - СТРАНИЦА 1/3") ;LIST OF COMMANDS - PAGE
 							CreateConsoleMsg("******************************")
@@ -816,25 +816,25 @@ Function UpdateConsole()
 					;[End Block]
 				Case "ending"
 					;[Block]
-					SelectedEnding = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					SelectedEnding = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					KillTimer = -0.1
 					;EndingTimer = -0.1
 					;[End Block]
 				Case "noclipspeed"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					NoClipSpeed = Float(StrTemp)
 					;[End Block]
 				Case "injure"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Injuries = Float(StrTemp)
 					;[End Block]
 				Case "infect"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Infect = Float(StrTemp)
 					;[End Block]
@@ -845,7 +845,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "teleport"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "895", "scp-895"
@@ -875,16 +875,16 @@ Function UpdateConsole()
 					;[End Block]
 				Case "spawnitem" ;..!
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					temp = False 
 					For itt.Itemtemplates = Each ItemTemplates
-						If (Lower2(itt\name) = StrTemp) Then
+						If (lower(itt\name) = StrTemp) Then
 							temp = True
 							CreateConsoleMsg("Предмет "+Chr(34)+ itt\name +Chr(34)+" создан.") ;spawned.
 							it.Items = CreateItem(itt\name, itt\tempname, EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 							EntityType(it\collider, HIT_ITEM)
 							Exit
-						Else If (Lower2(itt\tempname) = StrTemp) Then
+						Else If (lower(itt\tempname) = StrTemp) Then
 							temp = True
 							CreateConsoleMsg("Предмет "+Chr(34)+ itt\name +Chr(34)+" создан.") ;spawned.
 							it.Items = CreateItem(itt\name, itt\tempname, EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
@@ -897,7 +897,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "wireframe"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "on", "1", "true"
@@ -918,13 +918,13 @@ Function UpdateConsole()
 					;[End Block]
 				Case "173speed"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Curr173\Speed = Float(StrTemp)
 					CreateConsoleMsg("Скорость 173-го установлена на " + StrTemp) ;173's speed set to
 					;[End Block]
 				Case "106speed"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Curr106\Speed = Float(StrTemp)
 					CreateConsoleMsg("Скорость 106-го установлена на " + StrTemp) ;106's speed set to
 					;[End Block]
@@ -1018,7 +1018,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "godmode", "god"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "on", "1", "true"
@@ -1061,7 +1061,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "noclip","fly"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "on", "1", "true"
@@ -1107,7 +1107,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "debughud"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Select StrTemp
 						Case "on", "1", "true"
 							DebugHUD = True
@@ -1152,20 +1152,20 @@ Function UpdateConsole()
 					;[End Block]
 				Case "camerafog"
 					;[Block]
-					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					args$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					CameraFogNear = Float(Left(args, Len(args) - Instr(args, " ")))
 					CameraFogFar = Float(Right(args, Len(args) - Instr(args, " ")))
 					CreateConsoleMsg("Начало тумана установлено на " + CameraFogNear + ", а конец на " + CameraFogFar) ;Near set to: ;, far set to
 					;[End Block]
 				Case "gamma"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					ScreenGamma = Int(StrTemp)
 					CreateConsoleMsg("Уровень гаммы установлен на " + ScreenGamma) ;Gamma set to
 					;[End Block]
 				Case "spawn"
 					;[Block]
-					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					args$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					StrTemp$ = Piece$(args$, 1)
 					StrTemp2$ = Piece$(args$, 2)
 					
@@ -1179,7 +1179,7 @@ Function UpdateConsole()
 				;new Console Commands in SCP:CB 1.3 - ENDSHN
 				Case "infinitestamina","infstam"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "on", "1", "true"
@@ -1216,7 +1216,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "unlockexits"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "a"
@@ -1274,7 +1274,7 @@ Function UpdateConsole()
 					;[Block]
 					; I think this might be broken since the FMod library streaming was added. -Mark
 					If Instr(ConsoleInput, " ")<>0 Then
-						StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+						StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Else
 						StrTemp$ = ""
 					EndIf
@@ -1307,7 +1307,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "tele"
 					;[Block]
-					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					args$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					StrTemp$ = Piece$(args$,1," ")
 					StrTemp2$ = Piece$(args$,2," ")
 					StrTemp3$ = Piece$(args$,3," ")
@@ -1319,7 +1319,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "notarget"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					Select StrTemp
 						Case "on", "1", "true"
@@ -1365,7 +1365,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "seteventstate"
 					;[Block]
-					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					args$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					StrTemp$ = Piece$(args$,1," ")
 					StrTemp2$ = Piece$(args$,2," ")
 					StrTemp3$ = Piece$(args$,3," ")
@@ -1375,13 +1375,13 @@ Function UpdateConsole()
 					Else
 						For e.Events = Each Events
 							If e\room = PlayerRoom
-								If Lower2(StrTemp)<>"keep"
+								If lower(StrTemp)<>"keep"
 									e\EventState = Float(StrTemp)
 								EndIf
-								If Lower2(StrTemp2)<>"keep"
+								If lower(StrTemp2)<>"keep"
 									e\EventState2 = Float(StrTemp2)
 								EndIf
-								If Lower2(StrTemp3)<>"keep"
+								If lower(StrTemp3)<>"keep"
 									e\EventState3 = Float(StrTemp3)
 								EndIf
 								CreateConsoleMsg("Изменено состояние события в текущей комнате на: "+e\EventState+"|"+e\EventState2+"|"+e\EventState3) ;Changed event states from current player room to:
@@ -1397,7 +1397,7 @@ Function UpdateConsole()
 				Case "spawnparticles"
 					;[Block]
 					If Instr(ConsoleInput, " ")<>0 Then
-						StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+						StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Else
 						StrTemp$ = ""
 					EndIf
@@ -1412,7 +1412,7 @@ Function UpdateConsole()
 				Case "giveachievement"
 					;[Block]
 					If Instr(ConsoleInput, " ")<>0 Then
-						StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+						StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Else
 						StrTemp$ = ""
 					EndIf
@@ -1426,7 +1426,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "427state"
 					;[Block]
-					StrTemp$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					StrTemp$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					
 					I_427\Timer = Float(StrTemp)*70.0
 					;[End Block]
@@ -1437,7 +1437,7 @@ Function UpdateConsole()
 					;[End Block]
 				Case "setblinkeffect"
 					;[Block]
-					args$ = Lower2(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
+					args$ = lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					BlinkEffect = Float(Left(args, Len(args) - Instr(args, " ")))
 					BlinkEffectTimer = Float(Right(args, Len(args) - Instr(args, " ")))
 					CreateConsoleMsg("Эффект моргания установлен на: " + BlinkEffect + ", а его таймер на: " + BlinkEffectTimer) ;Set BlinkEffect to: " + BlinkEffect + "and BlinkEffect timer:
@@ -3707,7 +3707,7 @@ Function DrawEnding()
 	Local x,y,width,height, temp
 	Local itt.ItemTemplates, r.Rooms
 	
-	Select Lower2(SelectedEnding)
+	Select lower(SelectedEnding)
 		Case "b2", "a1"
 			ClsColor Max(255+(EndingTimer)*2.8,0), Max(255+(EndingTimer)*2.8,0), Max(255+(EndingTimer)*2.8,0)
 		Default
@@ -3755,7 +3755,7 @@ Function DrawEnding()
 			EndIf
 			
 			If EndingTimer+FPSfactor2 > -450 And EndingTimer <= -450 Then
-				Select Lower2(SelectedEnding)
+				Select lower(SelectedEnding)
 					Case "a1", "a2"
 						PlaySound_Strict LoadTempSound("SFX\Ending\GateA\Ending"+SelectedEnding+".ogg")
 					Case "b1", "b2", "b3"
@@ -5998,8 +5998,8 @@ Function DrawGUI()
 				Case "cup" ;..!
 					;[Block]
 					If CanUseItem(False,False,True)
-						SelectedItem\name = Trim2(Lower2(SelectedItem\name))
-						If Lower2(Left(SelectedItem\name, Min(6,Len(SelectedItem\name)))) = "внутри" Then
+						SelectedItem\name = Trim2(lower2(SelectedItem\name))
+						If lower2(Left(SelectedItem\name, Min(6,Len(SelectedItem\name)))) = "внутри" Then
 							SelectedItem\name = Right(SelectedItem\name, Len(SelectedItem\name)-7)
 						;ElseIf Left(SelectedItem\name, Min(8,Len(SelectedItem\name))) = "a cup of" 
 						;	SelectedItem\name = Right(SelectedItem\name, Len(SelectedItem\name)-9)
@@ -6010,37 +6010,37 @@ Function DrawGUI()
 						
 						Local iniStr$ = "DATA\SCP-294.ini"
 						
-						Local loc% = GetINISectionLocation(iniStr, SelectedItem\name)
+						Local loc% = GetINISectionLocationCyr(iniStr, SelectedItem\name)
 						
 						;Stop
 						
-						strtemp = GetINIString2(iniStr, loc, "message")
+						strtemp = GetINIString2Cyr(iniStr, loc, "message")
 						If strtemp <> "" Then Msg = strtemp : MsgTimer = 70*6
 						
-						If GetINIInt2(iniStr, loc, "lethal") Or GetINIInt2(iniStr, loc, "deathtimer") Then 
-							DeathMSG = GetINIString2(iniStr, loc, "deathmessage")
-							If GetINIInt2(iniStr, loc, "lethal") Then Kill()
+						If GetINIInt2Cyr(iniStr, loc, "lethal") Or GetINIInt2Cyr(iniStr, loc, "deathtimer") Then 
+							DeathMSG = GetINIString2Cyr(iniStr, loc, "deathmessage")
+							If GetINIInt2Cyr(iniStr, loc, "lethal") Then Kill()
 						EndIf
-						BlurTimer = GetINIInt2(iniStr, loc, "blur")*70;*temp
-						If VomitTimer = 0 Then VomitTimer = GetINIInt2(iniStr, loc, "vomit")
-						CameraShakeTimer = GetINIString2(iniStr, loc, "camerashake")
-						Injuries = Max(Injuries + GetINIInt2(iniStr, loc, "damage"),0);*temp
-						Bloodloss = Max(Bloodloss + GetINIInt2(iniStr, loc, "blood loss"),0);*temp
-						strtemp =  GetINIString2(iniStr, loc, "sound")
+						BlurTimer = GetINIInt2Cyr(iniStr, loc, "blur")*70;*temp
+						If VomitTimer = 0 Then VomitTimer = GetINIInt2Cyr(iniStr, loc, "vomit")
+						CameraShakeTimer = GetINIString2Cyr(iniStr, loc, "camerashake")
+						Injuries = Max(Injuries + GetINIInt2Cyr(iniStr, loc, "damage"),0);*temp
+						Bloodloss = Max(Bloodloss + GetINIInt2Cyr(iniStr, loc, "blood loss"),0);*temp
+						strtemp =  GetINIString2Cyr(iniStr, loc, "sound")
 						If strtemp<>"" Then
 							PlaySound_Strict LoadTempSound(strtemp)
 						EndIf
-						If GetINIInt2(iniStr, loc, "stomachache") Then SCP1025state[3]=1
+						If GetINIInt2Cyr(iniStr, loc, "stomachache") Then SCP1025state[3]=1
 						
-						DeathTimer=GetINIInt2(iniStr, loc, "deathtimer")*70
+						DeathTimer=GetINIInt2Cyr(iniStr, loc, "deathtimer")*70
 						
-						BlinkEffect = Float(GetINIString2(iniStr, loc, "blink effect", 1.0))*x2
-						BlinkEffectTimer = Float(GetINIString2(iniStr, loc, "blink effect timer", 1.0))*x2
+						BlinkEffect = Float(GetINIString2Cyr(iniStr, loc, "blink effect", 1.0))*x2
+						BlinkEffectTimer = Float(GetINIString2Cyr(iniStr, loc, "blink effect timer", 1.0))*x2
 						
-						StaminaEffect = Float(GetINIString2(iniStr, loc, "stamina effect", 1.0))*x2
-						StaminaEffectTimer = Float(GetINIString2(iniStr, loc, "stamina effect timer", 1.0))*x2
+						StaminaEffect = Float(GetINIString2Cyr(iniStr, loc, "stamina effect", 1.0))*x2
+						StaminaEffectTimer = Float(GetINIString2Cyr(iniStr, loc, "stamina effect timer", 1.0))*x2
 						
-						strtemp = GetINIString2(iniStr, loc, "refusemessage")
+						strtemp = GetINIString2Cyr(iniStr, loc, "refusemessage")
 						If strtemp <> "" Then
 							Msg = strtemp 
 							MsgTimer = 70*6		
@@ -7213,19 +7213,19 @@ Function DrawMenu()
 			
 			Color 0,255,0
 			If OptionsMenu = 1
-				Rect(x-10*MenuScale,y-5*MenuScale,110*MenuScale,40*MenuScale,True)
+				Rect(x-10*MenuScale,y-5*MenuScale,115*MenuScale,40*MenuScale,True)
 			ElseIf OptionsMenu = 2
-				Rect(x+100*MenuScale,y-5*MenuScale,110*MenuScale,40*MenuScale,True)
+				Rect(x+105*MenuScale,y-5*MenuScale,115*MenuScale,40*MenuScale,True)
 			ElseIf OptionsMenu = 3
-				Rect(x+210*MenuScale,y-5*MenuScale,110*MenuScale,40*MenuScale,True)
+				Rect(x+215*MenuScale,y-5*MenuScale,115*MenuScale,40*MenuScale,True)
 			ElseIf OptionsMenu = 4
-				Rect(x+320*MenuScale,y-5*MenuScale,110*MenuScale,40*MenuScale,True)
+				Rect(x+325*MenuScale,y-5*MenuScale,115*MenuScale,40*MenuScale,True)
 			EndIf
 			
-			If DrawButton(x-5*MenuScale,y,100*MenuScale,30*MenuScale,"ГРАФИКА",False) Then OptionsMenu = 1 ;GRAPHICS
-			If DrawButton(x+105*MenuScale,y,100*MenuScale,30*MenuScale,"АУДИО",False) Then OptionsMenu = 2 ;AUDIO
-			If DrawButton(x+215*MenuScale,y,100*MenuScale,30*MenuScale,"УПРАВЛЕНИЕ",False) Then OptionsMenu = 3 ;CONTROLS
-			If DrawButton(x+325*MenuScale,y,100*MenuScale,30*MenuScale,"ПРОЧЕЕ",False) Then OptionsMenu = 4 ;ADVANCED
+			If DrawButton(x-5*MenuScale,y,105*MenuScale,30*MenuScale,"ГРАФИКА",False) Then OptionsMenu = 1 ;GRAPHICS
+			If DrawButton(x+110*MenuScale,y,105*MenuScale,30*MenuScale,"АУДИО",False) Then OptionsMenu = 2 ;AUDIO
+			If DrawButton(x+220*MenuScale,y,105*MenuScale,30*MenuScale,"УПРАВЛЕНИЕ",False) Then OptionsMenu = 3 ;CONTROLS
+			If DrawButton(x+330*MenuScale,y,105*MenuScale,30*MenuScale,"ПРОЧЕЕ",False) Then OptionsMenu = 4 ;ADVANCED
 			
 			Local tx# = (GraphicWidth/2)+(width/2)
 			Local ty# = y
@@ -7991,7 +7991,7 @@ Function LoadEntities()
 	;		b = GetSurfaceBrush( sf )
 	;		t1 = GetBrushTexture(b,0)
 	;		
-	;		Select Lower2(StripPath(TextureName(t1)))
+	;		Select lower(StripPath(TextureName(t1)))
 	;			Case "MTF_newdiffuse02.png"
 	;				
 	;				BrushTexture b, bump1, 0, 0
@@ -8172,7 +8172,7 @@ Function LoadEntities()
 			t1 = GetBrushTexture(b,0)
 			If t1<>0 Then
 				name$ = StripPath(TextureName(t1))
-				If Lower2(name) <> "monitortexture.jpg"
+				If lower(name) <> "monitortexture.jpg"
 					BrushTexture b, MonitorTextureOff, 0, 0
 					PaintSurface sf,b
 				EndIf
@@ -8188,7 +8188,7 @@ Function LoadEntities()
 			t1 = GetBrushTexture(b,0)
 			If t1<>0 Then
 				name$ = StripPath(TextureName(t1))
-				If Lower2(name) <> "monitortexture.jpg"
+				If lower(name) <> "monitortexture.jpg"
 					BrushTexture b, MonitorTextureOff, 0, 0
 					PaintSurface sf,b
 				EndIf
@@ -10193,31 +10193,31 @@ Function Use294() ;..!
 			Input294 = Left(Input294, Min(Len(Input294),15))
 			
 			If temp And Input294<>"" Then ;dispense
-				Input294 = Trim2(Lower2(Input294))
-				If Lower2(Left(Input294, Min(7,Len(Input294)))) = "внутри " Then ;cup of
+				Input294 = Trim2(lower2(Input294))
+				If lower2(Left(Input294, Min(7,Len(Input294)))) = "внутри " Then ;cup of
 					Input294 = Right(Input294, Len(Input294)-7)
 				;ElseIf Left(Input294, Min(9,Len(Input294))) = "a cup of " 
 				;	Input294 = Right(Input294, Len(Input294)-9)
 				EndIf
 				
 				If Input294<>""
-					Local loc% = GetINISectionLocation("DATA\SCP-294.ini",Input294)
+					Local loc% = GetINISectionLocationCyr("DATA\SCP-294.ini",Input294)
 				EndIf
 				
 				If loc > 0 Then
-					strtemp$ = GetINIString2("DATA\SCP-294.ini", loc, "dispensesound")
+					strtemp$ = GetINIString2Cyr("DATA\SCP-294.ini", loc, "dispensesound")
 					If strtemp="" Then
 						PlayerRoom\SoundCHN = PlaySound_Strict (LoadTempSound("SFX\SCP\294\dispense1.ogg"))
 					Else
 						PlayerRoom\SoundCHN = PlaySound_Strict (LoadTempSound(strtemp))
 					EndIf
 					
-					If GetINIInt2("DATA\SCP-294.ini", loc, "explosion")=True Then 
+					If GetINIInt2Cyr("DATA\SCP-294.ini", loc, "explosion")=True Then 
 						ExplosionTimer = 135
-						DeathMSG = GetINIString2("DATA\SCP-294.ini", loc, "deathmessage")
+						DeathMSG = GetINIString2Cyr("DATA\SCP-294.ini", loc, "deathmessage")
 					EndIf
 					
-					strtemp$ = GetINIString2("DATA\SCP-294.ini", loc, "color")
+					strtemp$ = GetINIString2Cyr("DATA\SCP-294.ini", loc, "color")
 					
 					sep1 = Instr(strtemp, ",", 1)
 					sep2 = Instr(strtemp, ",", sep1+1)
@@ -10225,8 +10225,8 @@ Function Use294() ;..!
 					g% = Trim2(Mid(strtemp, sep1+1, sep2-sep1-1))
 					b% = Trim2(Right(strtemp, Len(strtemp)-sep2))
 					
-					alpha# = Float(GetINIString2("DATA\SCP-294.ini", loc, "alpha",1.0))
-					glow = GetINIInt2("DATA\SCP-294.ini", loc, "glow")
+					alpha# = Float(GetINIString2Cyr("DATA\SCP-294.ini", loc, "alpha",1.0))
+					glow = GetINIInt2Cyr("DATA\SCP-294.ini", loc, "glow")
 					;If alpha = 0 Then alpha = 1.0
 					If glow Then alpha = -alpha
 					
@@ -10381,7 +10381,7 @@ Function UpdateMTF%()
 			
 			Local entrance.Rooms = Null
 			For r.Rooms = Each Rooms
-				If Lower2(r\RoomTemplate\Name) = "gateaentrance" Then entrance = r : Exit
+				If lower(r\RoomTemplate\Name) = "gateaentrance" Then entrance = r : Exit
 			Next
 			
 			If entrance <> Null Then 
@@ -10928,7 +10928,7 @@ End Function
 Function UpdateINIFile$(filename$)
 	Local file.INIFile = Null
 	For k.INIFile = Each INIFile
-		If k\name = Lower2(filename) Then
+		If k\name = lower(filename) Then
 			file = k
 		EndIf
 	Next
@@ -10955,7 +10955,7 @@ Function GetINIString$(file$, section$, parameter$, defaultvalue$="")
 	
 	Local lfile.INIFile = Null
 	For k.INIFile = Each INIFile
-		If k\name = Lower2(file) Then
+		If k\name = lower(file) Then
 			lfile = k
 		EndIf
 	Next
@@ -10963,24 +10963,24 @@ Function GetINIString$(file$, section$, parameter$, defaultvalue$="")
 	If lfile = Null Then
 		DebugLog "CREATE BANK FOR "+file
 		lfile = New INIFile
-		lfile\name = Lower2(file)
+		lfile\name = lower(file)
 		lfile\bank = 0
 		UpdateINIFile(lfile\name)
 	EndIf
 	
 	lfile\bankOffset = 0
 	
-	section = Lower2(section)
+	section = lower(section)
 	
 	;While Not Eof(f)
 	While lfile\bankOffset<lfile\size
 		Local strtemp$ = ReadINILine(lfile)
 		If Left(strtemp,1) = "[" Then
-			strtemp$ = Lower2(strtemp)
+			strtemp$ = lower(strtemp)
 			If Mid(strtemp, 2, Len(strtemp)-2)=section Then
 				Repeat
 					TemporaryString = ReadINILine(lfile)
-					If Lower2(Trim2(Left(TemporaryString, Max(Instr(TemporaryString, "=") - 1, 0)))) = Lower2(parameter) Then
+					If lower(Trim2(Left(TemporaryString, Max(Instr(TemporaryString, "=") - 1, 0)))) = lower(parameter) Then
 						;CloseFile f
 						Return Trim2( Right(TemporaryString,Len(TemporaryString)-Instr(TemporaryString,"=")) )
 					EndIf
@@ -10997,9 +10997,9 @@ End Function
 
 Function GetINIInt%(file$, section$, parameter$, defaultvalue% = 0)
 	Local txt$ = GetINIString(file$, section$, parameter$, defaultvalue)
-	If Lower2(txt) = "true" Then
+	If lower(txt) = "true" Then
 		Return 1
-	ElseIf Lower2(txt) = "false"
+	ElseIf lower(txt) = "false"
 		Return 0
 	Else
 		Return Int(txt)
@@ -11022,7 +11022,7 @@ Function GetINIString2$(file$, start%, parameter$, defaultvalue$="")
 		If n=start Then 
 			Repeat
 				TemporaryString = ReadLine(f)
-				If Lower2(Trim2(Left(TemporaryString, Max(Instr(TemporaryString, "=") - 1, 0)))) = Lower2(parameter) Then
+				If lower(Trim2(Left(TemporaryString, Max(Instr(TemporaryString, "=") - 1, 0)))) = lower(parameter) Then
 					CloseFile f
 					Return Trim2( Right(TemporaryString,Len(TemporaryString)-Instr(TemporaryString,"=")) )
 				EndIf
@@ -11039,9 +11039,9 @@ End Function
 
 Function GetINIInt2%(file$, start%, parameter$, defaultvalue$="")
 	Local txt$ = GetINIString2(file$, start%, parameter$, defaultvalue$)
-	If Lower2(txt) = "true" Then
+	If lower(txt) = "true" Then
 		Return 1
-	ElseIf Lower2(txt) = "false"
+	ElseIf lower(txt) = "false"
 		Return 0
 	Else
 		Return Int(txt)
@@ -11053,14 +11053,14 @@ Function GetINISectionLocation%(file$, section$)
 	Local Temp%
 	Local f% = ReadFile(file)
 	
-	section = Lower2(section)
+	section = lower(section)
 	
 	Local n%=0
 	While Not Eof(f)
 		Local strtemp$ = ReadLine(f)
 		n=n+1
 		If Left(strtemp,1) = "[" Then
-			strtemp$ = Lower2(strtemp)
+			strtemp$ = lower(strtemp)
 			Temp = Instr(strtemp, section)
 			If Temp>0 Then
 				If Mid(strtemp, Temp-1, 1)="[" Or Mid(strtemp, Temp-1, 1)="|" Then
@@ -11756,7 +11756,7 @@ Function CatchErrors(location$)
 			WriteLine errF,"Состояние памяти: "+(m\dwAvailPhys%/1024/1024)+" MБ/"+(m\dwTotalPhys%/1024/1024)+" MБ ("+(m\dwAvailPhys%/1024)+" KБ/"+(m\dwTotalPhys%/1024)+" KБ)" ;Global memory status:
 			WriteLine errF,"Отображено треугольников: "+CurrTrisAmount ;Triangles rendered
 			WriteLine errF,"Активных текстур: "+ActiveTextures() ;Active textures:
-			WriteLine errF,"Сообщите об этом на contact@oleg720.ru (Прикрипите этот лог и файл сохранения!)"
+			WriteLine errF,"Сообщите об этом на vk.me/creatormteam (Прикрипите этот лог и файл сохранения!)"
 			WriteLine errF,""
 			WriteLine errF,"Ошибки:" ;Error(s):
 		Else
@@ -11799,7 +11799,7 @@ Function Create3DIcon(width%,height%,modelpath$,modelX#=0,modelY#=0,modelZ#=0,mo
 		CameraFogRange cam,CameraFogNear,CameraFogFar
 	EndIf
 	
-	If Right(Lower2(modelpath$),6)=".rmesh"
+	If Right(lower(modelpath$),6)=".rmesh"
 		model = LoadRMesh(modelpath$,Null)
 	Else
 		model = LoadMesh(modelpath$)
@@ -12124,7 +12124,7 @@ Function RotateEntity90DegreeAngles(entity%)
 End Function
 
 ;Фикс пропадающих кириллических букв
-Function Lower2$(txt$)
+Function lower2$(txt$)
 	Local m$,nt$=""
 
 	For i=1 To Len(txt)
@@ -12160,5 +12160,66 @@ Function Trim2$(txt$)
 	Wend
 	Return Mid(txt,txt1,txt2+1-txt1)
 End Function
-;~IDEal Editor Parameters:
-;~C#Blitz3D
+
+Function GetINIString2Cyr$(file$, start%, parameter$, defaultvalue$="")
+	Local TemporaryString$ = ""
+	Local f% = ReadFile(file)
+	
+	Local n%=0
+	While Not Eof(f)
+		Local strtemp$ = ReadLine(f)
+		n=n+1
+		If n=start Then 
+			Repeat
+				TemporaryString = ReadLine(f)
+				If lower2(trim2(Left(TemporaryString, Max(Instr(TemporaryString, "=") - 1, 0)))) = lower2(parameter) Then
+					CloseFile f
+					Return trim2( Right(TemporaryString,Len(TemporaryString)-Instr(TemporaryString,"=")) )
+				EndIf
+			Until Left(TemporaryString, 1) = "[" Or Eof(f)
+			CloseFile f
+			Return defaultvalue
+		EndIf
+	Wend
+	
+	CloseFile f	
+	
+	Return defaultvalue
+End Function
+
+Function GetINISectionLocationCyr%(file$, section$)
+	Local Temp%
+	Local f% = ReadFile(file)
+	
+	section = lower2(section)
+	
+	Local n%=0
+	While Not Eof(f)
+		Local strtemp$ = ReadLine(f)
+		n=n+1
+		If Left(strtemp,1) = "[" Then
+			strtemp$ = lower2(strtemp)
+			Temp = Instr(strtemp, section)
+			If Temp>0 Then
+				If Mid(strtemp, Temp-1, 1)="[" Or Mid(strtemp, Temp-1, 1)="|" Then
+					CloseFile f
+					Return n
+				EndIf
+			EndIf
+		EndIf
+	Wend
+	
+	CloseFile f
+End Function
+
+Function GetINIInt2Cyr%(file$, start%, parameter$, defaultvalue$="")
+	Local txt$ = GetINIString2(file$, start%, parameter$, defaultvalue$)
+	If lower2(txt) = "true" Then
+		Return 1
+	ElseIf lower2(txt) = "false"
+		Return 0
+	Else
+		Return Int(txt)
+	EndIf
+End Function
+
