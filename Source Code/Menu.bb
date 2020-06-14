@@ -101,15 +101,15 @@ Function UpdateMainMenu()
 				Case 14
 					MenuStr = "чёрный белый чёрный белый чёрный белый серый" ;black white black white black white gray
 				Case 15
-					MenuStr = "Камень не волнует" ;Stone does not care
+					MenuStr = "Камню всё равно" ;Stone does not care
 				Case 16
 					MenuStr = "9341"
 				Case 17
-					MenuStr = "Он управляет дверьми" ;It controls the doors
+					MenuStr = "Оно управляет дверьми" ;It controls the doors
 				Case 18
 					MenuStr = "e8m106]af173o+079m895w914"
 				Case 20
-					MenuStr = "Он захватил всё" ;It has taken over everything
+					MenuStr = "Оно взяло всё на себя" ;It has taken over everything
 				Case 21
 					MenuStr = "Спираль растёт" ;The spiral is growing
 				Case 22

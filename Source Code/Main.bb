@@ -812,7 +812,7 @@ Function UpdateConsole()
 				Case "hidedistance"
 					;[Block]
 					HideDistance = Float(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
-					CreateConsoleMsg("Дальность прорисовки установлена на "+HideDistance) ;set to
+					CreateConsoleMsg("Дальность прорисовки установлена на "+HideDistance) ;Hidedistance set to
 					;[End Block]
 				Case "ending"
 					;[Block]
@@ -1257,7 +1257,7 @@ Function UpdateConsole()
 					KillTimer = -1
 					Select Rand(4)
 						Case 1
-							DeathMSG = "[УДАЛЕНО]"
+							DeathMSG = "[УДАЛЕНО]" ;[REDACTED]
 						Case 2
 							DeathMSG = "Суъект D-9341 найден мёртвым в секторе [УДАЛЕНО]. " ;Subject D-9341 found dead in Sector [REDACTED].
 							DeathMSG = DeathMSG + "Похоже, что субъект не получил физических повреждений, и нет никаких видимых признаков того, что именно его убило. " ;The subject appears to have attained no physical damage, and there is no visible indication as to what killed him. 
